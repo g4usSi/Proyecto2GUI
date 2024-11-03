@@ -43,20 +43,20 @@
             // NombreUser
             // 
             NombreUser.AutoSize = true;
-            NombreUser.Font = new Font("Segoe UI", 12F);
-            NombreUser.Location = new Point(72, 139);
+            NombreUser.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            NombreUser.Location = new Point(59, 134);
             NombreUser.Name = "NombreUser";
-            NombreUser.Size = new Size(89, 28);
+            NombreUser.Size = new Size(101, 35);
             NombreUser.TabIndex = 0;
             NombreUser.Text = "Nombre:";
             // 
             // PassUser
             // 
             PassUser.AutoSize = true;
-            PassUser.Font = new Font("Segoe UI", 12F);
-            PassUser.Location = new Point(72, 215);
+            PassUser.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PassUser.Location = new Point(59, 214);
             PassUser.Name = "PassUser";
-            PassUser.Size = new Size(114, 28);
+            PassUser.Size = new Size(133, 35);
             PassUser.TabIndex = 1;
             PassUser.Text = "Contraseña:";
             // 
@@ -79,15 +79,16 @@
             // lblSignIn
             // 
             lblSignIn.AutoSize = true;
-            lblSignIn.Font = new Font("Segoe UI", 15F);
-            lblSignIn.Location = new Point(239, 62);
+            lblSignIn.Font = new Font("Segoe Print", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSignIn.Location = new Point(206, 61);
             lblSignIn.Name = "lblSignIn";
-            lblSignIn.Size = new Size(192, 35);
+            lblSignIn.Size = new Size(254, 50);
             lblSignIn.TabIndex = 4;
             lblSignIn.Text = "INICIAR SESION";
             // 
             // BtnEntrar
             // 
+            BtnEntrar.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             BtnEntrar.Location = new Point(213, 273);
             BtnEntrar.Name = "BtnEntrar";
             BtnEntrar.Size = new Size(105, 33);
@@ -98,6 +99,7 @@
             // 
             // button2
             // 
+            button2.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.Location = new Point(352, 273);
             button2.Name = "button2";
             button2.Size = new Size(105, 33);
