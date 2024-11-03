@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             NombreUser = new Label();
             PassUser = new Label();
             textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtPassword = new TextBox();
             lblSignIn = new Label();
             BtnEntrar = new Button();
             button2 = new Button();
@@ -42,43 +43,48 @@
             // NombreUser
             // 
             NombreUser.AutoSize = true;
+            NombreUser.Font = new Font("Segoe UI", 12F);
             NombreUser.Location = new Point(72, 139);
             NombreUser.Name = "NombreUser";
-            NombreUser.Size = new Size(67, 20);
+            NombreUser.Size = new Size(89, 28);
             NombreUser.TabIndex = 0;
             NombreUser.Text = "Nombre:";
             // 
             // PassUser
             // 
             PassUser.AutoSize = true;
-            PassUser.Location = new Point(72, 223);
+            PassUser.Font = new Font("Segoe UI", 12F);
+            PassUser.Location = new Point(72, 215);
             PassUser.Name = "PassUser";
-            PassUser.Size = new Size(86, 20);
+            PassUser.Size = new Size(114, 28);
             PassUser.TabIndex = 1;
             PassUser.Text = "Contraseña:";
             // 
             // textBox1
             // 
+            textBox1.Font = new Font("Segoe UI", 10F);
             textBox1.Location = new Point(196, 139);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(285, 27);
+            textBox1.Size = new Size(285, 30);
             textBox1.TabIndex = 2;
             // 
-            // textBox2
+            // txtPassword
             // 
-            textBox2.Location = new Point(196, 219);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(285, 27);
-            textBox2.TabIndex = 3;
+            txtPassword.Font = new Font("Segoe UI", 10F);
+            txtPassword.Location = new Point(196, 219);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(285, 30);
+            txtPassword.TabIndex = 3;
             // 
             // lblSignIn
             // 
             lblSignIn.AutoSize = true;
-            lblSignIn.Location = new Point(275, 81);
+            lblSignIn.Font = new Font("Segoe UI", 15F);
+            lblSignIn.Location = new Point(239, 62);
             lblSignIn.Name = "lblSignIn";
-            lblSignIn.Size = new Size(96, 20);
+            lblSignIn.Size = new Size(192, 35);
             lblSignIn.TabIndex = 4;
-            lblSignIn.Text = "Iniciar Sesion";
+            lblSignIn.Text = "INICIAR SESION";
             // 
             // BtnEntrar
             // 
@@ -101,9 +107,11 @@
             // 
             // BtnCerrar
             // 
+            BtnCerrar.Image = (Image)resources.GetObject("BtnCerrar.Image");
             BtnCerrar.Location = new Point(613, 12);
             BtnCerrar.Name = "BtnCerrar";
             BtnCerrar.Size = new Size(25, 25);
+            BtnCerrar.SizeMode = PictureBoxSizeMode.Zoom;
             BtnCerrar.TabIndex = 7;
             BtnCerrar.TabStop = false;
             BtnCerrar.Click += BtnCerrar_Click;
@@ -118,7 +126,7 @@
             Controls.Add(button2);
             Controls.Add(BtnEntrar);
             Controls.Add(lblSignIn);
-            Controls.Add(textBox2);
+            Controls.Add(txtPassword);
             Controls.Add(textBox1);
             Controls.Add(PassUser);
             Controls.Add(NombreUser);
@@ -136,7 +144,7 @@
         private Label NombreUser;
         private Label PassUser;
         private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtPassword;
         private Label lblSignIn;
         private Button BtnEntrar;
         private Button button2;
