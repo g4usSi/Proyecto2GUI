@@ -26,5 +26,10 @@ namespace Proyecto2GUI
         {
             Application.Exit();
         }
+        private void IngresarEdad() 
+        { 
+        
+        }
+
     }
 }
