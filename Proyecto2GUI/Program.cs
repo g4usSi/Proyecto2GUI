@@ -1,6 +1,9 @@
+using Proyecto2;
+using System.Security.Cryptography.X509Certificates;
+
 namespace Proyecto2GUI
 {
-    internal static class Program
+    public static class Program
     {
         /// <summary>
         ///  The main entry point for the application.
@@ -11,7 +14,17 @@ namespace Proyecto2GUI
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Login());
+
+
+            Biblioteca biblioteca = new Biblioteca();
+            biblioteca.RegistrarUsuarioNuevo();
+
+
+            Application.Run(new Login(biblioteca));
+
+
+
         }
+
     }
 }

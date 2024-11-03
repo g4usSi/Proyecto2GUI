@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             NombreUser = new Label();
             PassUser = new Label();
-            textBox1 = new TextBox();
+            txtNombre = new TextBox();
             txtPassword = new TextBox();
             lblSignIn = new Label();
             BtnEntrar = new Button();
@@ -60,13 +60,13 @@
             PassUser.TabIndex = 1;
             PassUser.Text = "Contraseña:";
             // 
-            // textBox1
+            // txtNombre
             // 
-            textBox1.Font = new Font("Segoe UI", 10F);
-            textBox1.Location = new Point(196, 139);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(285, 30);
-            textBox1.TabIndex = 2;
+            txtNombre.Font = new Font("Segoe UI", 10F);
+            txtNombre.Location = new Point(196, 139);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(285, 30);
+            txtNombre.TabIndex = 2;
             // 
             // txtPassword
             // 
@@ -94,6 +94,7 @@
             BtnEntrar.TabIndex = 5;
             BtnEntrar.Text = "Entrar";
             BtnEntrar.UseVisualStyleBackColor = true;
+            BtnEntrar.Click += BtnEntrar_Click;
             // 
             // button2
             // 
@@ -127,7 +128,7 @@
             Controls.Add(BtnEntrar);
             Controls.Add(lblSignIn);
             Controls.Add(txtPassword);
-            Controls.Add(textBox1);
+            Controls.Add(txtNombre);
             Controls.Add(PassUser);
             Controls.Add(NombreUser);
             FormBorderStyle = FormBorderStyle.None;
@@ -143,7 +144,7 @@
 
         private Label NombreUser;
         private Label PassUser;
-        private TextBox textBox1;
+        private TextBox txtNombre;
         private TextBox txtPassword;
         private Label lblSignIn;
         private Button BtnEntrar;
