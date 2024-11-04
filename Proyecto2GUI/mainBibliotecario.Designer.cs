@@ -71,13 +71,14 @@
             barraTitulo.Size = new Size(1380, 65);
             barraTitulo.TabIndex = 0;
             barraTitulo.Paint += barraTitulo_Paint;
+            barraTitulo.MouseDown += barraTitulo_MouseDown;
             // 
             // tituloBarraBibliotecario
             // 
             tituloBarraBibliotecario.AutoSize = true;
             tituloBarraBibliotecario.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tituloBarraBibliotecario.ForeColor = Color.Transparent;
-            tituloBarraBibliotecario.Location = new Point(618, 19);
+            tituloBarraBibliotecario.Location = new Point(623, 18);
             tituloBarraBibliotecario.Name = "tituloBarraBibliotecario";
             tituloBarraBibliotecario.Size = new Size(123, 27);
             tituloBarraBibliotecario.TabIndex = 3;
@@ -129,9 +130,9 @@
             PanelGenInformes.Controls.Add(btnEstadisticas);
             PanelGenInformes.Controls.Add(btnPrestamos);
             PanelGenInformes.Dock = DockStyle.Top;
-            PanelGenInformes.Location = new Point(0, 542);
+            PanelGenInformes.Location = new Point(0, 538);
             PanelGenInformes.Name = "PanelGenInformes";
-            PanelGenInformes.Size = new Size(280, 87);
+            PanelGenInformes.Size = new Size(280, 84);
             PanelGenInformes.TabIndex = 6;
             // 
             // btnEstadisticas
@@ -147,7 +148,7 @@
             btnEstadisticas.ImageAlign = ContentAlignment.MiddleLeft;
             btnEstadisticas.Location = new Point(0, 40);
             btnEstadisticas.Name = "btnEstadisticas";
-            btnEstadisticas.Padding = new Padding(60, 0, 0, 0);
+            btnEstadisticas.Padding = new Padding(60, 0, 77, 0);
             btnEstadisticas.Size = new Size(280, 40);
             btnEstadisticas.TabIndex = 1;
             btnEstadisticas.Text = "Estadisticas";
@@ -168,7 +169,7 @@
             btnPrestamos.ImageAlign = ContentAlignment.MiddleLeft;
             btnPrestamos.Location = new Point(0, 0);
             btnPrestamos.Name = "btnPrestamos";
-            btnPrestamos.Padding = new Padding(60, 0, 0, 0);
+            btnPrestamos.Padding = new Padding(60, 0, 28, 0);
             btnPrestamos.Size = new Size(280, 40);
             btnPrestamos.TabIndex = 0;
             btnPrestamos.Text = "Prestamos Activos";
@@ -186,7 +187,7 @@
             BotonGenInformes.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
             BotonGenInformes.Image = (Image)resources.GetObject("BotonGenInformes.Image");
             BotonGenInformes.ImageAlign = ContentAlignment.MiddleLeft;
-            BotonGenInformes.Location = new Point(0, 482);
+            BotonGenInformes.Location = new Point(0, 478);
             BotonGenInformes.Name = "BotonGenInformes";
             BotonGenInformes.Padding = new Padding(20, 0, 15, 0);
             BotonGenInformes.Size = new Size(280, 60);
@@ -202,9 +203,9 @@
             PanelGestUsuarios.Controls.Add(btnEditarUsuario);
             PanelGestUsuarios.Controls.Add(btnRegistrarUsuario);
             PanelGestUsuarios.Dock = DockStyle.Top;
-            PanelGestUsuarios.Location = new Point(0, 395);
+            PanelGestUsuarios.Location = new Point(0, 394);
             PanelGestUsuarios.Name = "PanelGestUsuarios";
-            PanelGestUsuarios.Size = new Size(280, 87);
+            PanelGestUsuarios.Size = new Size(280, 84);
             PanelGestUsuarios.TabIndex = 4;
             // 
             // btnEditarUsuario
@@ -220,7 +221,7 @@
             btnEditarUsuario.ImageAlign = ContentAlignment.MiddleLeft;
             btnEditarUsuario.Location = new Point(0, 40);
             btnEditarUsuario.Name = "btnEditarUsuario";
-            btnEditarUsuario.Padding = new Padding(60, 0, 0, 0);
+            btnEditarUsuario.Padding = new Padding(60, 0, 56, 0);
             btnEditarUsuario.Size = new Size(280, 40);
             btnEditarUsuario.TabIndex = 1;
             btnEditarUsuario.Text = "Editar Usuario";
@@ -241,7 +242,7 @@
             btnRegistrarUsuario.ImageAlign = ContentAlignment.MiddleLeft;
             btnRegistrarUsuario.Location = new Point(0, 0);
             btnRegistrarUsuario.Name = "btnRegistrarUsuario";
-            btnRegistrarUsuario.Padding = new Padding(60, 0, 0, 0);
+            btnRegistrarUsuario.Padding = new Padding(60, 0, 33, 0);
             btnRegistrarUsuario.Size = new Size(280, 40);
             btnRegistrarUsuario.TabIndex = 0;
             btnRegistrarUsuario.Text = "Registrar Usuario";
@@ -259,7 +260,7 @@
             BotonGestLibros.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
             BotonGestLibros.Image = (Image)resources.GetObject("BotonGestLibros.Image");
             BotonGestLibros.ImageAlign = ContentAlignment.MiddleLeft;
-            BotonGestLibros.Location = new Point(0, 335);
+            BotonGestLibros.Location = new Point(0, 334);
             BotonGestLibros.Name = "BotonGestLibros";
             BotonGestLibros.Padding = new Padding(20, 0, 20, 0);
             BotonGestLibros.Size = new Size(280, 60);
@@ -278,7 +279,7 @@
             PanelSubGestLibros.Dock = DockStyle.Top;
             PanelSubGestLibros.Location = new Point(0, 210);
             PanelSubGestLibros.Name = "PanelSubGestLibros";
-            PanelSubGestLibros.Size = new Size(280, 125);
+            PanelSubGestLibros.Size = new Size(280, 124);
             PanelSubGestLibros.TabIndex = 2;
             // 
             // btnEliminarLibro
