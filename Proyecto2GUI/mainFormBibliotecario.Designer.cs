@@ -282,7 +282,7 @@
             button3.Padding = new Padding(30, 0, 82, 0);
             button3.Size = new Size(268, 40);
             button3.TabIndex = 3;
-            button3.Text = "Buscar Libro";
+            button3.Text = "Editar Usuario";
             button3.TextAlign = ContentAlignment.MiddleRight;
             button3.UseVisualStyleBackColor = false;
             // 
@@ -298,7 +298,7 @@
             button4.Padding = new Padding(30, 0, 71, 0);
             button4.Size = new Size(268, 40);
             button4.TabIndex = 2;
-            button4.Text = "Agregar Libro";
+            button4.Text = "Registrar Usuario";
             button4.TextAlign = ContentAlignment.MiddleRight;
             button4.UseVisualStyleBackColor = false;
             // 
@@ -350,7 +350,7 @@
             button5.Padding = new Padding(30, 0, 82, 0);
             button5.Size = new Size(268, 40);
             button5.TabIndex = 3;
-            button5.Text = "Buscar Libro";
+            button5.Text = "Estadisticas";
             button5.TextAlign = ContentAlignment.MiddleRight;
             button5.UseVisualStyleBackColor = false;
             // 
@@ -366,7 +366,7 @@
             button6.Padding = new Padding(30, 0, 71, 0);
             button6.Size = new Size(268, 40);
             button6.TabIndex = 2;
-            button6.Text = "Agregar Libro";
+            button6.Text = "Prestamos Activos";
             button6.TextAlign = ContentAlignment.MiddleRight;
             button6.UseVisualStyleBackColor = false;
             // 
