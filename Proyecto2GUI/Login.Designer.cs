@@ -48,7 +48,7 @@ namespace Proyecto2GUI
             // 
             NombreUser.AutoSize = true;
             NombreUser.Font = new Font("Segoe UI Variable Small Semilig", 12F);
-            NombreUser.Location = new Point(154, 137);
+            NombreUser.Location = new Point(248, 135);
             NombreUser.Name = "NombreUser";
             NombreUser.Size = new Size(92, 27);
             NombreUser.TabIndex = 0;
@@ -58,7 +58,7 @@ namespace Proyecto2GUI
             // 
             PassUser.AutoSize = true;
             PassUser.Font = new Font("Segoe UI Variable Small Semilig", 12F);
-            PassUser.Location = new Point(154, 217);
+            PassUser.Location = new Point(248, 205);
             PassUser.Name = "PassUser";
             PassUser.Size = new Size(120, 27);
             PassUser.TabIndex = 1;
@@ -67,7 +67,7 @@ namespace Proyecto2GUI
             // txtNombre
             // 
             txtNombre.Font = new Font("Segoe UI", 10F);
-            txtNombre.Location = new Point(284, 137);
+            txtNombre.Location = new Point(248, 165);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(285, 30);
             txtNombre.TabIndex = 2;
@@ -75,7 +75,7 @@ namespace Proyecto2GUI
             // txtPassword
             // 
             txtPassword.Font = new Font("Segoe UI", 10F);
-            txtPassword.Location = new Point(284, 217);
+            txtPassword.Location = new Point(248, 235);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(285, 30);
             txtPassword.TabIndex = 3;
@@ -84,7 +84,7 @@ namespace Proyecto2GUI
             // 
             BtnEntrar.Cursor = Cursors.Hand;
             BtnEntrar.Font = new Font("Segoe UI Variable Small Semilig", 10F);
-            BtnEntrar.Location = new Point(307, 271);
+            BtnEntrar.Location = new Point(276, 281);
             BtnEntrar.Name = "BtnEntrar";
             BtnEntrar.Size = new Size(105, 33);
             BtnEntrar.TabIndex = 5;
@@ -96,7 +96,7 @@ namespace Proyecto2GUI
             // 
             btnSalir.Cursor = Cursors.Hand;
             btnSalir.Font = new Font("Segoe UI Variable Small Semilig", 10F);
-            btnSalir.Location = new Point(446, 271);
+            btnSalir.Location = new Point(401, 281);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(105, 33);
             btnSalir.TabIndex = 6;
@@ -122,14 +122,14 @@ namespace Proyecto2GUI
             imgLogin.Dock = DockStyle.Left;
             imgLogin.Location = new Point(0, 0);
             imgLogin.Name = "imgLogin";
-            imgLogin.Size = new Size(145, 400);
+            imgLogin.Size = new Size(211, 400);
             imgLogin.TabIndex = 8;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Aston Script Bold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(217, 26);
+            label1.Location = new Point(236, 26);
             label1.Name = "label1";
             label1.Size = new Size(226, 59);
             label1.TabIndex = 9;
@@ -139,7 +139,7 @@ namespace Proyecto2GUI
             // 
             lblSignIn.AutoSize = true;
             lblSignIn.Font = new Font("Aston Script Bold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSignIn.Location = new Point(366, 66);
+            lblSignIn.Location = new Point(367, 75);
             lblSignIn.Name = "lblSignIn";
             lblSignIn.Size = new Size(185, 59);
             lblSignIn.TabIndex = 4;
