@@ -46,6 +46,7 @@ namespace Proyecto2
         public void CerrarSesion()
         {
             UsuarioActual = null;
+            historialAcciones.LimpiarHistorial();
             Console.WriteLine("Sesión cerrada.");
         }
 
@@ -204,6 +205,7 @@ namespace Proyecto2
         //Opc 1
         public void RegistrarUsuarioNuevo() 
         {
+            listaUsuarios.Add(new Bibliotecario("Geo","1234"));
             Console.WriteLine("1. Bibliotecario\n2. Lector");
             Console.Write("Ingrese una opcion: ");
             int opcion = Convert.ToInt32(Console.ReadLine());

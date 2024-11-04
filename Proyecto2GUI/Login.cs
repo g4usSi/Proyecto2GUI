@@ -38,12 +38,13 @@ namespace Proyecto2GUI
                 txtNombre.Focus();
                 return;
             }
+
             if (_biblioteca.IniciarSesion(txtNombre.Text, txtPassword.Text))
             {
                 MessageBox.Show("Inicio de sesión exitoso", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                //var mainForm = new MainForm(_biblioteca);  // Pasar _biblioteca si es necesario
-                //mainForm.Show();
+                var mainForm = new mainFormBibliotecario(_biblioteca);  // Pasar _biblioteca si es necesario
+                mainForm.Show();
 
                 this.Hide();
             }

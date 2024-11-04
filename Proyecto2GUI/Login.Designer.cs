@@ -35,8 +35,9 @@
             txtPassword = new TextBox();
             lblSignIn = new Label();
             BtnEntrar = new Button();
-            button2 = new Button();
+            btnSalir = new Button();
             BtnCerrar = new PictureBox();
+            imgLogin = new Panel();
             ((System.ComponentModel.ISupportInitialize)BtnCerrar).BeginInit();
             SuspendLayout();
             // 
@@ -44,7 +45,7 @@
             // 
             NombreUser.AutoSize = true;
             NombreUser.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            NombreUser.Location = new Point(59, 134);
+            NombreUser.Location = new Point(153, 132);
             NombreUser.Name = "NombreUser";
             NombreUser.Size = new Size(101, 35);
             NombreUser.TabIndex = 0;
@@ -54,7 +55,7 @@
             // 
             PassUser.AutoSize = true;
             PassUser.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            PassUser.Location = new Point(59, 214);
+            PassUser.Location = new Point(153, 212);
             PassUser.Name = "PassUser";
             PassUser.Size = new Size(133, 35);
             PassUser.TabIndex = 1;
@@ -63,7 +64,7 @@
             // txtNombre
             // 
             txtNombre.Font = new Font("Segoe UI", 10F);
-            txtNombre.Location = new Point(196, 139);
+            txtNombre.Location = new Point(290, 137);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(285, 30);
             txtNombre.TabIndex = 2;
@@ -71,7 +72,7 @@
             // txtPassword
             // 
             txtPassword.Font = new Font("Segoe UI", 10F);
-            txtPassword.Location = new Point(196, 219);
+            txtPassword.Location = new Point(290, 217);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(285, 30);
             txtPassword.TabIndex = 3;
@@ -80,7 +81,7 @@
             // 
             lblSignIn.AutoSize = true;
             lblSignIn.Font = new Font("Segoe Print", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSignIn.Location = new Point(206, 61);
+            lblSignIn.Location = new Point(221, 53);
             lblSignIn.Name = "lblSignIn";
             lblSignIn.Size = new Size(254, 50);
             lblSignIn.TabIndex = 4;
@@ -88,8 +89,9 @@
             // 
             // BtnEntrar
             // 
+            BtnEntrar.Cursor = Cursors.Hand;
             BtnEntrar.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            BtnEntrar.Location = new Point(213, 273);
+            BtnEntrar.Location = new Point(307, 271);
             BtnEntrar.Name = "BtnEntrar";
             BtnEntrar.Size = new Size(105, 33);
             BtnEntrar.TabIndex = 5;
@@ -97,19 +99,21 @@
             BtnEntrar.UseVisualStyleBackColor = true;
             BtnEntrar.Click += BtnEntrar_Click;
             // 
-            // button2
+            // btnSalir
             // 
-            button2.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.Location = new Point(352, 273);
-            button2.Name = "button2";
-            button2.Size = new Size(105, 33);
-            button2.TabIndex = 6;
-            button2.Text = "Salir";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            btnSalir.Cursor = Cursors.Hand;
+            btnSalir.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSalir.Location = new Point(446, 271);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(105, 33);
+            btnSalir.TabIndex = 6;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += button2_Click;
             // 
             // BtnCerrar
             // 
+            BtnCerrar.Cursor = Cursors.Hand;
             BtnCerrar.Image = (Image)resources.GetObject("BtnCerrar.Image");
             BtnCerrar.Location = new Point(613, 12);
             BtnCerrar.Name = "BtnCerrar";
@@ -119,14 +123,25 @@
             BtnCerrar.TabStop = false;
             BtnCerrar.Click += BtnCerrar_Click;
             // 
+            // imgLogin
+            // 
+            imgLogin.BackgroundImage = (Image)resources.GetObject("imgLogin.BackgroundImage");
+            imgLogin.Dock = DockStyle.Left;
+            imgLogin.Location = new Point(0, 0);
+            imgLogin.Name = "imgLogin";
+            imgLogin.Size = new Size(145, 400);
+            imgLogin.TabIndex = 8;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoValidate = AutoValidate.EnablePreventFocusChange;
             BackColor = SystemColors.ActiveBorder;
             ClientSize = new Size(650, 400);
+            Controls.Add(imgLogin);
             Controls.Add(BtnCerrar);
-            Controls.Add(button2);
+            Controls.Add(btnSalir);
             Controls.Add(BtnEntrar);
             Controls.Add(lblSignIn);
             Controls.Add(txtPassword);
@@ -150,7 +165,8 @@
         private TextBox txtPassword;
         private Label lblSignIn;
         private Button BtnEntrar;
-        private Button button2;
+        private Button btnSalir;
         private PictureBox BtnCerrar;
+        private Panel imgLogin;
     }
 }

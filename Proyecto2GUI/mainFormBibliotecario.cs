@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto2;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,13 @@ namespace Proyecto2GUI
 {
     public partial class mainFormBibliotecario : Form
     {
-        public mainFormBibliotecario()
+        private Biblioteca _biblioteca;
+
+        public mainFormBibliotecario(Biblioteca biblioteca)
         {
             InitializeComponent();
+            _biblioteca = biblioteca;
         }
+
     }
 }
