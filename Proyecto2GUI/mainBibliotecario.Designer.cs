@@ -125,7 +125,7 @@
             // 
             // PanelGenInformes
             // 
-            PanelGenInformes.BackColor = Color.DarkGray;
+            PanelGenInformes.BackColor = Color.FromArgb(240, 211, 155);
             PanelGenInformes.Controls.Add(btnEstadisticas);
             PanelGenInformes.Controls.Add(btnPrestamos);
             PanelGenInformes.Dock = DockStyle.Top;
@@ -142,11 +142,16 @@
             btnEstadisticas.FlatAppearance.BorderSize = 0;
             btnEstadisticas.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
             btnEstadisticas.FlatStyle = FlatStyle.Flat;
+            btnEstadisticas.Font = new Font("Segoe UI Variable Small Semibol", 9F, FontStyle.Bold);
+            btnEstadisticas.Image = (Image)resources.GetObject("btnEstadisticas.Image");
+            btnEstadisticas.ImageAlign = ContentAlignment.MiddleLeft;
             btnEstadisticas.Location = new Point(0, 40);
             btnEstadisticas.Name = "btnEstadisticas";
+            btnEstadisticas.Padding = new Padding(60, 0, 0, 0);
             btnEstadisticas.Size = new Size(280, 40);
             btnEstadisticas.TabIndex = 1;
             btnEstadisticas.Text = "Estadisticas";
+            btnEstadisticas.TextAlign = ContentAlignment.MiddleRight;
             btnEstadisticas.UseVisualStyleBackColor = false;
             btnEstadisticas.Click += btnEstadisticas_Click;
             // 
@@ -158,11 +163,16 @@
             btnPrestamos.FlatAppearance.BorderSize = 0;
             btnPrestamos.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
             btnPrestamos.FlatStyle = FlatStyle.Flat;
+            btnPrestamos.Font = new Font("Segoe UI Variable Small Semibol", 9F, FontStyle.Bold);
+            btnPrestamos.Image = (Image)resources.GetObject("btnPrestamos.Image");
+            btnPrestamos.ImageAlign = ContentAlignment.MiddleLeft;
             btnPrestamos.Location = new Point(0, 0);
             btnPrestamos.Name = "btnPrestamos";
+            btnPrestamos.Padding = new Padding(60, 0, 0, 0);
             btnPrestamos.Size = new Size(280, 40);
             btnPrestamos.TabIndex = 0;
             btnPrestamos.Text = "Prestamos Activos";
+            btnPrestamos.TextAlign = ContentAlignment.MiddleRight;
             btnPrestamos.UseVisualStyleBackColor = false;
             btnPrestamos.Click += btnPrestamos_Click;
             // 
@@ -173,18 +183,22 @@
             BotonGenInformes.FlatAppearance.BorderSize = 0;
             BotonGenInformes.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
             BotonGenInformes.FlatStyle = FlatStyle.Flat;
-            BotonGenInformes.Font = new Font("Segoe UI Variable Display Semib", 12F, FontStyle.Bold);
+            BotonGenInformes.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
+            BotonGenInformes.Image = (Image)resources.GetObject("BotonGenInformes.Image");
+            BotonGenInformes.ImageAlign = ContentAlignment.MiddleLeft;
             BotonGenInformes.Location = new Point(0, 482);
             BotonGenInformes.Name = "BotonGenInformes";
+            BotonGenInformes.Padding = new Padding(20, 0, 15, 0);
             BotonGenInformes.Size = new Size(280, 60);
             BotonGenInformes.TabIndex = 5;
             BotonGenInformes.Text = "Generar Informes";
+            BotonGenInformes.TextAlign = ContentAlignment.MiddleRight;
             BotonGenInformes.UseVisualStyleBackColor = true;
             BotonGenInformes.Click += BotonGenInformes_Click;
             // 
             // PanelGestUsuarios
             // 
-            PanelGestUsuarios.BackColor = Color.DarkGray;
+            PanelGestUsuarios.BackColor = Color.FromArgb(240, 211, 155);
             PanelGestUsuarios.Controls.Add(btnEditarUsuario);
             PanelGestUsuarios.Controls.Add(btnRegistrarUsuario);
             PanelGestUsuarios.Dock = DockStyle.Top;
@@ -201,11 +215,16 @@
             btnEditarUsuario.FlatAppearance.BorderSize = 0;
             btnEditarUsuario.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
             btnEditarUsuario.FlatStyle = FlatStyle.Flat;
+            btnEditarUsuario.Font = new Font("Segoe UI Variable Small Semibol", 9F, FontStyle.Bold);
+            btnEditarUsuario.Image = (Image)resources.GetObject("btnEditarUsuario.Image");
+            btnEditarUsuario.ImageAlign = ContentAlignment.MiddleLeft;
             btnEditarUsuario.Location = new Point(0, 40);
             btnEditarUsuario.Name = "btnEditarUsuario";
+            btnEditarUsuario.Padding = new Padding(60, 0, 0, 0);
             btnEditarUsuario.Size = new Size(280, 40);
             btnEditarUsuario.TabIndex = 1;
             btnEditarUsuario.Text = "Editar Usuario";
+            btnEditarUsuario.TextAlign = ContentAlignment.MiddleRight;
             btnEditarUsuario.UseVisualStyleBackColor = false;
             btnEditarUsuario.Click += btnEditarUsuario_Click;
             // 
@@ -217,11 +236,16 @@
             btnRegistrarUsuario.FlatAppearance.BorderSize = 0;
             btnRegistrarUsuario.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
             btnRegistrarUsuario.FlatStyle = FlatStyle.Flat;
+            btnRegistrarUsuario.Font = new Font("Segoe UI Variable Small Semibol", 9F, FontStyle.Bold);
+            btnRegistrarUsuario.Image = (Image)resources.GetObject("btnRegistrarUsuario.Image");
+            btnRegistrarUsuario.ImageAlign = ContentAlignment.MiddleLeft;
             btnRegistrarUsuario.Location = new Point(0, 0);
             btnRegistrarUsuario.Name = "btnRegistrarUsuario";
+            btnRegistrarUsuario.Padding = new Padding(60, 0, 0, 0);
             btnRegistrarUsuario.Size = new Size(280, 40);
             btnRegistrarUsuario.TabIndex = 0;
-            btnRegistrarUsuario.Text = "Regiistrar Usuario";
+            btnRegistrarUsuario.Text = "Registrar Usuario";
+            btnRegistrarUsuario.TextAlign = ContentAlignment.MiddleRight;
             btnRegistrarUsuario.UseVisualStyleBackColor = false;
             btnRegistrarUsuario.Click += btnRegistrarUsuario_Click;
             // 
@@ -232,18 +256,22 @@
             BotonGestLibros.FlatAppearance.BorderSize = 0;
             BotonGestLibros.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
             BotonGestLibros.FlatStyle = FlatStyle.Flat;
-            BotonGestLibros.Font = new Font("Segoe UI Variable Display Semib", 12F, FontStyle.Bold);
+            BotonGestLibros.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
+            BotonGestLibros.Image = (Image)resources.GetObject("BotonGestLibros.Image");
+            BotonGestLibros.ImageAlign = ContentAlignment.MiddleLeft;
             BotonGestLibros.Location = new Point(0, 335);
             BotonGestLibros.Name = "BotonGestLibros";
+            BotonGestLibros.Padding = new Padding(20, 0, 20, 0);
             BotonGestLibros.Size = new Size(280, 60);
             BotonGestLibros.TabIndex = 3;
             BotonGestLibros.Text = "Gestion Usuarios";
+            BotonGestLibros.TextAlign = ContentAlignment.MiddleRight;
             BotonGestLibros.UseVisualStyleBackColor = true;
             BotonGestLibros.Click += BotonGestLibros_Click;
             // 
             // PanelSubGestLibros
             // 
-            PanelSubGestLibros.BackColor = Color.DarkGray;
+            PanelSubGestLibros.BackColor = Color.FromArgb(240, 211, 155);
             PanelSubGestLibros.Controls.Add(btnEliminarLibro);
             PanelSubGestLibros.Controls.Add(btnBuscarLibro);
             PanelSubGestLibros.Controls.Add(btnRegistrarLibro);
@@ -261,11 +289,16 @@
             btnEliminarLibro.FlatAppearance.BorderSize = 0;
             btnEliminarLibro.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
             btnEliminarLibro.FlatStyle = FlatStyle.Flat;
+            btnEliminarLibro.Font = new Font("Segoe UI Variable Small Semibol", 9F, FontStyle.Bold);
+            btnEliminarLibro.Image = (Image)resources.GetObject("btnEliminarLibro.Image");
+            btnEliminarLibro.ImageAlign = ContentAlignment.MiddleLeft;
             btnEliminarLibro.Location = new Point(0, 80);
             btnEliminarLibro.Name = "btnEliminarLibro";
+            btnEliminarLibro.Padding = new Padding(60, 0, 55, 0);
             btnEliminarLibro.Size = new Size(280, 40);
             btnEliminarLibro.TabIndex = 2;
             btnEliminarLibro.Text = "Eliminar Libro";
+            btnEliminarLibro.TextAlign = ContentAlignment.MiddleRight;
             btnEliminarLibro.UseVisualStyleBackColor = false;
             btnEliminarLibro.Click += btnEliminarLibro_Click;
             // 
@@ -277,27 +310,38 @@
             btnBuscarLibro.FlatAppearance.BorderSize = 0;
             btnBuscarLibro.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
             btnBuscarLibro.FlatStyle = FlatStyle.Flat;
+            btnBuscarLibro.Font = new Font("Segoe UI Variable Small Semibol", 9F, FontStyle.Bold);
+            btnBuscarLibro.Image = (Image)resources.GetObject("btnBuscarLibro.Image");
+            btnBuscarLibro.ImageAlign = ContentAlignment.MiddleLeft;
             btnBuscarLibro.Location = new Point(0, 40);
             btnBuscarLibro.Name = "btnBuscarLibro";
+            btnBuscarLibro.Padding = new Padding(60, 0, 66, 0);
             btnBuscarLibro.Size = new Size(280, 40);
             btnBuscarLibro.TabIndex = 1;
             btnBuscarLibro.Text = "Buscar Libro";
+            btnBuscarLibro.TextAlign = ContentAlignment.MiddleRight;
             btnBuscarLibro.UseVisualStyleBackColor = false;
             btnBuscarLibro.Click += btnBuscarLibro_Click;
             // 
             // btnRegistrarLibro
             // 
             btnRegistrarLibro.BackColor = Color.FromArgb(230, 165, 36);
+            btnRegistrarLibro.BackgroundImageLayout = ImageLayout.None;
             btnRegistrarLibro.Cursor = Cursors.Hand;
             btnRegistrarLibro.Dock = DockStyle.Top;
             btnRegistrarLibro.FlatAppearance.BorderSize = 0;
             btnRegistrarLibro.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
             btnRegistrarLibro.FlatStyle = FlatStyle.Flat;
+            btnRegistrarLibro.Font = new Font("Segoe UI Variable Small Semibol", 9F, FontStyle.Bold);
+            btnRegistrarLibro.Image = (Image)resources.GetObject("btnRegistrarLibro.Image");
+            btnRegistrarLibro.ImageAlign = ContentAlignment.MiddleLeft;
             btnRegistrarLibro.Location = new Point(0, 0);
             btnRegistrarLibro.Name = "btnRegistrarLibro";
+            btnRegistrarLibro.Padding = new Padding(60, 0, 55, 0);
             btnRegistrarLibro.Size = new Size(280, 40);
             btnRegistrarLibro.TabIndex = 0;
             btnRegistrarLibro.Text = "Agregar Libro";
+            btnRegistrarLibro.TextAlign = ContentAlignment.MiddleRight;
             btnRegistrarLibro.UseVisualStyleBackColor = false;
             btnRegistrarLibro.Click += btnRegistrarLibro_Click;
             // 
@@ -308,12 +352,16 @@
             BotonGestionLibros.FlatAppearance.BorderSize = 0;
             BotonGestionLibros.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
             BotonGestionLibros.FlatStyle = FlatStyle.Flat;
-            BotonGestionLibros.Font = new Font("Segoe UI Variable Display Semib", 12F, FontStyle.Bold);
+            BotonGestionLibros.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
+            BotonGestionLibros.Image = (Image)resources.GetObject("BotonGestionLibros.Image");
+            BotonGestionLibros.ImageAlign = ContentAlignment.MiddleLeft;
             BotonGestionLibros.Location = new Point(0, 150);
             BotonGestionLibros.Name = "BotonGestionLibros";
+            BotonGestionLibros.Padding = new Padding(20, 0, 40, 0);
             BotonGestionLibros.Size = new Size(280, 60);
             BotonGestionLibros.TabIndex = 1;
             BotonGestionLibros.Text = "Gestion Libros";
+            BotonGestionLibros.TextAlign = ContentAlignment.MiddleRight;
             BotonGestionLibros.UseVisualStyleBackColor = true;
             BotonGestionLibros.Click += BotonGestionLibros_Click;
             // 
@@ -340,6 +388,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(1380, 780);
             Controls.Add(panelMenuPrincipal);
             Controls.Add(barraTitulo);
