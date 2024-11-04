@@ -279,12 +279,13 @@ namespace Proyecto2
             }
             return null;
         }
-        public void MostrarListaUsuarios() 
+        public List<Usuario> MostrarListaUsuarios() 
         {
-            foreach (var usuarioActual in listaUsuarios)
+            return listaUsuarios;
+            /* foreach (var usuarioActual in listaUsuarios)
             {
                 usuarioActual.MostrarUsuario();
-            }
+            }*/
         }
         //Modulo 3 Prestamos Lector
         //metodo temporal para solicitar prestamos

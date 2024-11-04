@@ -19,8 +19,6 @@ namespace Proyecto2GUI
 
             Biblioteca biblioteca = new Biblioteca();
             biblioteca.RegistrarUsuarioNuevo();
-
-
             Application.Run(new Login(biblioteca));
 
 

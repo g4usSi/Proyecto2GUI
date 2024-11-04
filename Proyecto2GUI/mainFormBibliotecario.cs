@@ -17,7 +17,7 @@ namespace Proyecto2GUI
     public partial class mainFormBibliotecario : Form
     {
         private Biblioteca _biblioteca;
-
+        DataTable usuariosTabla = new DataTable();
         public mainFormBibliotecario(Biblioteca biblioteca)
         {
             InitializeComponent();
@@ -52,5 +52,22 @@ namespace Proyecto2GUI
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+             _biblioteca.CerrarSesion();
+             this.Close();
+             
+             var loginForm = new Login(_biblioteca);
+             loginForm.Show();
+
+        }
+
+
     }
 }

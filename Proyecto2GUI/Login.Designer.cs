@@ -150,7 +150,7 @@ namespace Proyecto2GUI
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
-            BackColor = SystemColors.ActiveBorder;
+            BackColor = Color.FromArgb(235, 235, 235);
             ClientSize = new Size(650, 400);
             Controls.Add(lblSignIn);
             Controls.Add(label1);
