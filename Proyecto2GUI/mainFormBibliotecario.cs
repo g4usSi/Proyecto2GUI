@@ -52,7 +52,7 @@ namespace Proyecto2GUI
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
+        //Botones de manejo de ventana
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -67,8 +67,58 @@ namespace Proyecto2GUI
             loginForm.Show();
 
         }
+        //
+        //
+        //Botones Gestion de Libros
+        private void btnLibros_Click(object sender, EventArgs e)
+        {
 
+        }
         private void btnFindBook_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void btnAddBook_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelBook_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //
+        //
+        //Botones Gestions de usuarios
+        private void btnGestionUsers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditElimUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
+        //
+        //
+        //Boton Generar Informes
+        private void btnGenerarInform_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMostrarPrestamos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMostrarEstadisticas_Click(object sender, EventArgs e)
         {
 
         }
