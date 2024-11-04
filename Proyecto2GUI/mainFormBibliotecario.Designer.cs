@@ -34,25 +34,31 @@
             btnMinimizar = new PictureBox();
             btnCerrar = new PictureBox();
             pnelMenu = new Panel();
+            panel3 = new Panel();
+            panel2 = new Panel();
             button1 = new Button();
+            button2 = new Button();
+            button7 = new Button();
             panel1 = new Panel();
+            panel7 = new Panel();
             btnDelBook = new Button();
-            btnFindBook = new Button();
             btnAddBook = new Button();
+            btnFindBook = new Button();
+            btnLibros = new Button();
             lblTituloApp = new Label();
             imgLogo = new PictureBox();
-            btnLibros = new Button();
-            panel7 = new Panel();
-            button7 = new Button();
-            panel2 = new Panel();
-            button2 = new Button();
+            button3 = new Button();
+            panel4 = new Panel();
+            button4 = new Button();
+            button5 = new Button();
             brraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
             pnelMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)imgLogo).BeginInit();
-            panel7.SuspendLayout();
             panel2.SuspendLayout();
+            panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)imgLogo).BeginInit();
+            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // brraTitulo
@@ -106,6 +112,9 @@
             // pnelMenu
             // 
             pnelMenu.BackColor = Color.FromArgb(184, 149, 93);
+            pnelMenu.Controls.Add(panel4);
+            pnelMenu.Controls.Add(button3);
+            pnelMenu.Controls.Add(panel3);
             pnelMenu.Controls.Add(panel2);
             pnelMenu.Controls.Add(button7);
             pnelMenu.Controls.Add(panel1);
@@ -119,23 +128,69 @@
             pnelMenu.Size = new Size(280, 715);
             pnelMenu.TabIndex = 1;
             // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(230, 165, 36);
+            panel3.Location = new Point(0, 335);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(13, 59);
+            panel3.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(button1);
+            panel2.Controls.Add(button2);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 395);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(280, 87);
+            panel2.TabIndex = 7;
+            // 
             // button1
             // 
-            button1.BackgroundImageLayout = ImageLayout.Zoom;
-            button1.Cursor = Cursors.Hand;
+            button1.BackColor = Color.FromArgb(230, 165, 36);
+            button1.Dock = DockStyle.Top;
             button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(202, 155, 66);
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(202, 155, 66);
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 11F);
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(521, 158);
+            button1.Location = new Point(0, 40);
             button1.Name = "button1";
-            button1.Size = new Size(268, 60);
-            button1.TabIndex = 6;
-            button1.Text = "Gestion Usuarios";
-            button1.UseVisualStyleBackColor = true;
+            button1.Size = new Size(280, 40);
+            button1.TabIndex = 1;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(230, 165, 36);
+            button2.Dock = DockStyle.Top;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Location = new Point(0, 0);
+            button2.Name = "button2";
+            button2.Size = new Size(280, 40);
+            button2.TabIndex = 0;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            button7.BackgroundImageLayout = ImageLayout.Zoom;
+            button7.Cursor = Cursors.Hand;
+            button7.Dock = DockStyle.Top;
+            button7.FlatAppearance.BorderSize = 0;
+            button7.FlatAppearance.MouseDownBackColor = Color.FromArgb(202, 155, 66);
+            button7.FlatAppearance.MouseOverBackColor = Color.FromArgb(202, 155, 66);
+            button7.FlatStyle = FlatStyle.Flat;
+            button7.Font = new Font("Segoe UI", 11F);
+            button7.Image = (Image)resources.GetObject("button7.Image");
+            button7.ImageAlign = ContentAlignment.MiddleLeft;
+            button7.Location = new Point(0, 335);
+            button7.Name = "button7";
+            button7.Padding = new Padding(20, 0, 0, 0);
+            button7.Size = new Size(280, 60);
+            button7.TabIndex = 7;
+            button7.Text = "Gestion Usuarios";
+            button7.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -144,6 +199,18 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(13, 59);
             panel1.TabIndex = 2;
+            // 
+            // panel7
+            // 
+            panel7.BackColor = Color.FromArgb(202, 155, 66);
+            panel7.Controls.Add(btnDelBook);
+            panel7.Controls.Add(btnAddBook);
+            panel7.Controls.Add(btnFindBook);
+            panel7.Dock = DockStyle.Top;
+            panel7.Location = new Point(0, 213);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(280, 122);
+            panel7.TabIndex = 10;
             // 
             // btnDelBook
             // 
@@ -155,29 +222,12 @@
             btnDelBook.ImageAlign = ContentAlignment.MiddleLeft;
             btnDelBook.Location = new Point(0, 80);
             btnDelBook.Name = "btnDelBook";
-            btnDelBook.Padding = new Padding(30, 0, 70, 0);
+            btnDelBook.Padding = new Padding(50, 0, 70, 0);
             btnDelBook.Size = new Size(280, 40);
             btnDelBook.TabIndex = 4;
             btnDelBook.Text = "Eliminar Libro";
             btnDelBook.TextAlign = ContentAlignment.MiddleRight;
             btnDelBook.UseVisualStyleBackColor = false;
-            // 
-            // btnFindBook
-            // 
-            btnFindBook.BackColor = Color.FromArgb(230, 165, 36);
-            btnFindBook.Dock = DockStyle.Top;
-            btnFindBook.FlatAppearance.BorderSize = 0;
-            btnFindBook.FlatStyle = FlatStyle.Flat;
-            btnFindBook.Image = (Image)resources.GetObject("btnFindBook.Image");
-            btnFindBook.ImageAlign = ContentAlignment.MiddleLeft;
-            btnFindBook.Location = new Point(0, 0);
-            btnFindBook.Name = "btnFindBook";
-            btnFindBook.Padding = new Padding(30, 0, 82, 0);
-            btnFindBook.Size = new Size(280, 40);
-            btnFindBook.TabIndex = 3;
-            btnFindBook.Text = "Buscar Libro";
-            btnFindBook.TextAlign = ContentAlignment.MiddleRight;
-            btnFindBook.UseVisualStyleBackColor = false;
             // 
             // btnAddBook
             // 
@@ -189,31 +239,29 @@
             btnAddBook.ImageAlign = ContentAlignment.MiddleLeft;
             btnAddBook.Location = new Point(0, 40);
             btnAddBook.Name = "btnAddBook";
-            btnAddBook.Padding = new Padding(30, 0, 71, 0);
+            btnAddBook.Padding = new Padding(50, 0, 71, 0);
             btnAddBook.Size = new Size(280, 40);
             btnAddBook.TabIndex = 2;
             btnAddBook.Text = "Agregar Libro";
             btnAddBook.TextAlign = ContentAlignment.MiddleRight;
             btnAddBook.UseVisualStyleBackColor = false;
             // 
-            // lblTituloApp
+            // btnFindBook
             // 
-            lblTituloApp.AutoSize = true;
-            lblTituloApp.Font = new Font("Aston Script Bold", 19.7999973F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTituloApp.Location = new Point(27, 41);
-            lblTituloApp.Name = "lblTituloApp";
-            lblTituloApp.Size = new Size(221, 69);
-            lblTituloApp.TabIndex = 5;
-            lblTituloApp.Text = "Biblioteca";
-            // 
-            // imgLogo
-            // 
-            imgLogo.Dock = DockStyle.Top;
-            imgLogo.Location = new Point(0, 0);
-            imgLogo.Name = "imgLogo";
-            imgLogo.Size = new Size(280, 153);
-            imgLogo.TabIndex = 1;
-            imgLogo.TabStop = false;
+            btnFindBook.BackColor = Color.FromArgb(230, 165, 36);
+            btnFindBook.Dock = DockStyle.Top;
+            btnFindBook.FlatAppearance.BorderSize = 0;
+            btnFindBook.FlatStyle = FlatStyle.Flat;
+            btnFindBook.Image = (Image)resources.GetObject("btnFindBook.Image");
+            btnFindBook.ImageAlign = ContentAlignment.MiddleLeft;
+            btnFindBook.Location = new Point(0, 0);
+            btnFindBook.Name = "btnFindBook";
+            btnFindBook.Padding = new Padding(50, 0, 82, 0);
+            btnFindBook.Size = new Size(280, 40);
+            btnFindBook.TabIndex = 3;
+            btnFindBook.Text = "Buscar Libro";
+            btnFindBook.TextAlign = ContentAlignment.MiddleRight;
+            btnFindBook.UseVisualStyleBackColor = false;
             // 
             // btnLibros
             // 
@@ -235,58 +283,73 @@
             btnLibros.Text = "Gestion Libros";
             btnLibros.UseVisualStyleBackColor = true;
             // 
-            // panel7
+            // lblTituloApp
             // 
-            panel7.BackColor = Color.FromArgb(202, 155, 66);
-            panel7.Controls.Add(btnDelBook);
-            panel7.Controls.Add(btnAddBook);
-            panel7.Controls.Add(btnFindBook);
-            panel7.Dock = DockStyle.Top;
-            panel7.Location = new Point(0, 213);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(280, 122);
-            panel7.TabIndex = 10;
+            lblTituloApp.AutoSize = true;
+            lblTituloApp.Font = new Font("Aston Script Bold", 19.7999973F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTituloApp.Location = new Point(27, 41);
+            lblTituloApp.Name = "lblTituloApp";
+            lblTituloApp.Size = new Size(221, 69);
+            lblTituloApp.TabIndex = 5;
+            lblTituloApp.Text = "Biblioteca";
             // 
-            // button7
+            // imgLogo
             // 
-            button7.BackgroundImageLayout = ImageLayout.Zoom;
-            button7.Cursor = Cursors.Hand;
-            button7.Dock = DockStyle.Top;
-            button7.FlatAppearance.BorderSize = 0;
-            button7.FlatAppearance.MouseDownBackColor = Color.FromArgb(202, 155, 66);
-            button7.FlatAppearance.MouseOverBackColor = Color.FromArgb(202, 155, 66);
-            button7.FlatStyle = FlatStyle.Flat;
-            button7.Font = new Font("Segoe UI", 11F);
-            button7.Image = (Image)resources.GetObject("button7.Image");
-            button7.ImageAlign = ContentAlignment.MiddleLeft;
-            button7.Location = new Point(0, 335);
-            button7.Name = "button7";
-            button7.Size = new Size(280, 60);
-            button7.TabIndex = 7;
-            button7.Text = "Gestion Usuarios";
-            button7.UseVisualStyleBackColor = true;
+            imgLogo.Dock = DockStyle.Top;
+            imgLogo.Location = new Point(0, 0);
+            imgLogo.Name = "imgLogo";
+            imgLogo.Size = new Size(280, 153);
+            imgLogo.TabIndex = 1;
+            imgLogo.TabStop = false;
             // 
-            // panel2
+            // button3
             // 
-            panel2.Controls.Add(button2);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 395);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(280, 125);
-            panel2.TabIndex = 7;
+            button3.Dock = DockStyle.Top;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(202, 155, 66);
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Location = new Point(0, 482);
+            button3.Name = "button3";
+            button3.Size = new Size(280, 60);
+            button3.TabIndex = 11;
+            button3.Text = "button3";
+            button3.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // panel4
             // 
-            button2.BackColor = Color.FromArgb(230, 165, 36);
-            button2.Dock = DockStyle.Top;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(0, 0);
-            button2.Name = "button2";
-            button2.Size = new Size(280, 40);
-            button2.TabIndex = 0;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = false;
+            panel4.Controls.Add(button5);
+            panel4.Controls.Add(button4);
+            panel4.Dock = DockStyle.Top;
+            panel4.Location = new Point(0, 542);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(280, 85);
+            panel4.TabIndex = 2;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.FromArgb(230, 165, 36);
+            button4.Dock = DockStyle.Top;
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Location = new Point(0, 0);
+            button4.Name = "button4";
+            button4.Size = new Size(280, 40);
+            button4.TabIndex = 0;
+            button4.Text = "button4";
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.FromArgb(230, 165, 36);
+            button5.Dock = DockStyle.Top;
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Location = new Point(0, 40);
+            button5.Name = "button5";
+            button5.Size = new Size(280, 40);
+            button5.TabIndex = 1;
+            button5.Text = "button5";
+            button5.UseVisualStyleBackColor = false;
             // 
             // mainFormBibliotecario
             // 
@@ -296,7 +359,6 @@
             ClientSize = new Size(1380, 780);
             Controls.Add(pnelMenu);
             Controls.Add(brraTitulo);
-            Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "mainFormBibliotecario";
             StartPosition = FormStartPosition.CenterScreen;
@@ -307,9 +369,10 @@
             ((System.ComponentModel.ISupportInitialize)btnCerrar).EndInit();
             pnelMenu.ResumeLayout(false);
             pnelMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)imgLogo).EndInit();
-            panel7.ResumeLayout(false);
             panel2.ResumeLayout(false);
+            panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)imgLogo).EndInit();
+            panel4.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -327,10 +390,15 @@
         private Button btnAddBook;
         private Button btnDelBook;
         private Button btnFindBook;
-        private Button button1;
         private Panel panel2;
         private Button button7;
         private Panel panel7;
         private Button button2;
+        private Button button1;
+        private Panel panel3;
+        private Panel panel4;
+        private Button button4;
+        private Button button3;
+        private Button button5;
     }
 }
