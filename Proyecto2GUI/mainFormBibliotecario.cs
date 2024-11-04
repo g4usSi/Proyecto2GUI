@@ -60,14 +60,17 @@ namespace Proyecto2GUI
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-             _biblioteca.CerrarSesion();
-             this.Close();
-             
-             var loginForm = new Login(_biblioteca);
-             loginForm.Show();
+            _biblioteca.CerrarSesion();
+            this.Close();
+
+            var loginForm = new Login(_biblioteca);
+            loginForm.Show();
 
         }
 
+        private void btnFindBook_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
