@@ -51,6 +51,7 @@
             panel4 = new Panel();
             button4 = new Button();
             button5 = new Button();
+            panel5 = new Panel();
             brraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
@@ -112,6 +113,7 @@
             // pnelMenu
             // 
             pnelMenu.BackColor = Color.FromArgb(184, 149, 93);
+            pnelMenu.Controls.Add(panel5);
             pnelMenu.Controls.Add(panel4);
             pnelMenu.Controls.Add(button3);
             pnelMenu.Controls.Add(panel3);
@@ -152,11 +154,15 @@
             button1.Dock = DockStyle.Top;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
             button1.Location = new Point(0, 40);
             button1.Name = "button1";
+            button1.Padding = new Padding(50, 0, 71, 0);
             button1.Size = new Size(280, 40);
             button1.TabIndex = 1;
-            button1.Text = "button1";
+            button1.Text = "Editar Usuario";
+            button1.TextAlign = ContentAlignment.MiddleRight;
             button1.UseVisualStyleBackColor = false;
             // 
             // button2
@@ -165,11 +171,15 @@
             button2.Dock = DockStyle.Top;
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
             button2.Location = new Point(0, 0);
             button2.Name = "button2";
+            button2.Padding = new Padding(50, 0, 50, 0);
             button2.Size = new Size(280, 40);
             button2.TabIndex = 0;
-            button2.Text = "button2";
+            button2.Text = "Registrar Usuario";
+            button2.TextAlign = ContentAlignment.MiddleRight;
             button2.UseVisualStyleBackColor = false;
             // 
             // button7
@@ -186,7 +196,7 @@
             button7.ImageAlign = ContentAlignment.MiddleLeft;
             button7.Location = new Point(0, 335);
             button7.Name = "button7";
-            button7.Padding = new Padding(20, 0, 0, 0);
+            button7.Padding = new Padding(15, 0, 0, 0);
             button7.Size = new Size(280, 60);
             button7.TabIndex = 7;
             button7.Text = "Gestion Usuarios";
@@ -277,7 +287,7 @@
             btnLibros.ImageAlign = ContentAlignment.MiddleLeft;
             btnLibros.Location = new Point(0, 153);
             btnLibros.Name = "btnLibros";
-            btnLibros.Padding = new Padding(20, 0, 0, 0);
+            btnLibros.Padding = new Padding(15, 0, 0, 0);
             btnLibros.Size = new Size(280, 60);
             btnLibros.TabIndex = 0;
             btnLibros.Text = "Gestion Libros";
@@ -308,11 +318,15 @@
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(202, 155, 66);
             button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Segoe UI", 11F);
+            button3.Image = (Image)resources.GetObject("button3.Image");
+            button3.ImageAlign = ContentAlignment.MiddleLeft;
             button3.Location = new Point(0, 482);
             button3.Name = "button3";
+            button3.Padding = new Padding(15, 0, 0, 0);
             button3.Size = new Size(280, 60);
             button3.TabIndex = 11;
-            button3.Text = "button3";
+            button3.Text = "Generar Informes";
             button3.UseVisualStyleBackColor = true;
             // 
             // panel4
@@ -331,11 +345,15 @@
             button4.Dock = DockStyle.Top;
             button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.Flat;
+            button4.Image = (Image)resources.GetObject("button4.Image");
+            button4.ImageAlign = ContentAlignment.MiddleLeft;
             button4.Location = new Point(0, 0);
             button4.Name = "button4";
+            button4.Padding = new Padding(50, 0, 45, 0);
             button4.Size = new Size(280, 40);
             button4.TabIndex = 0;
-            button4.Text = "button4";
+            button4.Text = "Prestamos Activos";
+            button4.TextAlign = ContentAlignment.MiddleRight;
             button4.UseVisualStyleBackColor = false;
             // 
             // button5
@@ -344,12 +362,24 @@
             button5.Dock = DockStyle.Top;
             button5.FlatAppearance.BorderSize = 0;
             button5.FlatStyle = FlatStyle.Flat;
+            button5.Image = (Image)resources.GetObject("button5.Image");
+            button5.ImageAlign = ContentAlignment.MiddleLeft;
             button5.Location = new Point(0, 40);
             button5.Name = "button5";
+            button5.Padding = new Padding(50, 0, 89, 0);
             button5.Size = new Size(280, 40);
             button5.TabIndex = 1;
-            button5.Text = "button5";
+            button5.Text = "Estadisticas";
+            button5.TextAlign = ContentAlignment.MiddleRight;
             button5.UseVisualStyleBackColor = false;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.FromArgb(230, 165, 36);
+            panel5.Location = new Point(0, 483);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(13, 59);
+            panel5.TabIndex = 3;
             // 
             // mainFormBibliotecario
             // 
@@ -400,5 +430,6 @@
         private Button button4;
         private Button button3;
         private Button button5;
+        private Panel panel5;
     }
 }
