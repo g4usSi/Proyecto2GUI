@@ -16,12 +16,10 @@ namespace Proyecto2GUI
     public partial class Login : Form
     {
         private Biblioteca _biblioteca;
-
         public Login(Biblioteca biblioteca)
         {
-            InitializeComponent();
             _biblioteca = biblioteca;
-
+            InitializeComponent();
             FormBorderStyle = FormBorderStyle.None;
 
             // Crear una región con esquinas redondeadas
@@ -69,7 +67,7 @@ namespace Proyecto2GUI
             {
                 MessageBox.Show("Inicio de sesión exitoso", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                var mainForm = new mainFormBibliotecario(_biblioteca);  // Pasar _biblioteca si es necesario
+                var mainForm = new mainBibliotecario(_biblioteca, this);  // Pasar _biblioteca si es necesario
                 mainForm.Show();
 
                 this.Hide();
