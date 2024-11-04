@@ -70,6 +70,7 @@
             barraTitulo.Name = "barraTitulo";
             barraTitulo.Size = new Size(1380, 65);
             barraTitulo.TabIndex = 0;
+            barraTitulo.Paint += barraTitulo_Paint;
             // 
             // tituloBarraBibliotecario
             // 
@@ -135,6 +136,8 @@
             // 
             // btnEstadisticas
             // 
+            btnEstadisticas.BackColor = Color.FromArgb(230, 165, 36);
+            btnEstadisticas.Cursor = Cursors.Hand;
             btnEstadisticas.Dock = DockStyle.Top;
             btnEstadisticas.FlatAppearance.BorderSize = 0;
             btnEstadisticas.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
@@ -144,11 +147,13 @@
             btnEstadisticas.Size = new Size(280, 40);
             btnEstadisticas.TabIndex = 1;
             btnEstadisticas.Text = "Estadisticas";
-            btnEstadisticas.UseVisualStyleBackColor = true;
+            btnEstadisticas.UseVisualStyleBackColor = false;
             btnEstadisticas.Click += btnEstadisticas_Click;
             // 
             // btnPrestamos
             // 
+            btnPrestamos.BackColor = Color.FromArgb(230, 165, 36);
+            btnPrestamos.Cursor = Cursors.Hand;
             btnPrestamos.Dock = DockStyle.Top;
             btnPrestamos.FlatAppearance.BorderSize = 0;
             btnPrestamos.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
@@ -158,15 +163,17 @@
             btnPrestamos.Size = new Size(280, 40);
             btnPrestamos.TabIndex = 0;
             btnPrestamos.Text = "Prestamos Activos";
-            btnPrestamos.UseVisualStyleBackColor = true;
+            btnPrestamos.UseVisualStyleBackColor = false;
             btnPrestamos.Click += btnPrestamos_Click;
             // 
             // BotonGenInformes
             // 
+            BotonGenInformes.Cursor = Cursors.Hand;
             BotonGenInformes.Dock = DockStyle.Top;
             BotonGenInformes.FlatAppearance.BorderSize = 0;
             BotonGenInformes.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
             BotonGenInformes.FlatStyle = FlatStyle.Flat;
+            BotonGenInformes.Font = new Font("Segoe UI Variable Display Semib", 12F, FontStyle.Bold);
             BotonGenInformes.Location = new Point(0, 482);
             BotonGenInformes.Name = "BotonGenInformes";
             BotonGenInformes.Size = new Size(280, 60);
@@ -188,6 +195,8 @@
             // 
             // btnEditarUsuario
             // 
+            btnEditarUsuario.BackColor = Color.FromArgb(230, 165, 36);
+            btnEditarUsuario.Cursor = Cursors.Hand;
             btnEditarUsuario.Dock = DockStyle.Top;
             btnEditarUsuario.FlatAppearance.BorderSize = 0;
             btnEditarUsuario.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
@@ -197,11 +206,13 @@
             btnEditarUsuario.Size = new Size(280, 40);
             btnEditarUsuario.TabIndex = 1;
             btnEditarUsuario.Text = "Editar Usuario";
-            btnEditarUsuario.UseVisualStyleBackColor = true;
+            btnEditarUsuario.UseVisualStyleBackColor = false;
             btnEditarUsuario.Click += btnEditarUsuario_Click;
             // 
             // btnRegistrarUsuario
             // 
+            btnRegistrarUsuario.BackColor = Color.FromArgb(230, 165, 36);
+            btnRegistrarUsuario.Cursor = Cursors.Hand;
             btnRegistrarUsuario.Dock = DockStyle.Top;
             btnRegistrarUsuario.FlatAppearance.BorderSize = 0;
             btnRegistrarUsuario.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
@@ -211,15 +222,17 @@
             btnRegistrarUsuario.Size = new Size(280, 40);
             btnRegistrarUsuario.TabIndex = 0;
             btnRegistrarUsuario.Text = "Regiistrar Usuario";
-            btnRegistrarUsuario.UseVisualStyleBackColor = true;
+            btnRegistrarUsuario.UseVisualStyleBackColor = false;
             btnRegistrarUsuario.Click += btnRegistrarUsuario_Click;
             // 
             // BotonGestLibros
             // 
+            BotonGestLibros.Cursor = Cursors.Hand;
             BotonGestLibros.Dock = DockStyle.Top;
             BotonGestLibros.FlatAppearance.BorderSize = 0;
             BotonGestLibros.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
             BotonGestLibros.FlatStyle = FlatStyle.Flat;
+            BotonGestLibros.Font = new Font("Segoe UI Variable Display Semib", 12F, FontStyle.Bold);
             BotonGestLibros.Location = new Point(0, 335);
             BotonGestLibros.Name = "BotonGestLibros";
             BotonGestLibros.Size = new Size(280, 60);
@@ -242,6 +255,8 @@
             // 
             // btnEliminarLibro
             // 
+            btnEliminarLibro.BackColor = Color.FromArgb(230, 165, 36);
+            btnEliminarLibro.Cursor = Cursors.Hand;
             btnEliminarLibro.Dock = DockStyle.Top;
             btnEliminarLibro.FlatAppearance.BorderSize = 0;
             btnEliminarLibro.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
@@ -251,11 +266,13 @@
             btnEliminarLibro.Size = new Size(280, 40);
             btnEliminarLibro.TabIndex = 2;
             btnEliminarLibro.Text = "Eliminar Libro";
-            btnEliminarLibro.UseVisualStyleBackColor = true;
+            btnEliminarLibro.UseVisualStyleBackColor = false;
             btnEliminarLibro.Click += btnEliminarLibro_Click;
             // 
             // btnBuscarLibro
             // 
+            btnBuscarLibro.BackColor = Color.FromArgb(230, 165, 36);
+            btnBuscarLibro.Cursor = Cursors.Hand;
             btnBuscarLibro.Dock = DockStyle.Top;
             btnBuscarLibro.FlatAppearance.BorderSize = 0;
             btnBuscarLibro.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
@@ -265,11 +282,13 @@
             btnBuscarLibro.Size = new Size(280, 40);
             btnBuscarLibro.TabIndex = 1;
             btnBuscarLibro.Text = "Buscar Libro";
-            btnBuscarLibro.UseVisualStyleBackColor = true;
+            btnBuscarLibro.UseVisualStyleBackColor = false;
             btnBuscarLibro.Click += btnBuscarLibro_Click;
             // 
             // btnRegistrarLibro
             // 
+            btnRegistrarLibro.BackColor = Color.FromArgb(230, 165, 36);
+            btnRegistrarLibro.Cursor = Cursors.Hand;
             btnRegistrarLibro.Dock = DockStyle.Top;
             btnRegistrarLibro.FlatAppearance.BorderSize = 0;
             btnRegistrarLibro.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
@@ -279,15 +298,17 @@
             btnRegistrarLibro.Size = new Size(280, 40);
             btnRegistrarLibro.TabIndex = 0;
             btnRegistrarLibro.Text = "Agregar Libro";
-            btnRegistrarLibro.UseVisualStyleBackColor = true;
+            btnRegistrarLibro.UseVisualStyleBackColor = false;
             btnRegistrarLibro.Click += btnRegistrarLibro_Click;
             // 
             // BotonGestionLibros
             // 
+            BotonGestionLibros.Cursor = Cursors.Hand;
             BotonGestionLibros.Dock = DockStyle.Top;
             BotonGestionLibros.FlatAppearance.BorderSize = 0;
             BotonGestionLibros.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
             BotonGestionLibros.FlatStyle = FlatStyle.Flat;
+            BotonGestionLibros.Font = new Font("Segoe UI Variable Display Semib", 12F, FontStyle.Bold);
             BotonGestionLibros.Location = new Point(0, 150);
             BotonGestionLibros.Name = "BotonGestionLibros";
             BotonGestionLibros.Size = new Size(280, 60);
@@ -308,10 +329,10 @@
             // lblTituloApp
             // 
             lblTituloApp.AutoSize = true;
-            lblTituloApp.Font = new Font("Aston Script Bold", 19.7999973F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTituloApp.Location = new Point(28, 39);
+            lblTituloApp.Font = new Font("Aston Script Bold", 22F, FontStyle.Bold);
+            lblTituloApp.Location = new Point(17, 38);
             lblTituloApp.Name = "lblTituloApp";
-            lblTituloApp.Size = new Size(221, 69);
+            lblTituloApp.Size = new Size(246, 77);
             lblTituloApp.TabIndex = 6;
             lblTituloApp.Text = "Biblioteca";
             // 
