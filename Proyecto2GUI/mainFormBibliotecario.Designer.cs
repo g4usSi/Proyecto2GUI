@@ -34,20 +34,20 @@
             btnMinimizar = new PictureBox();
             btnCerrar = new PictureBox();
             pnelMenu = new Panel();
-            button6 = new Button();
+            btnCerrarSesion = new Button();
             panel6 = new Panel();
             panel5 = new Panel();
-            panel4 = new Panel();
+            panelGenInformes = new Panel();
             btnMostrarEstadisticas = new Button();
             btnMostrarPrestamos = new Button();
             btnGenerarInform = new Button();
             panel3 = new Panel();
-            panel2 = new Panel();
+            panelGestionUsuarios = new Panel();
             btnEditElimUsuario = new Button();
             btnRegUsuario = new Button();
             btnGestionUsers = new Button();
             panel1 = new Panel();
-            panel7 = new Panel();
+            panelGestionLibros = new Panel();
             btnDelBook = new Button();
             btnAddBook = new Button();
             btnFindBook = new Button();
@@ -58,9 +58,9 @@
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
             pnelMenu.SuspendLayout();
-            panel4.SuspendLayout();
-            panel2.SuspendLayout();
-            panel7.SuspendLayout();
+            panelGenInformes.SuspendLayout();
+            panelGestionUsuarios.SuspendLayout();
+            panelGestionLibros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)imgLogo).BeginInit();
             SuspendLayout();
             // 
@@ -115,16 +115,16 @@
             // pnelMenu
             // 
             pnelMenu.BackColor = Color.FromArgb(184, 149, 93);
-            pnelMenu.Controls.Add(button6);
+            pnelMenu.Controls.Add(btnCerrarSesion);
             pnelMenu.Controls.Add(panel6);
             pnelMenu.Controls.Add(panel5);
-            pnelMenu.Controls.Add(panel4);
+            pnelMenu.Controls.Add(panelGenInformes);
             pnelMenu.Controls.Add(btnGenerarInform);
             pnelMenu.Controls.Add(panel3);
-            pnelMenu.Controls.Add(panel2);
+            pnelMenu.Controls.Add(panelGestionUsuarios);
             pnelMenu.Controls.Add(btnGestionUsers);
             pnelMenu.Controls.Add(panel1);
-            pnelMenu.Controls.Add(panel7);
+            pnelMenu.Controls.Add(panelGestionLibros);
             pnelMenu.Controls.Add(btnLibros);
             pnelMenu.Controls.Add(lblTituloApp);
             pnelMenu.Controls.Add(imgLogo);
@@ -134,19 +134,19 @@
             pnelMenu.Size = new Size(280, 715);
             pnelMenu.TabIndex = 1;
             // 
-            // button6
+            // btnCerrarSesion
             // 
-            button6.BackColor = Color.FromArgb(230, 165, 36);
-            button6.Dock = DockStyle.Bottom;
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 0);
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Location = new Point(0, 643);
-            button6.Name = "button6";
-            button6.Size = new Size(280, 42);
-            button6.TabIndex = 2;
-            button6.Text = "Cerrar Sesion";
-            button6.UseVisualStyleBackColor = false;
+            btnCerrarSesion.BackColor = Color.FromArgb(230, 165, 36);
+            btnCerrarSesion.Dock = DockStyle.Bottom;
+            btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            btnCerrarSesion.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 0);
+            btnCerrarSesion.FlatStyle = FlatStyle.Flat;
+            btnCerrarSesion.Location = new Point(0, 628);
+            btnCerrarSesion.Name = "btnCerrarSesion";
+            btnCerrarSesion.Size = new Size(280, 57);
+            btnCerrarSesion.TabIndex = 2;
+            btnCerrarSesion.Text = "Cerrar Sesion";
+            btnCerrarSesion.UseVisualStyleBackColor = false;
             // 
             // panel6
             // 
@@ -164,15 +164,15 @@
             panel5.Size = new Size(13, 59);
             panel5.TabIndex = 3;
             // 
-            // panel4
+            // panelGenInformes
             // 
-            panel4.Controls.Add(btnMostrarEstadisticas);
-            panel4.Controls.Add(btnMostrarPrestamos);
-            panel4.Dock = DockStyle.Top;
-            panel4.Location = new Point(0, 542);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(280, 85);
-            panel4.TabIndex = 2;
+            panelGenInformes.Controls.Add(btnMostrarEstadisticas);
+            panelGenInformes.Controls.Add(btnMostrarPrestamos);
+            panelGenInformes.Dock = DockStyle.Top;
+            panelGenInformes.Location = new Point(0, 542);
+            panelGenInformes.Name = "panelGenInformes";
+            panelGenInformes.Size = new Size(280, 85);
+            panelGenInformes.TabIndex = 2;
             // 
             // btnMostrarEstadisticas
             // 
@@ -236,15 +236,15 @@
             panel3.Size = new Size(13, 59);
             panel3.TabIndex = 2;
             // 
-            // panel2
+            // panelGestionUsuarios
             // 
-            panel2.Controls.Add(btnEditElimUsuario);
-            panel2.Controls.Add(btnRegUsuario);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 395);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(280, 87);
-            panel2.TabIndex = 7;
+            panelGestionUsuarios.Controls.Add(btnEditElimUsuario);
+            panelGestionUsuarios.Controls.Add(btnRegUsuario);
+            panelGestionUsuarios.Dock = DockStyle.Top;
+            panelGestionUsuarios.Location = new Point(0, 395);
+            panelGestionUsuarios.Name = "panelGestionUsuarios";
+            panelGestionUsuarios.Size = new Size(280, 87);
+            panelGestionUsuarios.TabIndex = 7;
             // 
             // btnEditElimUsuario
             // 
@@ -311,17 +311,17 @@
             panel1.Size = new Size(13, 59);
             panel1.TabIndex = 2;
             // 
-            // panel7
+            // panelGestionLibros
             // 
-            panel7.BackColor = Color.FromArgb(202, 155, 66);
-            panel7.Controls.Add(btnDelBook);
-            panel7.Controls.Add(btnAddBook);
-            panel7.Controls.Add(btnFindBook);
-            panel7.Dock = DockStyle.Top;
-            panel7.Location = new Point(0, 213);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(280, 122);
-            panel7.TabIndex = 10;
+            panelGestionLibros.BackColor = Color.FromArgb(202, 155, 66);
+            panelGestionLibros.Controls.Add(btnDelBook);
+            panelGestionLibros.Controls.Add(btnAddBook);
+            panelGestionLibros.Controls.Add(btnFindBook);
+            panelGestionLibros.Dock = DockStyle.Top;
+            panelGestionLibros.Location = new Point(0, 213);
+            panelGestionLibros.Name = "panelGestionLibros";
+            panelGestionLibros.Size = new Size(280, 122);
+            panelGestionLibros.TabIndex = 10;
             // 
             // btnDelBook
             // 
@@ -434,9 +434,9 @@
             ((System.ComponentModel.ISupportInitialize)btnCerrar).EndInit();
             pnelMenu.ResumeLayout(false);
             pnelMenu.PerformLayout();
-            panel4.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel7.ResumeLayout(false);
+            panelGenInformes.ResumeLayout(false);
+            panelGestionUsuarios.ResumeLayout(false);
+            panelGestionLibros.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)imgLogo).EndInit();
             ResumeLayout(false);
         }
@@ -455,18 +455,18 @@
         private Button btnAddBook;
         private Button btnDelBook;
         private Button btnFindBook;
-        private Panel panel2;
+        private Panel panelGestionUsuarios;
         private Button btnGestionUsers;
-        private Panel panel7;
+        private Panel panelGestionLibros;
         private Button btnRegUsuario;
         private Button btnEditElimUsuario;
         private Panel panel3;
-        private Panel panel4;
+        private Panel panelGenInformes;
         private Button btnMostrarPrestamos;
         private Button btnGenerarInform;
         private Button btnMostrarEstadisticas;
         private Panel panel5;
         private Panel panel6;
-        private Button button6;
+        private Button btnCerrarSesion;
     }
 }
