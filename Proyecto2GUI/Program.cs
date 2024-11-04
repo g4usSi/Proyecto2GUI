@@ -1,5 +1,6 @@
 using Proyecto2;
 using System.Security.Cryptography.X509Certificates;
+using System.Drawing.Drawing2D;
 
 namespace Proyecto2GUI
 {

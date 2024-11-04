@@ -28,29 +28,80 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainFormBibliotecario));
+            brraTitulo = new Panel();
+            btnMinimizar = new PictureBox();
+            btnCerrar = new PictureBox();
+            pnelMenu = new Panel();
+            brraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
             SuspendLayout();
             // 
-            // panel1
+            // brraTitulo
             // 
-            panel1.Location = new Point(24, 12);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(250, 125);
-            panel1.TabIndex = 0;
+            brraTitulo.Controls.Add(btnMinimizar);
+            brraTitulo.Controls.Add(btnCerrar);
+            brraTitulo.Dock = DockStyle.Top;
+            brraTitulo.Location = new Point(0, 0);
+            brraTitulo.Name = "brraTitulo";
+            brraTitulo.Size = new Size(1380, 65);
+            brraTitulo.TabIndex = 0;
+            brraTitulo.MouseDown += brraTitulo_MouseDown;
+            // 
+            // btnMinimizar
+            // 
+            btnMinimizar.Cursor = Cursors.Hand;
+            btnMinimizar.Image = (Image)resources.GetObject("btnMinimizar.Image");
+            btnMinimizar.Location = new Point(1271, 12);
+            btnMinimizar.Name = "btnMinimizar";
+            btnMinimizar.Size = new Size(40, 40);
+            btnMinimizar.SizeMode = PictureBoxSizeMode.Zoom;
+            btnMinimizar.TabIndex = 9;
+            btnMinimizar.TabStop = false;
+            // 
+            // btnCerrar
+            // 
+            btnCerrar.Cursor = Cursors.Hand;
+            btnCerrar.Image = (Image)resources.GetObject("btnCerrar.Image");
+            btnCerrar.Location = new Point(1328, 12);
+            btnCerrar.Name = "btnCerrar";
+            btnCerrar.Size = new Size(40, 40);
+            btnCerrar.SizeMode = PictureBoxSizeMode.Zoom;
+            btnCerrar.TabIndex = 8;
+            btnCerrar.TabStop = false;
+            // 
+            // pnelMenu
+            // 
+            pnelMenu.Dock = DockStyle.Left;
+            pnelMenu.Location = new Point(0, 65);
+            pnelMenu.Name = "pnelMenu";
+            pnelMenu.Size = new Size(250, 715);
+            pnelMenu.TabIndex = 1;
             // 
             // mainFormBibliotecario
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(panel1);
+            BackColor = Color.FromArgb(209, 209, 209);
+            ClientSize = new Size(1380, 780);
+            Controls.Add(pnelMenu);
+            Controls.Add(brraTitulo);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "mainFormBibliotecario";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "mainFormBibliotecario";
+            brraTitulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)btnMinimizar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnCerrar).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
+        private Panel brraTitulo;
+        private Panel pnelMenu;
+        private PictureBox btnMinimizar;
+        private PictureBox btnCerrar;
     }
 }
