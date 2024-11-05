@@ -104,7 +104,7 @@ namespace Proyecto2GUI
         private void btnRegistrarLibro_Click(object sender, EventArgs e)
         {
             OcultarBienvenida();
-            openChildForm(new BiblioAgregarUsuario(_biblioteca));
+            openChildForm(new BiblioAgregarLibro(_biblioteca));
             //Code...
             hideSubMenu();
 
@@ -138,6 +138,7 @@ namespace Proyecto2GUI
 
         private void btnRegistrarUsuario_Click(object sender, EventArgs e)
         {
+
             //Code...
 
             hideSubMenu();

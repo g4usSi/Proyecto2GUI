@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Proyecto2GUI
 {
-    public partial class BiblioAgregarUsuario : Form
+    public partial class BiblioEditarUsuario : Form
     {
-        public BiblioAgregarUsuario()
+        public BiblioEditarUsuario()
         {
             InitializeComponent();
         }
