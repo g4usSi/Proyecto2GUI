@@ -114,7 +114,7 @@ namespace Proyecto2GUI
         {
 
             OcultarBienvenida();
-            openChildForm(new BiblioBuscarLibro());
+            openChildForm(new BiblioBuscarLibro(_biblioteca));
             //Code...
 
             hideSubMenu();

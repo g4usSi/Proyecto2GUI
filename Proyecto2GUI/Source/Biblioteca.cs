@@ -20,7 +20,7 @@ namespace Proyecto2
         private Queue<SolicitudEspera> listaEspera = new Queue<SolicitudEspera>();
 
         //Estados
-        private bool LibrosOrdenados = false; //Libros ordenados
+        public bool LibrosOrdenados = false; //Libros ordenados
         private HistorialAcciones historialAcciones = new HistorialAcciones();
 
         //LOGIN
@@ -100,22 +100,24 @@ namespace Proyecto2
             return BuscarLibroTitAut(librosBiblioteca, parametro, indiceLista + 1);
         }
 
-        /*Busque de libro Secuencial
-         * public Libro BuscarLibroTitAut(List<Libro> librosBiblioteca, string parametro)
+        //Busqueda de libro
+        public List<Libro> BuscarLibrosPorTituloOAutor(string parametro)
         {
-            if (parametro == null || parametro == "") return null;
+            List<Libro> librosEncontrados = new List<Libro>();
+            if (string.IsNullOrWhiteSpace(parametro)) return librosEncontrados;
+            parametro = parametro.ToLower();
 
             foreach (var libro in librosBiblioteca)
             {
-                if (libro.Titulo.ToLower() == parametro || libro.Autor.ToLower() == parametro)
+                if (libro.Titulo.ToLower().Contains(parametro) || libro.Autor.ToLower().Contains(parametro))
                 {
-                    return libro;
+                    librosEncontrados.Add(libro);
                 }
             }
-            return null;
-        }*/
+            return librosEncontrados;
+        }
 
-        public Libro BuscarLibroISBN(List<Libro> librosBiblioteca, string iSBN)
+        public Libro BuscarLibroISBN(string iSBN)
         {
             if (iSBN == null) return null;
 
@@ -128,8 +130,23 @@ namespace Proyecto2
             }
             return null;
         }
+        public List<Libro> ListaLibrosPorISBN(string iSBN)
+        {
+            List<Libro> librosEncontrados = new List<Libro>();
+
+            if (string.IsNullOrWhiteSpace(iSBN)) return librosEncontrados;
+
+            foreach (var libro in librosBiblioteca)
+            {
+                if (libro.ISBN.Equals(iSBN, StringComparison.OrdinalIgnoreCase))
+                {
+                    librosEncontrados.Add(libro);
+                }
+            }
+            return librosEncontrados;
+        }
         //BusquedaBinaria
-        public Libro BuscarLibroBinario(List<Libro> librosBiblioteca, string ISBN)
+        public Libro BuscarLibroBinario(string ISBN)
         {
             int izquierda = 0;
             int derecha = librosBiblioteca.Count - 1;
@@ -165,7 +182,7 @@ namespace Proyecto2
                 Console.WriteLine("Error. No hay coincidencias.");
                 return;
             }
-            Libro libroEliminar = BuscarLibroISBN(librosBiblioteca, parametro);
+            Libro libroEliminar = BuscarLibroISBN(parametro);
             libroEliminar.MostrarLibro();
 
             Console.WriteLine("Seguro desea eliminar el libro de la biblioteca? (S/N)");
@@ -310,8 +327,8 @@ namespace Proyecto2
         public void SolicitarLibro(Lector lector)
         {
             Console.Write("Ingrese el ISBN del libro que desea solicitar: ");
-            string isbn = Console.ReadLine();
-            Libro libroSolicitado = BuscarLibroISBN(librosBiblioteca, isbn);
+            string isbnBuscar = Console.ReadLine();
+            Libro libroSolicitado = BuscarLibroISBN(isbnBuscar);
 
             if (libroSolicitado == null)
             {

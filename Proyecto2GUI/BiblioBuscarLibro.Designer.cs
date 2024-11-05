@@ -29,12 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BiblioBuscarLibro));
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             panel1 = new Panel();
+            btnBuscarLibro = new Button();
             TablaLibrosBuscados = new DataGridView();
             RecibirBuscar = new TextBox();
             label2 = new Label();
             label1 = new Label();
-            btnBuscarLibro = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)TablaLibrosBuscados).BeginInit();
             SuspendLayout();
@@ -51,22 +54,74 @@
             panel1.Size = new Size(982, 353);
             panel1.TabIndex = 11;
             // 
+            // btnBuscarLibro
+            // 
+            btnBuscarLibro.BackColor = Color.FromArgb(230, 165, 36);
+            btnBuscarLibro.Cursor = Cursors.Hand;
+            btnBuscarLibro.FlatAppearance.BorderSize = 0;
+            btnBuscarLibro.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
+            btnBuscarLibro.FlatStyle = FlatStyle.Flat;
+            btnBuscarLibro.Font = new Font("Segoe UI Variable Small Semibol", 9F, FontStyle.Bold);
+            btnBuscarLibro.Image = (Image)resources.GetObject("btnBuscarLibro.Image");
+            btnBuscarLibro.ImageAlign = ContentAlignment.MiddleLeft;
+            btnBuscarLibro.Location = new Point(730, 33);
+            btnBuscarLibro.Name = "btnBuscarLibro";
+            btnBuscarLibro.Size = new Size(146, 40);
+            btnBuscarLibro.TabIndex = 11;
+            btnBuscarLibro.Text = "Buscar Libro";
+            btnBuscarLibro.TextAlign = ContentAlignment.MiddleRight;
+            btnBuscarLibro.UseVisualStyleBackColor = false;
+            btnBuscarLibro.Click += btnBuscarLibro_Click;
+            // 
             // TablaLibrosBuscados
             // 
+            TablaLibrosBuscados.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            TablaLibrosBuscados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            TablaLibrosBuscados.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            TablaLibrosBuscados.BackgroundColor = SystemColors.Control;
+            TablaLibrosBuscados.BorderStyle = BorderStyle.None;
+            TablaLibrosBuscados.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(49, 53, 56);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI Variable Display Semib", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = SystemColors.Window;
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(184, 149, 93);
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            TablaLibrosBuscados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             TablaLibrosBuscados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            TablaLibrosBuscados.Location = new Point(99, 88);
+            TablaLibrosBuscados.EnableHeadersVisualStyles = false;
+            TablaLibrosBuscados.GridColor = Color.FromArgb(49, 53, 56);
+            TablaLibrosBuscados.Location = new Point(254, 111);
             TablaLibrosBuscados.Name = "TablaLibrosBuscados";
+            TablaLibrosBuscados.ReadOnly = true;
+            TablaLibrosBuscados.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = SystemColors.Control;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(230, 165, 36);
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            TablaLibrosBuscados.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            TablaLibrosBuscados.RowHeadersVisible = false;
             TablaLibrosBuscados.RowHeadersWidth = 51;
-            TablaLibrosBuscados.Size = new Size(777, 239);
+            dataGridViewCellStyle6.BackColor = Color.WhiteSmoke;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI Variable Small", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(230, 165, 36);
+            TablaLibrosBuscados.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            TablaLibrosBuscados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            TablaLibrosBuscados.Size = new Size(632, 239);
             TablaLibrosBuscados.TabIndex = 10;
             // 
             // RecibirBuscar
             // 
             RecibirBuscar.BorderStyle = BorderStyle.None;
-            RecibirBuscar.Font = new Font("Segoe UI Variable Small", 10.8F);
+            RecibirBuscar.Cursor = Cursors.IBeam;
+            RecibirBuscar.Font = new Font("Segoe UI Variable Small", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             RecibirBuscar.Location = new Point(269, 40);
             RecibirBuscar.Name = "RecibirBuscar";
-            RecibirBuscar.Size = new Size(437, 24);
+            RecibirBuscar.Size = new Size(440, 27);
             RecibirBuscar.TabIndex = 5;
             // 
             // label2
@@ -89,25 +144,6 @@
             label1.TabIndex = 10;
             label1.Text = "Buscar Libro";
             label1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // btnBuscarLibro
-            // 
-            btnBuscarLibro.BackColor = Color.FromArgb(230, 165, 36);
-            btnBuscarLibro.Cursor = Cursors.Hand;
-            btnBuscarLibro.FlatAppearance.BorderSize = 0;
-            btnBuscarLibro.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
-            btnBuscarLibro.FlatStyle = FlatStyle.Flat;
-            btnBuscarLibro.Font = new Font("Segoe UI Variable Small Semibol", 9F, FontStyle.Bold);
-            btnBuscarLibro.Image = (Image)resources.GetObject("btnBuscarLibro.Image");
-            btnBuscarLibro.ImageAlign = ContentAlignment.MiddleLeft;
-            btnBuscarLibro.Location = new Point(730, 33);
-            btnBuscarLibro.Name = "btnBuscarLibro";
-            btnBuscarLibro.Size = new Size(146, 40);
-            btnBuscarLibro.TabIndex = 11;
-            btnBuscarLibro.Text = "Buscar Libro";
-            btnBuscarLibro.TextAlign = ContentAlignment.MiddleRight;
-            btnBuscarLibro.UseVisualStyleBackColor = false;
-            btnBuscarLibro.Click += btnBuscarLibro_Click;
             // 
             // BiblioBuscarLibro
             // 
