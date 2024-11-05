@@ -122,6 +122,8 @@ namespace Proyecto2GUI
 
         private void btnEliminarLibro_Click(object sender, EventArgs e)
         {
+            OcultarBienvenida();
+            openChildForm(new BiblioEliminarLibro(_biblioteca));
             //Code...
 
             hideSubMenu();

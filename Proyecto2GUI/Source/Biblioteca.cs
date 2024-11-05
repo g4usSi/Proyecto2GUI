@@ -172,42 +172,24 @@ namespace Proyecto2
             return null;
         }
         //Eliminar Libro
-        public void EliminarLibro()
+        public bool EliminarLibro(Libro libroEliminar)
         {
-            Console.WriteLine("Ingrese el ISBN del libro: ");
-            string parametro = Console.ReadLine();
-
-            if (!LibroExistente(parametro))
-            {
-                Console.WriteLine("Error. No hay coincidencias.");
-                return;
-            }
-            Libro libroEliminar = BuscarLibroISBN(parametro);
-            libroEliminar.MostrarLibro();
-
-            Console.WriteLine("Seguro desea eliminar el libro de la biblioteca? (S/N)");
-            string eliminacion = Console.ReadLine().ToLower();
-
-            if (eliminacion == "s"||eliminacion == "si")
-            {
-                librosBiblioteca.Remove(libroEliminar);
-                Console.WriteLine("El libro se ha eliminado de la lista.");
-            }
-            else
-            {
-                Console.WriteLine("El libro sigue en la lista.");
-            }
+            return librosBiblioteca.Remove(libroEliminar);
         }
 
         //Modulo 2 Gestion de Usuarios
         //Opc 1
         public void RegistrarUsuarioNuevo() 
         {
-            listaUsuarios.Add(new Bibliotecario("Geovanny Alcon","1234"));
+            listaUsuarios.Add(new Bibliotecario("Geovanny Alcon","321"));
+            listaUsuarios.Add(new Bibliotecario("Geo","1234"));
+            librosBiblioteca.Add(new Libro("It","Stephen King","Horror","666"));
+            librosBiblioteca.Add(new Libro("It","Stephen King","Horror","123"));
+            /*
             Console.WriteLine("1. Bibliotecario\n2. Lector");
             Console.Write("Ingrese una opcion: ");
             int opcion = Convert.ToInt32(Console.ReadLine());
-
+            
             switch (opcion) 
             {
                 case 1:
@@ -221,6 +203,7 @@ namespace Proyecto2
                     Console.WriteLine("Se ha agregado al nuevo usuario.");
                 break;
             }
+            */
         }
         //Opc 2
         public void EliminarEditarUsuario()
