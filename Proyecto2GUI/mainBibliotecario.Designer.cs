@@ -49,6 +49,9 @@
             BotonGestionLibros = new Button();
             panel1 = new Panel();
             lblTituloApp = new Label();
+            panelChildForm = new Panel();
+            lblMensajeUser = new Label();
+            label1 = new Label();
             barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
@@ -57,6 +60,7 @@
             PanelGestUsuarios.SuspendLayout();
             PanelSubGestLibros.SuspendLayout();
             panel1.SuspendLayout();
+            panelChildForm.SuspendLayout();
             SuspendLayout();
             // 
             // barraTitulo
@@ -385,12 +389,45 @@
             lblTituloApp.TabIndex = 6;
             lblTituloApp.Text = "Biblioteca";
             // 
+            // panelChildForm
+            // 
+            panelChildForm.Controls.Add(lblMensajeUser);
+            panelChildForm.Controls.Add(label1);
+            panelChildForm.Font = new Font("Aston Script Bold", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            panelChildForm.Location = new Point(329, 137);
+            panelChildForm.Name = "panelChildForm";
+            panelChildForm.Size = new Size(997, 567);
+            panelChildForm.TabIndex = 2;
+            // 
+            // lblMensajeUser
+            // 
+            lblMensajeUser.Dock = DockStyle.Top;
+            lblMensajeUser.Font = new Font("Aston Script Bold", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMensajeUser.Location = new Point(0, 77);
+            lblMensajeUser.Name = "lblMensajeUser";
+            lblMensajeUser.Size = new Size(997, 78);
+            lblMensajeUser.TabIndex = 8;
+            lblMensajeUser.Text = "user";
+            lblMensajeUser.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // label1
+            // 
+            label1.Dock = DockStyle.Top;
+            label1.Font = new Font("Aston Script Bold", 22F, FontStyle.Bold);
+            label1.Location = new Point(0, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(997, 77);
+            label1.TabIndex = 7;
+            label1.Text = "Bienvenid@: ";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // mainBibliotecario
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(1380, 780);
+            Controls.Add(panelChildForm);
             Controls.Add(panelMenuPrincipal);
             Controls.Add(barraTitulo);
             FormBorderStyle = FormBorderStyle.None;
@@ -407,6 +444,7 @@
             PanelSubGestLibros.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panelChildForm.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -432,5 +470,8 @@
         private Button btnEstadisticas;
         private Button btnPrestamos;
         private Button BotonGenInformes;
+        private Panel panelChildForm;
+        private Label lblMensajeUser;
+        private Label label1;
     }
 }

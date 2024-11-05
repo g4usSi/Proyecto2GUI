@@ -22,6 +22,7 @@ namespace Proyecto2GUI
             _biblioteca = biblioteca;
             _login = login;
             InitializeComponent();
+            BienvenudoUsuario();
             customizeDesign();
 
             // Crear una región con esquinas redondeadas
@@ -45,6 +46,14 @@ namespace Proyecto2GUI
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int IParam);
+
+        //Metodos diseño
+        //Mensajes bienvenudo
+        private void BienvenudoUsuario()
+        {
+            lblMensajeUser.Text = _biblioteca.UsuarioActual.ID;
+        }
+
         private void customizeDesign()
         {
             PanelSubGestLibros.Visible = false;
@@ -87,9 +96,7 @@ namespace Proyecto2GUI
         //Eventos Click
         private void BotonGestionLibros_Click(object sender, EventArgs e)
         {
-            BotonGestionLibros.BackColor = Color.White;
             showSubMenu(PanelSubGestLibros);
-
             //Codigo
         }
 
@@ -117,7 +124,6 @@ namespace Proyecto2GUI
 
         private void BotonGestLibros_Click(object sender, EventArgs e)
         {
-            BotonGestionLibros.BackColor = Color.White;
             showSubMenu(PanelGestUsuarios);
         }
 
@@ -137,7 +143,6 @@ namespace Proyecto2GUI
 
         private void BotonGenInformes_Click(object sender, EventArgs e)
         {
-            BotonGestionLibros.BackColor = Color.White;
             showSubMenu(PanelGenInformes);
             //Codigo
         }

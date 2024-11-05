@@ -38,17 +38,18 @@ namespace Proyecto2GUI
             BtnEntrar = new Button();
             btnSalir = new Button();
             BtnCerrar = new PictureBox();
-            imgLogin = new Panel();
             label1 = new Label();
             lblSignIn = new Label();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)BtnCerrar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // NombreUser
             // 
             NombreUser.AutoSize = true;
             NombreUser.Font = new Font("Segoe UI Variable Small Semilig", 12F);
-            NombreUser.Location = new Point(248, 135);
+            NombreUser.Location = new Point(281, 155);
             NombreUser.Name = "NombreUser";
             NombreUser.Size = new Size(92, 27);
             NombreUser.TabIndex = 0;
@@ -58,7 +59,7 @@ namespace Proyecto2GUI
             // 
             PassUser.AutoSize = true;
             PassUser.Font = new Font("Segoe UI Variable Small Semilig", 12F);
-            PassUser.Location = new Point(248, 205);
+            PassUser.Location = new Point(281, 225);
             PassUser.Name = "PassUser";
             PassUser.Size = new Size(120, 27);
             PassUser.TabIndex = 1;
@@ -67,7 +68,7 @@ namespace Proyecto2GUI
             // txtNombre
             // 
             txtNombre.Font = new Font("Segoe UI", 10F);
-            txtNombre.Location = new Point(248, 165);
+            txtNombre.Location = new Point(281, 185);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(285, 30);
             txtNombre.TabIndex = 2;
@@ -75,7 +76,7 @@ namespace Proyecto2GUI
             // txtPassword
             // 
             txtPassword.Font = new Font("Segoe UI", 10F);
-            txtPassword.Location = new Point(248, 235);
+            txtPassword.Location = new Point(281, 255);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(285, 30);
             txtPassword.TabIndex = 3;
@@ -84,19 +85,20 @@ namespace Proyecto2GUI
             // 
             BtnEntrar.Cursor = Cursors.Hand;
             BtnEntrar.Font = new Font("Segoe UI Variable Small Semilig", 10F);
-            BtnEntrar.Location = new Point(276, 281);
+            BtnEntrar.Location = new Point(309, 301);
             BtnEntrar.Name = "BtnEntrar";
             BtnEntrar.Size = new Size(105, 33);
             BtnEntrar.TabIndex = 5;
             BtnEntrar.Text = "Entrar";
             BtnEntrar.UseVisualStyleBackColor = true;
             BtnEntrar.Click += BtnEntrar_Click;
+            BtnEntrar.KeyDown += BtnEntrar_KeyDown;
             // 
             // btnSalir
             // 
             btnSalir.Cursor = Cursors.Hand;
             btnSalir.Font = new Font("Segoe UI Variable Small Semilig", 10F);
-            btnSalir.Location = new Point(401, 281);
+            btnSalir.Location = new Point(434, 301);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(105, 33);
             btnSalir.TabIndex = 6;
@@ -116,20 +118,11 @@ namespace Proyecto2GUI
             BtnCerrar.TabStop = false;
             BtnCerrar.Click += BtnCerrar_Click;
             // 
-            // imgLogin
-            // 
-            imgLogin.BackgroundImage = (Image)resources.GetObject("imgLogin.BackgroundImage");
-            imgLogin.Dock = DockStyle.Left;
-            imgLogin.Location = new Point(0, 0);
-            imgLogin.Name = "imgLogin";
-            imgLogin.Size = new Size(211, 400);
-            imgLogin.TabIndex = 8;
-            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Aston Script Bold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(236, 26);
+            label1.Location = new Point(263, 31);
             label1.Name = "label1";
             label1.Size = new Size(226, 59);
             label1.TabIndex = 9;
@@ -139,11 +132,21 @@ namespace Proyecto2GUI
             // 
             lblSignIn.AutoSize = true;
             lblSignIn.Font = new Font("Aston Script Bold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSignIn.Location = new Point(367, 75);
+            lblSignIn.Location = new Point(394, 80);
             lblSignIn.Name = "lblSignIn";
             lblSignIn.Size = new Size(185, 59);
             lblSignIn.TabIndex = 4;
             lblSignIn.Text = "Biblioteca";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Dock = DockStyle.Left;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(230, 400);
+            pictureBox1.TabIndex = 10;
+            pictureBox1.TabStop = false;
             // 
             // Login
             // 
@@ -152,9 +155,9 @@ namespace Proyecto2GUI
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             BackColor = Color.FromArgb(235, 235, 235);
             ClientSize = new Size(650, 400);
+            Controls.Add(pictureBox1);
             Controls.Add(lblSignIn);
             Controls.Add(label1);
-            Controls.Add(imgLogin);
             Controls.Add(BtnCerrar);
             Controls.Add(btnSalir);
             Controls.Add(BtnEntrar);
@@ -168,7 +171,9 @@ namespace Proyecto2GUI
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             Load += Login_Load;
+            MouseDown += Login_MouseDown;
             ((System.ComponentModel.ISupportInitialize)BtnCerrar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -182,8 +187,8 @@ namespace Proyecto2GUI
         private Button BtnEntrar;
         private Button btnSalir;
         private PictureBox BtnCerrar;
-        private Panel imgLogin;
         private Label label1;
         private Label lblSignIn;
+        private PictureBox pictureBox1;
     }
 }

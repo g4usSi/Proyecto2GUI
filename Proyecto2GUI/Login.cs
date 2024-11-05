@@ -84,6 +84,21 @@ namespace Proyecto2GUI
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+        private void Login_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void BtnEntrar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Llama al método de inicio de sesión
+                BtnEntrar_Click(sender, e);
+            }
+        }
+
         /*private void NuevoUsuario()
         {
             if (string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtPassword.Text))
