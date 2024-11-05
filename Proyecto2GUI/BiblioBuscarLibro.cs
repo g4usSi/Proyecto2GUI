@@ -16,5 +16,10 @@ namespace Proyecto2GUI
         {
             InitializeComponent();
         }
+
+        private void btnBuscarLibro_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

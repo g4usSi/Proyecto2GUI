@@ -106,13 +106,15 @@ namespace Proyecto2GUI
             OcultarBienvenida();
             openChildForm(new BiblioAgregarUsuario(_biblioteca));
             //Code...
-
             hideSubMenu();
 
         }
 
         private void btnBuscarLibro_Click(object sender, EventArgs e)
         {
+
+            OcultarBienvenida();
+            openChildForm(new BiblioBuscarLibro());
             //Code...
 
             hideSubMenu();
