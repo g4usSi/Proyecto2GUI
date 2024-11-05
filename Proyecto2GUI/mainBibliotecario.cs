@@ -15,7 +15,7 @@ namespace Proyecto2GUI
 {
     public partial class mainBibliotecario : Form
     {
-        private Biblioteca _biblioteca;
+        Biblioteca _biblioteca;
         public Login _login;
         public mainBibliotecario(Biblioteca biblioteca, Login login)
         {
@@ -88,20 +88,23 @@ namespace Proyecto2GUI
                 subMenu.Visible = false;
             }
         }
-        private void CambiarColorBoton()
+        private void OcultarBienvenida()
         {
-
+            lblBienvenida.Visible = false;
+            lblMensajeUser.Visible = false;
         }
 
         //Eventos Click
+        #region GestionLibros
         private void BotonGestionLibros_Click(object sender, EventArgs e)
         {
             showSubMenu(PanelSubGestLibros);
-            //Codigo
         }
-
+        
         private void btnRegistrarLibro_Click(object sender, EventArgs e)
         {
+            OcultarBienvenida();
+            openChildForm(new BiblioAgregarUsuario(_biblioteca));
             //Code...
 
             hideSubMenu();
@@ -121,7 +124,9 @@ namespace Proyecto2GUI
 
             hideSubMenu();
         }
+        #endregion
 
+        #region GestionUsuarios
         private void BotonGestLibros_Click(object sender, EventArgs e)
         {
             showSubMenu(PanelGestUsuarios);
@@ -140,7 +145,8 @@ namespace Proyecto2GUI
 
             hideSubMenu();
         }
-
+        #endregion
+        #region GenerarInformes
         private void BotonGenInformes_Click(object sender, EventArgs e)
         {
             showSubMenu(PanelGenInformes);
@@ -160,6 +166,9 @@ namespace Proyecto2GUI
 
             hideSubMenu();
         }
+        #endregion
+
+        #region LogicaVentana
         //Logica Basica entre ventanas
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
@@ -183,5 +192,25 @@ namespace Proyecto2GUI
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+        #endregion
+        private Form activeForm = null;
+        //Llamada a formulario
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+        
+    
     }
 }

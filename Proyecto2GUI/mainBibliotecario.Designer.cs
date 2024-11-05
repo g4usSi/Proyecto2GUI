@@ -41,7 +41,7 @@
             PanelGestUsuarios = new Panel();
             btnEditarUsuario = new Button();
             btnRegistrarUsuario = new Button();
-            BotonGestLibros = new Button();
+            BotonGestUsuarios = new Button();
             PanelSubGestLibros = new Panel();
             btnEliminarLibro = new Button();
             btnBuscarLibro = new Button();
@@ -51,7 +51,7 @@
             lblTituloApp = new Label();
             panelChildForm = new Panel();
             lblMensajeUser = new Label();
-            label1 = new Label();
+            lblBienvenida = new Label();
             barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
@@ -118,7 +118,7 @@
             panelMenuPrincipal.Controls.Add(PanelGenInformes);
             panelMenuPrincipal.Controls.Add(BotonGenInformes);
             panelMenuPrincipal.Controls.Add(PanelGestUsuarios);
-            panelMenuPrincipal.Controls.Add(BotonGestLibros);
+            panelMenuPrincipal.Controls.Add(BotonGestUsuarios);
             panelMenuPrincipal.Controls.Add(PanelSubGestLibros);
             panelMenuPrincipal.Controls.Add(BotonGestionLibros);
             panelMenuPrincipal.Controls.Add(panel1);
@@ -254,25 +254,25 @@
             btnRegistrarUsuario.UseVisualStyleBackColor = false;
             btnRegistrarUsuario.Click += btnRegistrarUsuario_Click;
             // 
-            // BotonGestLibros
+            // BotonGestUsuarios
             // 
-            BotonGestLibros.Cursor = Cursors.Hand;
-            BotonGestLibros.Dock = DockStyle.Top;
-            BotonGestLibros.FlatAppearance.BorderSize = 0;
-            BotonGestLibros.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
-            BotonGestLibros.FlatStyle = FlatStyle.Flat;
-            BotonGestLibros.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
-            BotonGestLibros.Image = (Image)resources.GetObject("BotonGestLibros.Image");
-            BotonGestLibros.ImageAlign = ContentAlignment.MiddleLeft;
-            BotonGestLibros.Location = new Point(0, 334);
-            BotonGestLibros.Name = "BotonGestLibros";
-            BotonGestLibros.Padding = new Padding(20, 0, 20, 0);
-            BotonGestLibros.Size = new Size(280, 60);
-            BotonGestLibros.TabIndex = 3;
-            BotonGestLibros.Text = "Gestion Usuarios";
-            BotonGestLibros.TextAlign = ContentAlignment.MiddleRight;
-            BotonGestLibros.UseVisualStyleBackColor = true;
-            BotonGestLibros.Click += BotonGestLibros_Click;
+            BotonGestUsuarios.Cursor = Cursors.Hand;
+            BotonGestUsuarios.Dock = DockStyle.Top;
+            BotonGestUsuarios.FlatAppearance.BorderSize = 0;
+            BotonGestUsuarios.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
+            BotonGestUsuarios.FlatStyle = FlatStyle.Flat;
+            BotonGestUsuarios.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
+            BotonGestUsuarios.Image = (Image)resources.GetObject("BotonGestUsuarios.Image");
+            BotonGestUsuarios.ImageAlign = ContentAlignment.MiddleLeft;
+            BotonGestUsuarios.Location = new Point(0, 334);
+            BotonGestUsuarios.Name = "BotonGestUsuarios";
+            BotonGestUsuarios.Padding = new Padding(20, 0, 24, 0);
+            BotonGestUsuarios.Size = new Size(280, 60);
+            BotonGestUsuarios.TabIndex = 3;
+            BotonGestUsuarios.Text = "Gestion Usuarios";
+            BotonGestUsuarios.TextAlign = ContentAlignment.MiddleRight;
+            BotonGestUsuarios.UseVisualStyleBackColor = true;
+            BotonGestUsuarios.Click += BotonGestLibros_Click;
             // 
             // PanelSubGestLibros
             // 
@@ -362,7 +362,7 @@
             BotonGestionLibros.ImageAlign = ContentAlignment.MiddleLeft;
             BotonGestionLibros.Location = new Point(0, 150);
             BotonGestionLibros.Name = "BotonGestionLibros";
-            BotonGestionLibros.Padding = new Padding(20, 0, 40, 0);
+            BotonGestionLibros.Padding = new Padding(20, 0, 48, 0);
             BotonGestionLibros.Size = new Size(280, 60);
             BotonGestionLibros.TabIndex = 1;
             BotonGestionLibros.Text = "Gestion Libros";
@@ -392,34 +392,34 @@
             // panelChildForm
             // 
             panelChildForm.Controls.Add(lblMensajeUser);
-            panelChildForm.Controls.Add(label1);
+            panelChildForm.Controls.Add(lblBienvenida);
             panelChildForm.Font = new Font("Aston Script Bold", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            panelChildForm.Location = new Point(329, 137);
+            panelChildForm.Location = new Point(330, 121);
             panelChildForm.Name = "panelChildForm";
-            panelChildForm.Size = new Size(997, 567);
+            panelChildForm.Size = new Size(1000, 600);
             panelChildForm.TabIndex = 2;
             // 
             // lblMensajeUser
             // 
             lblMensajeUser.Dock = DockStyle.Top;
-            lblMensajeUser.Font = new Font("Aston Script Bold", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMensajeUser.Font = new Font("Aston Script Bold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblMensajeUser.Location = new Point(0, 77);
             lblMensajeUser.Name = "lblMensajeUser";
-            lblMensajeUser.Size = new Size(997, 78);
+            lblMensajeUser.Size = new Size(1000, 78);
             lblMensajeUser.TabIndex = 8;
             lblMensajeUser.Text = "user";
             lblMensajeUser.TextAlign = ContentAlignment.TopCenter;
             // 
-            // label1
+            // lblBienvenida
             // 
-            label1.Dock = DockStyle.Top;
-            label1.Font = new Font("Aston Script Bold", 22F, FontStyle.Bold);
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(997, 77);
-            label1.TabIndex = 7;
-            label1.Text = "Bienvenid@: ";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            lblBienvenida.Dock = DockStyle.Top;
+            lblBienvenida.Font = new Font("Aston Script Bold", 22F, FontStyle.Bold);
+            lblBienvenida.Location = new Point(0, 0);
+            lblBienvenida.Name = "lblBienvenida";
+            lblBienvenida.Size = new Size(1000, 77);
+            lblBienvenida.TabIndex = 7;
+            lblBienvenida.Text = "Bienvenid@: ";
+            lblBienvenida.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // mainBibliotecario
             // 
@@ -465,13 +465,13 @@
         private Panel PanelGestUsuarios;
         private Button btnEditarUsuario;
         private Button btnRegistrarUsuario;
-        private Button BotonGestLibros;
+        private Button BotonGestUsuarios;
         private Panel PanelGenInformes;
         private Button btnEstadisticas;
         private Button btnPrestamos;
         private Button BotonGenInformes;
         private Panel panelChildForm;
         private Label lblMensajeUser;
-        private Label label1;
+        private Label lblBienvenida;
     }
 }

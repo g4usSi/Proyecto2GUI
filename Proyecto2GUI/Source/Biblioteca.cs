@@ -52,38 +52,19 @@ namespace Proyecto2
 
         //Modulo 1 Gestion de Libros
         //Agregar Libros
-        public void AgregarLibro()
+        public void AgregarLibro(Libro libroRecibidoGUI)
         {
-            Console.WriteLine("Agregar Libro Nuevo");
-            Console.Write("Titulo: ");
-            string titulo = Console.ReadLine();
-            Console.Write("Autor: ");
-            string autor = Console.ReadLine();
-            Console.Write("Genero: ");
-            string genero = Console.ReadLine();
-            Console.Write("ISBN: ");
-            string isbn = Console.ReadLine();
-
-            if (!LibroExistente(librosBiblioteca, isbn))
-            {
-                Libro libroNuevo = new Libro(titulo, autor, genero, isbn);
-                librosBiblioteca.Add(libroNuevo);
-                Console.WriteLine("Libro agregado exitosamente.");
-                LibrosOrdenados = false;
-            }
-            else
-            {
-                Console.WriteLine("Error. Ya existe un libro con el mismo ISBN.");
-            }
+            librosBiblioteca.Add(libroRecibidoGUI);
+            LibrosOrdenados = false;
         }
 
-        private bool LibroExistente(List<Libro> librosBiblioteca, string ISBN)
+        public bool LibroExistente(string ISBN)
         {
             return librosBiblioteca.Any(libro => libro.ISBN == ISBN);
         }
         // ***** Busqueda de Libros ***** //
         //Metodo de introduccion de datos
-        private string ParametroBuscar() 
+        private string ParametroBuscar()
         {
             Console.Write("Ingrese el titulo o autor del libro: ");
             string parametro = Console.ReadLine();
@@ -179,7 +160,7 @@ namespace Proyecto2
             Console.WriteLine("Ingrese el ISBN del libro: ");
             string parametro = Console.ReadLine();
 
-            if (!LibroExistente(librosBiblioteca, parametro))
+            if (!LibroExistente(parametro))
             {
                 Console.WriteLine("Error. No hay coincidencias.");
                 return;
