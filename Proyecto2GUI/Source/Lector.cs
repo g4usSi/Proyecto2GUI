@@ -10,10 +10,39 @@ namespace Proyecto2
     public class Lector : Usuario
     {
         public Libro LibroLigado;
-        public Lector() : base()
+        public Lector(string iD = null, string nombre = null, string password = null) : base()
         {
             this.Rol = "Lector";
             this.LibroLigado = null;
+            if (iD == null)
+            {
+                Console.Write("Ingrese el nombre: ");
+                ID = Console.ReadLine();
+            }
+            else
+            {
+                ID = iD;
+            }
+
+            if (nombre == null)
+            {
+                Console.Write("Ingrese el nombre: ");
+                Name = Console.ReadLine();
+            }
+            else
+            {
+                Name = nombre;
+            }
+
+            if (password == null)
+            {
+                Console.Write("Ingrese la contraseña: ");
+                Password = Console.ReadLine();
+            }
+            else
+            {
+                Password = password;
+            }
         }
         public override void MostrarUsuario()
         {

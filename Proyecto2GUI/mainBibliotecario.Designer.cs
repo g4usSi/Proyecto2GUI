@@ -87,6 +87,7 @@
             tituloBarraBibliotecario.Size = new Size(123, 27);
             tituloBarraBibliotecario.TabIndex = 3;
             tituloBarraBibliotecario.Text = "Bibliotecario";
+            tituloBarraBibliotecario.MouseDown += tituloBarraBibliotecario_MouseDown;
             // 
             // btnMinimizar
             // 

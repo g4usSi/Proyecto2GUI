@@ -183,8 +183,11 @@ namespace Proyecto2
         {
             listaUsuarios.Add(new Bibliotecario("Geovanny Alcon","Geovanny Alcon", "1407"));
             listaUsuarios.Add(new Bibliotecario("Geo", "Geo","1234"));
+            listaUsuarios.Add(new Lector("01", "Cono de Leon","123"));
             librosBiblioteca.Add(new Libro("It", "Stephen King", "Horror", "666",true, 10));
-            librosBiblioteca.Add(new Libro("It", "Stephen King", "Horror", "123", false, 20));
+            librosBiblioteca.Add(new Libro("It", "Stephen King", "Horror", "123367", false, 20));
+            librosBiblioteca.Add(new Libro("Moby Dick", "Hamlet", "Narrativa", "32089", true, 3));
+            
         }
         //Modulo 2 Gestion de Usuarios
         //Opc 1

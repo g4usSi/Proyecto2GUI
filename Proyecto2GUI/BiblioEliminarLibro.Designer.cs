@@ -180,7 +180,7 @@
             // 
             // btnEliminarLibro
             // 
-            btnEliminarLibro.BackColor = Color.FromArgb(230, 165, 36);
+            btnEliminarLibro.BackColor = Color.DarkRed;
             btnEliminarLibro.Cursor = Cursors.Hand;
             btnEliminarLibro.FlatAppearance.BorderSize = 0;
             btnEliminarLibro.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);

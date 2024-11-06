@@ -14,6 +14,7 @@ namespace Proyecto2GUI
     public partial class BiblioEliminarLibro : Form
     {
         Biblioteca _biblioteca;
+        Libro libroBuscado;
         public BiblioEliminarLibro(Biblioteca biblioteca)
         {
             _biblioteca = biblioteca;
@@ -32,7 +33,7 @@ namespace Proyecto2GUI
         {
             if (_biblioteca.LibroExistente(RecibirBuscar.Text))
             {
-                Libro libroBuscado = _biblioteca.BuscarLibroISBN(RecibirBuscar.Text);
+                libroBuscado = _biblioteca.BuscarLibroISBN(RecibirBuscar.Text);
                 lblISBN.Text = libroBuscado.ISBN;
                 lblRecibirTitulo.Text = libroBuscado.Titulo;
                 lblRecibirAutor.Text = libroBuscado.Autor;
@@ -48,7 +49,17 @@ namespace Proyecto2GUI
 
         private void btnEliminarLibro_Click(object sender, EventArgs e)
         {
-
+            if (libroBuscado != null)
+            {
+                _biblioteca.EliminarLibro(libroBuscado);
+            }
+            else
+            {
+                lblMensajeUsuario.Visible = true;
+                lblMensajeUsuario.Text = "Error. Campos Vacios";
+            }
         }
+
+
     }
 }

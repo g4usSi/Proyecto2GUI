@@ -15,6 +15,7 @@ namespace Proyecto2GUI
 {
     public partial class Login : Form
     {
+        Usuario usario;
         private Biblioteca _biblioteca;
         public Login(Biblioteca biblioteca)
         {
@@ -65,11 +66,17 @@ namespace Proyecto2GUI
 
             if (_biblioteca.IniciarSesion(txtNombre.Text, txtPassword.Text))
             {
+                if (_biblioteca.UsuarioActual.Rol == "Bibliotecario")
+                {
+                    var mainForm = new mainBibliotecario(_biblioteca, this);
+                    mainForm.Show();
 
-                var mainForm = new mainBibliotecario(_biblioteca, this);
-                mainForm.Show();
-
-                this.Hide();
+                    this.Hide();
+                }
+                else
+                {
+                    var mainForm = new mainFormLector();
+                }
             }
             else
             {
