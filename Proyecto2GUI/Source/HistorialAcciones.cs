@@ -25,7 +25,10 @@ namespace Proyecto2
     public class HistorialAcciones
     {
         private Stack<AccionBiblioteca> historial;
-
+        public bool EstaVacio() 
+        { 
+            return historial.Count == 0;
+        }
         public HistorialAcciones()
         {
             historial = new Stack<AccionBiblioteca>();

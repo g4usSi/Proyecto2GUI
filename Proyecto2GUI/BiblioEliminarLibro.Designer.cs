@@ -177,6 +177,7 @@
             button2.Text = "Cancelar";
             button2.TextAlign = ContentAlignment.MiddleRight;
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // btnEliminarLibro
             // 

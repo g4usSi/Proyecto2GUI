@@ -19,14 +19,14 @@ namespace Proyecto2GUI
         {
             _biblioteca = biblioteca;
             InitializeComponent();
-
+            LimpiarSalidaDatos();
         }
         private void LimpiarSalidaDatos()
         {
             lblISBN.Text = String.Empty;
             lblRecibirTitulo.Text = String.Empty;
             lblRecibirAutor.Text = String.Empty;
-            lblRecibirDisponibilidad.Text = "";
+            lblRecibirDisponibilidad.Text = String.Empty;
         }
 
         private void btnBuscarLibro_Click_1(object sender, EventArgs e)
@@ -44,22 +44,45 @@ namespace Proyecto2GUI
             {
                 LimpiarSalidaDatos();
                 lblMensajeUsuario.Visible = true;
+                lblMensajeUsuario.Text = "El libro no se encontró.";
+                lblMensajeUsuario.ForeColor = Color.Red;
             }
         }
+
 
         private void btnEliminarLibro_Click(object sender, EventArgs e)
         {
             if (libroBuscado != null)
             {
-                _biblioteca.EliminarLibro(libroBuscado);
+                bool eliminado = _biblioteca.EliminarLibro(libroBuscado);
+
+                if (eliminado)
+                {
+                    LimpiarSalidaDatos();
+                    lblMensajeUsuario.Visible = true;
+                    lblMensajeUsuario.Text = "Libro eliminado: " + libroBuscado.Titulo;
+                    lblMensajeUsuario.ForeColor = Color.DarkRed;
+
+                }
+                else
+                {
+                    lblMensajeUsuario.Visible = true;
+                    lblMensajeUsuario.Text = "Error al eliminar el libro. Puede que no exista en la lista.";
+                    lblMensajeUsuario.ForeColor = Color.Red;
+                }
             }
             else
             {
                 lblMensajeUsuario.Visible = true;
-                lblMensajeUsuario.Text = "Error. Campos Vacios";
+                lblMensajeUsuario.Text = "Error. Campos Vacíos";
+                lblMensajeUsuario.ForeColor = Color.DarkRed;
             }
         }
 
-
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LimpiarSalidaDatos();
+            libroBuscado = null;
+        }
     }
 }

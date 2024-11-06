@@ -16,12 +16,13 @@ namespace Proyecto2
         //Listas
         private List<Libro> librosBiblioteca = new List<Libro>();
         private List<Usuario> listaUsuarios = new List<Usuario>();//LinkedList
-        private List<Prestamo> prestamos = new List<Prestamo>();//LinkedList
-        private Queue<SolicitudEspera> listaEspera = new Queue<SolicitudEspera>();
+        private List<Prestamo> prestamos;
+        public Queue<SolicitudEspera> listaEspera = new Queue<SolicitudEspera>();
 
         //Estados
         public bool LibrosOrdenados = false; //Libros ordenados
-        private HistorialAcciones historialAcciones = new HistorialAcciones();
+
+        public HistorialAcciones historialAcciones;
 
         public Lector LectorUser() 
         {
@@ -31,7 +32,11 @@ namespace Proyecto2
             }
             return null;
         }
-
+        public Biblioteca()
+        {
+            historialAcciones = new HistorialAcciones();
+            prestamos = new List<Prestamo>();
+        }
         //LOGIN
         public bool IniciarSesion(string nombre, string contrasena)
         {
@@ -52,11 +57,14 @@ namespace Proyecto2
             }
             return false;
         }
+        public void AgregarALaListaDeEspera(SolicitudEspera nuevaSolicitud) {
+            listaEspera.Enqueue(nuevaSolicitud);
+
+        }
         public void CerrarSesion()
         {
             UsuarioActual = null;
             historialAcciones.LimpiarHistorial();
-            Console.WriteLine("Sesión cerrada.");
         }
 
         //Modulo 1 Gestion de Libros
@@ -294,25 +302,36 @@ namespace Proyecto2
         //Modulo 3 Prestamos Lector
         //metodo temporal para solicitar prestamos
         //Solicitar
+        // Solicitar libro
         public void SolicitarLibro(Lector lector, Libro libroSolicitado)
         {
-            
             Prestamo nuevoPrestamo = new Prestamo(libroSolicitado, lector);
             prestamos.Add(nuevoPrestamo);
             libroSolicitado.CambiarDisponibilidad();
             libroSolicitado.Disponible = false;
             historialAcciones.RegistrarAccion(new AccionBiblioteca("Préstamo", libroSolicitado));
         }
-        public void AgregarALaListaDeEspera(SolicitudEspera nuevaSolicitud)
-        {
-            listaEspera.Enqueue(nuevaSolicitud);
-        }
-        //Devolver
+
+        // Devolver libro
         public Prestamo DevolverLibro(Lector lector)
         {
+            // Encuentra el préstamo correspondiente al lector
             Prestamo prestamoEliminar = prestamos.Find(p => p.LectorPrestamo == lector);
+
+            if (prestamoEliminar != null)
+            {
+                // Marca el libro como disponible
+                prestamoEliminar.LibroPrestado.Disponible = true;
+                prestamoEliminar.LibroPrestado.CambiarDisponibilidad();
+                prestamos.Remove(prestamoEliminar);
+
+                historialAcciones.RegistrarAccion(new AccionBiblioteca("Devolución", prestamoEliminar.LibroPrestado));
+            }
+
             return prestamoEliminar;
         }
+
+        //Deshacer Accion
 
 
         public void EliminarPrestamo(Prestamo prestamoEliminar) 

@@ -24,6 +24,7 @@ namespace Proyecto2GUI
             _biblioteca = biblioteca;
             InitializeComponent();
             BienvenudoUsuario();
+            //lblMensajeDeshacer.Text = String.Empty;
 
             GraphicsPath path = new GraphicsPath();
             int redondeo = 13;
@@ -51,7 +52,6 @@ namespace Proyecto2GUI
         {
             OcultarBienvenida();
             openChildForm(new LectorPrestarLibro(_biblioteca));
-            
         }
 
         private void BotonDevolverUsuario_Click(object sender, EventArgs e)
@@ -119,7 +119,41 @@ namespace Proyecto2GUI
             childForm.BringToFront();
             childForm.Show();
         }
-            #endregion
+        #endregion
+        /*
+        //Boton deshacer accion
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!_biblioteca.historialAcciones.EstaVacio())
+            {
+                AccionBiblioteca ultimaAccion = _biblioteca.historialAcciones.DeshacerUltimaAccion();
+
+                if (ultimaAccion != null)
+                {
+                    if (ultimaAccion.TipoAccion == "Préstamo")
+                    {
+                        // Deshacer el préstamo: marcar como disponible y actualizar mensaje
+                        ultimaAccion.LibroInvolucrado.Disponible = true;
+                        lblMensajeDeshacer.Text = $"Se deshizo el préstamo del libro: '{ultimaAccion.LibroInvolucrado.Titulo}'.";
+                    }
+                    else if (ultimaAccion.TipoAccion == "Devolución")
+                    {
+                        // Deshacer la devolución: marcar como no disponible y actualizar mensaje
+                        ultimaAccion.LibroInvolucrado.Disponible = false;
+                        lblMensajeDeshacer.Text = $"Se deshizo la devolución del libro: '{ultimaAccion.LibroInvolucrado.Titulo}'.";
+                    }
+                }
+                else
+                {
+                    lblMensajeDeshacer.Text = "No hay acciones para deshacer.";
+                }
+            }
+            else
+            {
+                lblMensajeDeshacer.Text = "No hay acciones para deshacer.";
+            }
+        }
+        */
 
 
     }
