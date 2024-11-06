@@ -176,35 +176,48 @@ namespace Proyecto2
         {
             return librosBiblioteca.Remove(libroEliminar);
         }
-
+        public void LibrosUsuariosPredeterminados()
+        {
+            listaUsuarios.Add(new Bibliotecario("Geovanny Alcon","Geovanny Alcon", "1407"));
+            listaUsuarios.Add(new Bibliotecario("Geo", "Geo","1234"));
+            librosBiblioteca.Add(new Libro("It", "Stephen King", "Horror", "666"));
+            librosBiblioteca.Add(new Libro("It", "Stephen King", "Horror", "123"));
+        }
         //Modulo 2 Gestion de Usuarios
         //Opc 1
-        public void RegistrarUsuarioNuevo() 
+        public void RegistrarUsuarioNuevo(string id, string nombre, string contraseña, int rol)
         {
-            listaUsuarios.Add(new Bibliotecario("Geovanny Alcon","321"));
-            listaUsuarios.Add(new Bibliotecario("Geo","1234"));
-            librosBiblioteca.Add(new Libro("It","Stephen King","Horror","666"));
-            librosBiblioteca.Add(new Libro("It","Stephen King","Horror","123"));
-            /*
-            Console.WriteLine("1. Bibliotecario\n2. Lector");
-            Console.Write("Ingrese una opcion: ");
-            int opcion = Convert.ToInt32(Console.ReadLine());
-            
-            switch (opcion) 
+            switch (rol)
             {
                 case 1:
-                    Bibliotecario nuevoBibliotecario = new Bibliotecario();
+                    Bibliotecario nuevoBibliotecario = new Bibliotecario
+                    {
+                        ID = id,
+                        Name = nombre,
+                        Password = contraseña
+                    };
                     listaUsuarios.Add(nuevoBibliotecario);
-                    Console.WriteLine("Se ha agregado al nuevo usuario.");
                     break;
                 case 2:
-                    Lector nuevoLector = new Lector();
+                    Lector nuevoLector = new Lector
+                    {
+                        ID = id,
+                        Name = nombre,
+                        Password = contraseña
+                    };
                     listaUsuarios.Add(nuevoLector);
-                    Console.WriteLine("Se ha agregado al nuevo usuario.");
-                break;
+                    break;
+                default:
+                    throw new ArgumentException("Rol no válido.");
             }
-            */
+
+            MessageBox.Show("Usuario registrado con éxito.", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        public bool UsuarioExistente(string ID)
+        {
+            return listaUsuarios.Any(usuario => usuario.ID == ID);
+        }
+
         //Opc 2
         public void EliminarEditarUsuario()
         {
@@ -244,12 +257,12 @@ namespace Proyecto2
             usuarioBuscado.Password = Console.ReadLine();
             Console.WriteLine("Cambio realizado");
         }
-        public void EliminarUsuario(Usuario usuarioBuscado) 
+        public bool EliminarUsuario(Usuario usuarioBuscado) 
         { 
-            listaUsuarios.Remove(usuarioBuscado);
+            return listaUsuarios.Remove(usuarioBuscado);
         }
 
-        private Usuario BuscarUsuario(string nombreUsuario) 
+        public Usuario BuscarUsuario(string nombreUsuario) 
         {
             foreach(var usuario in listaUsuarios)
             {
@@ -263,10 +276,7 @@ namespace Proyecto2
         public List<Usuario> MostrarListaUsuarios() 
         {
             return listaUsuarios;
-            /* foreach (var usuarioActual in listaUsuarios)
-            {
-                usuarioActual.MostrarUsuario();
-            }*/
+
         }
         //Modulo 3 Prestamos Lector
         //metodo temporal para solicitar prestamos

@@ -41,6 +41,7 @@
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
+            lblMensajeUsuario = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -57,6 +58,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(lblMensajeUsuario);
             panel1.Controls.Add(btnCancelar);
             panel1.Controls.Add(btnRegistrarLibro);
             panel1.Controls.Add(RecibirISBN);
@@ -190,14 +192,26 @@
             label2.TabIndex = 0;
             label2.Text = "Titulo: ";
             // 
-            // BiblioAgregarUsuario
+            // lblMensajeUsuario
+            // 
+            lblMensajeUsuario.AutoSize = true;
+            lblMensajeUsuario.Font = new Font("Segoe UI Variable Small", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMensajeUsuario.ForeColor = Color.DarkRed;
+            lblMensajeUsuario.Location = new Point(323, 254);
+            lblMensajeUsuario.Name = "lblMensajeUsuario";
+            lblMensajeUsuario.Size = new Size(341, 27);
+            lblMensajeUsuario.TabIndex = 22;
+            lblMensajeUsuario.Text = "No puede repetir numero de ISBN";
+            lblMensajeUsuario.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // BiblioAgregarLibro
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(982, 553);
             Controls.Add(panel1);
             Controls.Add(label1);
-            Name = "BiblioAgregarUsuario";
+            Name = "BiblioAgregarLibro";
             Text = "BiblioAgregarUsuario";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -218,5 +232,6 @@
         private TextBox RecibirGenero;
         private Button btnCancelar;
         private Button btnRegistrarLibro;
+        private Label lblMensajeUsuario;
     }
 }

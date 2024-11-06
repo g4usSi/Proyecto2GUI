@@ -9,18 +9,28 @@ namespace Proyecto2
     public class Usuario
     {
         public string ID { get; set; }
+        public string Name { get; set; }
         public string Password  { get; set; }
         public string Rol { get; set; }
-        public Usuario(string iD = null, string password = null, string rol = "Superusuario")
+        public Usuario(string iD = null, string nombre = null, string password = null, string rol = "Superusuario")
         {
             if (iD == null)
             {
-                Console.Write("Ingrese el nombre: ");
+                Console.Write("Ingrese el ID: ");
                 ID = Console.ReadLine();
             }
             else
             {
                 ID = iD;
+            }
+            if (nombre == null)
+            {
+                Console.Write("Ingrese el nombre: ");
+                Name = Console.ReadLine();
+            }
+            else
+            {
+                Name = nombre;
             }
 
             if (password == null)

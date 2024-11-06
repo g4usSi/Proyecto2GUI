@@ -18,6 +18,7 @@ namespace Proyecto2GUI
         {
             _biblioteca = biliotecaActual;
             InitializeComponent();
+            lblMensajeUsuario.Visible = false;
 
         }
 
@@ -39,6 +40,7 @@ namespace Proyecto2GUI
             else
             {
                 MessageBox.Show("Numero de ISBN Repedito", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblMensajeUsuario .Visible = true;
             }
         }
 
@@ -49,10 +51,11 @@ namespace Proyecto2GUI
 
         private void LimpiarCampos()
         {
-            RecibirNombre.Text = "";
-            RecibirAutor.Text = "";
-            RecibirGenero.Text = "";
-            RecibirISBN.Text = "";
+            lblMensajeUsuario.Visible = false;
+            RecibirNombre.Clear();
+            RecibirAutor.Clear();
+            RecibirGenero.Clear();
+            RecibirISBN.Clear();
         }
     }
 }

@@ -138,7 +138,8 @@ namespace Proyecto2GUI
 
         private void btnRegistrarUsuario_Click(object sender, EventArgs e)
         {
-
+            OcultarBienvenida();
+            openChildForm(new BiblioAgregarUsuario(_biblioteca));
             //Code...
 
             hideSubMenu();
@@ -146,6 +147,8 @@ namespace Proyecto2GUI
 
         private void btnEditarUsuario_Click(object sender, EventArgs e)
         {
+            OcultarBienvenida();
+            openChildForm(new BiblioEditarUsuario(_biblioteca));
             //Code...
 
             hideSubMenu();
@@ -160,6 +163,7 @@ namespace Proyecto2GUI
 
         private void btnPrestamos_Click(object sender, EventArgs e)
         {
+            OcultarBienvenida();
             //Code...
 
             hideSubMenu();
@@ -167,6 +171,7 @@ namespace Proyecto2GUI
 
         private void btnEstadisticas_Click(object sender, EventArgs e)
         {
+            OcultarBienvenida();
             //Code...
 
             hideSubMenu();

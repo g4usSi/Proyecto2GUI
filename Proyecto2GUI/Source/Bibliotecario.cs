@@ -8,7 +8,7 @@ namespace Proyecto2
 {
     public class Bibliotecario : Usuario
     {
-        public Bibliotecario(string iD = null, string password = null) : base()
+        public Bibliotecario(string iD = null, string nombre = null ,string password = null) : base()
         {
             this.Rol = "Bibliotecario";
             if (iD == null)
@@ -19,6 +19,16 @@ namespace Proyecto2
             else
             {
                 ID = iD;
+            }
+
+            if (nombre == null)
+            {
+                Console.Write("Ingrese el nombre: ");
+                Name = Console.ReadLine();
+            }
+            else
+            {
+                Name = nombre;
             }
 
             if (password == null)

@@ -16,9 +16,8 @@ namespace Proyecto2GUI
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-
             Biblioteca biblioteca = new Biblioteca();
-            biblioteca.RegistrarUsuarioNuevo();
+            biblioteca.LibrosUsuariosPredeterminados();
             Application.Run(new Login(biblioteca));
 
 
