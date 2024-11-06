@@ -75,7 +75,10 @@ namespace Proyecto2GUI
                 }
                 else
                 {
-                    var mainForm = new mainFormLector();
+                    var mainForm = new mainFormLector(_biblioteca, this);
+                    mainForm.Show();
+
+                    this.Hide();
                 }
             }
             else

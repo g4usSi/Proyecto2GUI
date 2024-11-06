@@ -37,7 +37,7 @@ namespace Proyecto2GUI
                 lblISBN.Text = libroBuscado.ISBN;
                 lblRecibirTitulo.Text = libroBuscado.Titulo;
                 lblRecibirAutor.Text = libroBuscado.Autor;
-                lblRecibirDisponibilidad.Text = libroBuscado.Disponible ? "Disponible" : "No disponible"; ;
+                lblRecibirDisponibilidad.Text = libroBuscado.Disponible ? "Disponible" : "No disponible";
                 lblMensajeUsuario.Visible = false;
             }
             else

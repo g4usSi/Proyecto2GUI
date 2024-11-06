@@ -94,7 +94,7 @@ namespace Proyecto2GUI
             lblMensajeUser.Visible = false;
         }
 
-        //Eventos Click
+        //Logica de Ventanas
         #region GestionLibros
         private void BotonGestionLibros_Click(object sender, EventArgs e)
         {
@@ -129,7 +129,6 @@ namespace Proyecto2GUI
             hideSubMenu();
         }
         #endregion
-
         #region GestionUsuarios
         private void BotonGestLibros_Click(object sender, EventArgs e)
         {
@@ -179,7 +178,6 @@ namespace Proyecto2GUI
             hideSubMenu();
         }
         #endregion
-
         #region LogicaVentana
         //Logica Basica entre ventanas
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -222,13 +220,18 @@ namespace Proyecto2GUI
             childForm.BringToFront();
             childForm.Show();
         }
-
-        #endregion
-
         private void tituloBarraBibliotecario_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        #endregion
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            _biblioteca.CerrarSesion();
+            _login.Show();
         }
     }
 }

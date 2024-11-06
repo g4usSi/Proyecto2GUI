@@ -61,7 +61,6 @@ namespace Proyecto2
         //Lo unico que hara es llevarse el libro, no administrar la lista LeL
         public override void SolicitarLibro(Libro libroPrestar) 
         {
-            libroPrestar.CambiarDisponibilidad();
             libroPrestar.AumentarContadorPrestamo();
             this.LibroLigado = libroPrestar;
         }

@@ -41,7 +41,7 @@ namespace Proyecto2GUI
             }
 
             int rol = RecibirRol.SelectedIndex + 1;
-
+            
             _biblioteca.RegistrarUsuarioNuevo(RecibirID.Text, RecibirNombre.Text, RecibirContraseña.Text, rol);
             lblConfirmacion.Visible=true;
             LimpiarCampos();

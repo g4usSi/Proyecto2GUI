@@ -23,6 +23,15 @@ namespace Proyecto2
         public bool LibrosOrdenados = false; //Libros ordenados
         private HistorialAcciones historialAcciones = new HistorialAcciones();
 
+        public Lector LectorUser() 
+        {
+            if (UsuarioActual is Lector)
+            {
+                return (Lector)UsuarioActual;
+            }
+            return null;
+        }
+
         //LOGIN
         public bool IniciarSesion(string nombre, string contrasena)
         {
@@ -187,7 +196,6 @@ namespace Proyecto2
             librosBiblioteca.Add(new Libro("It", "Stephen King", "Horror", "666",true, 10));
             librosBiblioteca.Add(new Libro("It", "Stephen King", "Horror", "123367", false, 20));
             librosBiblioteca.Add(new Libro("Moby Dick", "Hamlet", "Narrativa", "32089", true, 3));
-            
         }
         //Modulo 2 Gestion de Usuarios
         //Opc 1
@@ -264,7 +272,7 @@ namespace Proyecto2
             Console.WriteLine("Cambio realizado");
         }
         public bool EliminarUsuario(Usuario usuarioBuscado) 
-        { 
+        {
             return listaUsuarios.Remove(usuarioBuscado);
         }
 
@@ -282,97 +290,36 @@ namespace Proyecto2
         public List<Usuario> MostrarListaUsuarios() 
         {
             return listaUsuarios;
-
         }
         //Modulo 3 Prestamos Lector
         //metodo temporal para solicitar prestamos
-        public void GestionPrestamos() 
-        {
-            //Provisional hasta hacer login, se reemplazara con prop UsuarioActual ;3
-            Console.WriteLine("Ingrese su nombre: ");
-            string nombre = Console.ReadLine();
-            Usuario usuario = BuscarUsuario(nombre);
-            if (usuario is Lector)
-            {
-                Lector lectorActual = (Lector)usuario;
-                Console.WriteLine("1. Solicitar");
-                Console.WriteLine("2. Devolver");
-                Console.WriteLine("3. Deshacer");
-                Console.Write("Ingrese una opcion: ");
-                int opc = Convert.ToInt32(Console.ReadLine());
-                switch (opc) 
-                {
-                    case 1:
-                    SolicitarLibro(lectorActual);
-                        break;
-                    case 2:
-                    DevolverLibro(lectorActual);
-                    break;
-                    case 3:
-                        historialAcciones.DeshacerUltimaAccion();
-                    break;
-                }
-            }
-            else 
-            {
-                Console.WriteLine("El usuario ingresado no es un lector o no existe.");
-                return;
-            }
-
-
-        }
-
         //Solicitar
-        public void SolicitarLibro(Lector lector)
+        public void SolicitarLibro(Lector lector, Libro libroSolicitado)
         {
-            Console.Write("Ingrese el ISBN del libro que desea solicitar: ");
-            string isbnBuscar = Console.ReadLine();
-            Libro libroSolicitado = BuscarLibroISBN(isbnBuscar);
-
-            if (libroSolicitado == null)
-            {
-                Console.WriteLine("Error. El libro no se encuentra en la biblioteca.");
-                return;
-            }
-
-            if (!libroSolicitado.Disponible)
-            {
-                SolicitudEspera nuevaSolicitud = new SolicitudEspera(lector, libroSolicitado);
-                listaEspera.Enqueue(nuevaSolicitud);
-                Console.WriteLine("Error. El libro ya está prestado.");
-                Console.WriteLine("Se le ha agregado a una lista de espera...");
-                return;
-            }
-
+            
             Prestamo nuevoPrestamo = new Prestamo(libroSolicitado, lector);
             prestamos.Add(nuevoPrestamo);
-            libroSolicitado.AumentarContadorPrestamo();
-            Console.WriteLine($"El libro '{libroSolicitado.Titulo}' ha sido prestado a {lector.ID}.");
-
-            // Registrar acción en el historial
+            libroSolicitado.CambiarDisponibilidad();
+            libroSolicitado.Disponible = false;
             historialAcciones.RegistrarAccion(new AccionBiblioteca("Préstamo", libroSolicitado));
         }
-        //Devolver
-        public void DevolverLibro(Lector lector)
+        public void AgregarALaListaDeEspera(SolicitudEspera nuevaSolicitud)
         {
-            Console.Write("Ingrese el ISBN del libro que desea devolver: ");
-            string isbn = Console.ReadLine();
+            listaEspera.Enqueue(nuevaSolicitud);
+        }
+        //Devolver
+        public Prestamo DevolverLibro(Lector lector)
+        {
+            Prestamo prestamoEliminar = prestamos.Find(p => p.LectorPrestamo == lector);
+            return prestamoEliminar;
+        }
 
-            Prestamo prestamo = prestamos.Find(p => p.LibroPrestado.ISBN == isbn && p.LectorPrestamo.ID == lector.ID);
 
-            if (prestamo == null)
-            {
-                Console.WriteLine("Error. No se encontró un préstamo correspondiente.");
-                return;
-            }
-
-            prestamo.DevolverLibro();
-            prestamos.Remove(prestamo);
-
-            Console.WriteLine($"El libro '{prestamo.LibroPrestado.Titulo}' ha sido devuelto por {lector.ID}.");
-
-            // Registrar acción en el historial
-            historialAcciones.RegistrarAccion(new AccionBiblioteca("Devolución", prestamo.LibroPrestado));
+        public void EliminarPrestamo(Prestamo prestamoEliminar) 
+        {
+            historialAcciones.RegistrarAccion(new AccionBiblioteca("Devolución", prestamoEliminar.LibroPrestado));
+            prestamos.Remove(prestamoEliminar);
+;
         }
 
         //Mostrar prestamos activos
@@ -403,7 +350,6 @@ namespace Proyecto2
                     }
                 }
             }
-
             foreach (var libro in librosOrdenados)
             {
                 Console.WriteLine($"Título: {libro.Titulo}, Autor: {libro.Autor}, Préstamos: {libro.ContadorPrestamos}");
@@ -413,10 +359,7 @@ namespace Proyecto2
         //Funcionalidades de ordenamiento
         public void OrdenarLibros() 
         {
-
             LibrosOrdenados = true;
         }
-
-
     }
 }

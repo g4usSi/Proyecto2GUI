@@ -52,6 +52,8 @@
             panelChildForm = new Panel();
             lblMensajeUser = new Label();
             lblBienvenida = new Label();
+            btnCerrarSesion = new Button();
+            panel2 = new Panel();
             barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
@@ -116,6 +118,7 @@
             // panelMenuPrincipal
             // 
             panelMenuPrincipal.BackColor = Color.FromArgb(184, 149, 93);
+            panelMenuPrincipal.Controls.Add(btnCerrarSesion);
             panelMenuPrincipal.Controls.Add(PanelGenInformes);
             panelMenuPrincipal.Controls.Add(BotonGenInformes);
             panelMenuPrincipal.Controls.Add(PanelGestUsuarios);
@@ -123,6 +126,7 @@
             panelMenuPrincipal.Controls.Add(PanelSubGestLibros);
             panelMenuPrincipal.Controls.Add(BotonGestionLibros);
             panelMenuPrincipal.Controls.Add(panel1);
+            panelMenuPrincipal.Controls.Add(panel2);
             panelMenuPrincipal.Dock = DockStyle.Left;
             panelMenuPrincipal.Location = new Point(0, 65);
             panelMenuPrincipal.Name = "panelMenuPrincipal";
@@ -422,6 +426,34 @@
             lblBienvenida.Text = "Bienvenid@: ";
             lblBienvenida.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // btnCerrarSesion
+            // 
+            btnCerrarSesion.Cursor = Cursors.Hand;
+            btnCerrarSesion.Dock = DockStyle.Bottom;
+            btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            btnCerrarSesion.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
+            btnCerrarSesion.FlatStyle = FlatStyle.Flat;
+            btnCerrarSesion.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
+            btnCerrarSesion.Image = (Image)resources.GetObject("btnCerrarSesion.Image");
+            btnCerrarSesion.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCerrarSesion.Location = new Point(0, 628);
+            btnCerrarSesion.Name = "btnCerrarSesion";
+            btnCerrarSesion.Padding = new Padding(20, 0, 48, 0);
+            btnCerrarSesion.Size = new Size(280, 60);
+            btnCerrarSesion.TabIndex = 7;
+            btnCerrarSesion.Text = "Cerrar Sesion";
+            btnCerrarSesion.TextAlign = ContentAlignment.MiddleRight;
+            btnCerrarSesion.UseVisualStyleBackColor = true;
+            btnCerrarSesion.Click += btnCerrarSesion_Click;
+            // 
+            // panel2
+            // 
+            panel2.Dock = DockStyle.Bottom;
+            panel2.Location = new Point(0, 688);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(280, 27);
+            panel2.TabIndex = 8;
+            // 
             // mainBibliotecario
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -474,5 +506,7 @@
         private Panel panelChildForm;
         private Label lblMensajeUser;
         private Label lblBienvenida;
+        private Button btnCerrarSesion;
+        private Panel panel2;
     }
 }
