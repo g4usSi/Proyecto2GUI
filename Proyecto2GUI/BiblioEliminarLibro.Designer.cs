@@ -174,10 +174,9 @@
             button2.Name = "button2";
             button2.Size = new Size(146, 40);
             button2.TabIndex = 13;
-            button2.Text = "Limpiar";
+            button2.Text = "Cancelar";
             button2.TextAlign = ContentAlignment.MiddleRight;
             button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
             // 
             // btnEliminarLibro
             // 

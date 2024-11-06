@@ -164,6 +164,7 @@ namespace Proyecto2GUI
         private void btnPrestamos_Click(object sender, EventArgs e)
         {
             OcultarBienvenida();
+            openChildForm(new BiblioPrestamosActivos(_biblioteca));
             //Code...
 
             hideSubMenu();
@@ -172,6 +173,7 @@ namespace Proyecto2GUI
         private void btnEstadisticas_Click(object sender, EventArgs e)
         {
             OcultarBienvenida();
+            openChildForm(new BiblioPrestamosMas(_biblioteca));
             //Code...
 
             hideSubMenu();
@@ -202,7 +204,7 @@ namespace Proyecto2GUI
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-        #endregion
+   
         private Form activeForm = null;
         //Llamada a formulario
         private void openChildForm(Form childForm)
@@ -220,7 +222,7 @@ namespace Proyecto2GUI
             childForm.BringToFront();
             childForm.Show();
         }
-        
-    
+
+        #endregion
     }
 }

@@ -57,7 +57,10 @@ namespace Proyecto2
             librosBiblioteca.Add(libroRecibidoGUI);
             LibrosOrdenados = false;
         }
-
+        public List<Libro> MostrarLibros()
+        {
+            return librosBiblioteca;
+        }
         public bool LibroExistente(string ISBN)
         {
             return librosBiblioteca.Any(libro => libro.ISBN == ISBN);
@@ -180,8 +183,8 @@ namespace Proyecto2
         {
             listaUsuarios.Add(new Bibliotecario("Geovanny Alcon","Geovanny Alcon", "1407"));
             listaUsuarios.Add(new Bibliotecario("Geo", "Geo","1234"));
-            librosBiblioteca.Add(new Libro("It", "Stephen King", "Horror", "666"));
-            librosBiblioteca.Add(new Libro("It", "Stephen King", "Horror", "123"));
+            librosBiblioteca.Add(new Libro("It", "Stephen King", "Horror", "666",true, 10));
+            librosBiblioteca.Add(new Libro("It", "Stephen King", "Horror", "123", false, 20));
         }
         //Modulo 2 Gestion de Usuarios
         //Opc 1
@@ -370,19 +373,9 @@ namespace Proyecto2
         }
 
         //Mostrar prestamos activos
-        public void MostrarPrestamosActivos()
+        public List<Prestamo> MostrarPrestamosActivos()
         {
-            if (prestamos != null)
-            {
-                foreach (var p in prestamos)
-                {
-                    p.MostrarPrestamo();
-                }
-            }
-            else
-            {
-                Console.WriteLine("Error. No hay prestamos activos");
-            }
+            return prestamos;
         }
         public void MostrarLibrosMasSolicitados(int cantidad = 5)
         {

@@ -51,7 +51,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 150);
             panel1.Name = "panel1";
-            panel1.Size = new Size(982, 353);
+            panel1.Size = new Size(982, 376);
             panel1.TabIndex = 11;
             // 
             // btnBuscarLibro
@@ -64,7 +64,7 @@
             btnBuscarLibro.Font = new Font("Segoe UI Variable Small Semibol", 9F, FontStyle.Bold);
             btnBuscarLibro.Image = (Image)resources.GetObject("btnBuscarLibro.Image");
             btnBuscarLibro.ImageAlign = ContentAlignment.MiddleLeft;
-            btnBuscarLibro.Location = new Point(730, 37);
+            btnBuscarLibro.Location = new Point(740, 33);
             btnBuscarLibro.Name = "btnBuscarLibro";
             btnBuscarLibro.Size = new Size(146, 40);
             btnBuscarLibro.TabIndex = 11;
@@ -75,6 +75,8 @@
             // 
             // TablaLibrosBuscados
             // 
+            TablaLibrosBuscados.AllowUserToAddRows = false;
+            TablaLibrosBuscados.AllowUserToDeleteRows = false;
             TablaLibrosBuscados.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             TablaLibrosBuscados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             TablaLibrosBuscados.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -90,6 +92,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             TablaLibrosBuscados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             TablaLibrosBuscados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            TablaLibrosBuscados.Cursor = Cursors.Hand;
             TablaLibrosBuscados.EnableHeadersVisualStyles = false;
             TablaLibrosBuscados.GridColor = Color.FromArgb(49, 53, 56);
             TablaLibrosBuscados.Location = new Point(254, 111);
@@ -111,7 +114,7 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(230, 165, 36);
             TablaLibrosBuscados.RowsDefaultCellStyle = dataGridViewCellStyle3;
             TablaLibrosBuscados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            TablaLibrosBuscados.Size = new Size(632, 239);
+            TablaLibrosBuscados.Size = new Size(632, 265);
             TablaLibrosBuscados.TabIndex = 10;
             // 
             // RecibirBuscar

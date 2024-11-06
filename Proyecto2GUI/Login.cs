@@ -65,9 +65,8 @@ namespace Proyecto2GUI
 
             if (_biblioteca.IniciarSesion(txtNombre.Text, txtPassword.Text))
             {
-                MessageBox.Show("Inicio de sesión exitoso", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                var mainForm = new mainBibliotecario(_biblioteca, this);  // Pasar _biblioteca si es necesario
+                var mainForm = new mainBibliotecario(_biblioteca, this);
                 mainForm.Show();
 
                 this.Hide();
