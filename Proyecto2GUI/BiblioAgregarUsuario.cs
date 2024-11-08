@@ -21,7 +21,6 @@ namespace Proyecto2GUI
             lblMensajeUsuario.Visible = false;
             lblConfirmacion.Visible = false;
         }
-
         private void btnAgregarUsuario_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(RecibirID.Text) ||
@@ -46,8 +45,6 @@ namespace Proyecto2GUI
             lblConfirmacion.Visible=true;
             LimpiarCampos();
         }
-
-
         private void btnLimpiarCampos_Click(object sender, EventArgs e)
         {
             LimpiarCampos();

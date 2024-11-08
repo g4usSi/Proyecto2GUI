@@ -118,6 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnLimpiarCampos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
+        MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfoCwgBCgfh7j2vAAABCElEQVRYR+2WsQ3CMBBFgxA0lFRs
+        QE2FRMUIjMAo1ExAi2hBbMIAzEBFQRn+jxxkIhf25UegyE96Xe5ysqPcLzKZ3lOWZWcm0SgewKHAr77R
+        eEUreIQXeG4h6w9wDk3DjOAVKtlD0zC8nh18wpfAB9xC0zB0ApdwLXABx9A8TCdmWhE6UpVJNIqncCaQ
+        fT59o/GKNvAG7wLZh/1Mw/DfcoJK2I993Zsi4MPOvzmZ2t9+M8QvVJtpRehIlUbjFXGbcquGtm2q3PLc
+        9uZhmDOYN0I5JFXmH+Yg87+FCUwJEyKTontTBHzYyWzKjKrIuszMzM5V72jqAs9Qqk+1up7aJPxCtZlM
+        zymKN2bVr6X5l0lFAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="btnAgregarUsuario.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1

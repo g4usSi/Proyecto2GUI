@@ -24,7 +24,7 @@ namespace Proyecto2GUI
             _biblioteca = biblioteca;
             InitializeComponent();
             BienvenudoUsuario();
-            //lblMensajeDeshacer.Text = String.Empty;
+            lblMensajeDeshacer.Text = String.Empty;
 
             GraphicsPath path = new GraphicsPath();
             int redondeo = 13;
@@ -52,12 +52,14 @@ namespace Proyecto2GUI
         {
             OcultarBienvenida();
             openChildForm(new LectorPrestarLibro(_biblioteca));
+            LimpiarLabel();
         }
 
         private void BotonDevolverUsuario_Click(object sender, EventArgs e)
         {
             OcultarBienvenida();
             openChildForm(new LectorDevolverLibrocs(_biblioteca));
+            LimpiarLabel();
         }
 
         private void barraTitulo_MouseDown(object sender, MouseEventArgs e)
@@ -86,6 +88,7 @@ namespace Proyecto2GUI
         {
             this.Close();
             _biblioteca.CerrarSesion();
+            //Se limpia el Stack de Acciones
             _login.Show();
         }
 
@@ -119,10 +122,11 @@ namespace Proyecto2GUI
             childForm.BringToFront();
             childForm.Show();
         }
-        #endregion
-        /*
-        //Boton deshacer accion
-        private void button1_Click(object sender, EventArgs e)
+        private void LimpiarLabel()
+        {
+            lblMensajeDeshacer.Text = string.Empty;
+        }
+        private void btnDeshacer_Click(object sender, EventArgs e)
         {
             if (!_biblioteca.historialAcciones.EstaVacio())
             {
@@ -152,6 +156,13 @@ namespace Proyecto2GUI
             {
                 lblMensajeDeshacer.Text = "No hay acciones para deshacer.";
             }
+        }
+        #endregion
+        /*
+        //Boton deshacer accion
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
         */
 

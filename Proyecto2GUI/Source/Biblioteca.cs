@@ -346,17 +346,15 @@ namespace Proyecto2
         {
             return prestamos;
         }
-        public void MostrarLibrosMasSolicitados(int cantidad = 5)
+        public List<Libro> ObtenerLibrosMasSolicitados(int cantidad = 3)
         {
             if (cantidad > librosBiblioteca.Count)
             {
                 cantidad = librosBiblioteca.Count;
             }
 
-            Console.WriteLine($"Los {cantidad} libros más solicitados son:");
-
             List<Libro> librosOrdenados = new List<Libro>(librosBiblioteca);
-            //Ordenamiento burbuja de libros mas solicitados
+
             for (int i = 0; i < librosOrdenados.Count; i++)
             {
                 for (int j = i + 1; j < librosOrdenados.Count; j++)
@@ -369,10 +367,8 @@ namespace Proyecto2
                     }
                 }
             }
-            foreach (var libro in librosOrdenados)
-            {
-                Console.WriteLine($"Título: {libro.Titulo}, Autor: {libro.Autor}, Préstamos: {libro.ContadorPrestamos}");
-            }
+
+            return librosOrdenados.Take(cantidad).ToList();
         }
 
         //Funcionalidades de ordenamiento

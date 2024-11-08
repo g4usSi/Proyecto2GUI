@@ -43,6 +43,8 @@
             panelChildForm = new Panel();
             lblBienvenidaUser = new Label();
             lblBienvenida = new Label();
+            btnDeshacer = new Button();
+            lblMensajeDeshacer = new Label();
             panelMenuPrincipal.SuspendLayout();
             panel1.SuspendLayout();
             barraTitulo.SuspendLayout();
@@ -170,7 +172,7 @@
             tituloBarraBibliotecario.AutoSize = true;
             tituloBarraBibliotecario.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tituloBarraBibliotecario.ForeColor = Color.Transparent;
-            tituloBarraBibliotecario.Location = new Point(647, 21);
+            tituloBarraBibliotecario.Location = new Point(678, 19);
             tituloBarraBibliotecario.Name = "tituloBarraBibliotecario";
             tituloBarraBibliotecario.Size = new Size(67, 27);
             tituloBarraBibliotecario.TabIndex = 3;
@@ -232,11 +234,44 @@
             lblBienvenida.Text = "Bienvenid@: ";
             lblBienvenida.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // btnDeshacer
+            // 
+            btnDeshacer.BackColor = Color.Goldenrod;
+            btnDeshacer.Cursor = Cursors.Hand;
+            btnDeshacer.FlatAppearance.BorderSize = 0;
+            btnDeshacer.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
+            btnDeshacer.FlatStyle = FlatStyle.Flat;
+            btnDeshacer.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
+            btnDeshacer.Image = (Image)resources.GetObject("btnDeshacer.Image");
+            btnDeshacer.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDeshacer.Location = new Point(280, 735);
+            btnDeshacer.Name = "btnDeshacer";
+            btnDeshacer.Padding = new Padding(5, 0, 10, 0);
+            btnDeshacer.Size = new Size(164, 45);
+            btnDeshacer.TabIndex = 11;
+            btnDeshacer.Text = "Deshacer";
+            btnDeshacer.TextAlign = ContentAlignment.MiddleRight;
+            btnDeshacer.UseVisualStyleBackColor = false;
+            btnDeshacer.Click += btnDeshacer_Click;
+            // 
+            // lblMensajeDeshacer
+            // 
+            lblMensajeDeshacer.Dock = DockStyle.Bottom;
+            lblMensajeDeshacer.Font = new Font("Segoe UI Variable Display Semib", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMensajeDeshacer.Location = new Point(280, 735);
+            lblMensajeDeshacer.Name = "lblMensajeDeshacer";
+            lblMensajeDeshacer.Size = new Size(1100, 45);
+            lblMensajeDeshacer.TabIndex = 12;
+            lblMensajeDeshacer.Text = "mensaje";
+            lblMensajeDeshacer.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // mainFormLector
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1380, 780);
+            Controls.Add(btnDeshacer);
+            Controls.Add(lblMensajeDeshacer);
             Controls.Add(panelChildForm);
             Controls.Add(panelMenuPrincipal);
             Controls.Add(barraTitulo);
@@ -271,5 +306,7 @@
         private Panel panelChildForm;
         private Label lblBienvenidaUser;
         private Label lblBienvenida;
+        private Button btnDeshacer;
+        private Label lblMensajeDeshacer;
     }
 }

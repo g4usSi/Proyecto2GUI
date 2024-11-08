@@ -233,5 +233,13 @@ namespace Proyecto2GUI
             _biblioteca.CerrarSesion();
             _login.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OcultarBienvenida();
+            //openChildForm( );
+            //Code...
+            hideSubMenu();
+        }
     }
 }

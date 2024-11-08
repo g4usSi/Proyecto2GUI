@@ -147,6 +147,7 @@
             btnLimpiarCampos.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
             btnLimpiarCampos.FlatStyle = FlatStyle.Flat;
             btnLimpiarCampos.Font = new Font("Segoe UI Variable Small Semibol", 9F, FontStyle.Bold);
+            btnLimpiarCampos.Image = (Image)resources.GetObject("btnLimpiarCampos.Image");
             btnLimpiarCampos.ImageAlign = ContentAlignment.MiddleLeft;
             btnLimpiarCampos.Location = new Point(717, 113);
             btnLimpiarCampos.Name = "btnLimpiarCampos";

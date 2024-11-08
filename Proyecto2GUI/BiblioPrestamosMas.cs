@@ -21,6 +21,7 @@ namespace Proyecto2GUI
             _biblioteca = biblioteca;
             InitializeComponent();
             RellenarGrid();
+            RellenarGridMasPrestado();
         }
         private void RellenarGrid()
         {
@@ -50,6 +51,25 @@ namespace Proyecto2GUI
                 lblMensajeUsuario.ForeColor = Color.DarkRed;
             }
 
+        }
+
+        private void RellenarGridMasPrestado()
+        {
+            dataMasPrestados.Rows.Clear();
+
+            var librosBiblioteca = _biblioteca.ObtenerLibrosMasSolicitados();
+
+            if (librosBiblioteca != null)
+            {
+                foreach (var l in librosBiblioteca)
+                {
+                    int rowIndex = dataMasPrestados.Rows.Add();
+                    DataGridViewRow row = dataMasPrestados.Rows[rowIndex];
+                    row.Cells[0].Value = l.Titulo;
+                    row.Cells[1].Value = l.Genero;
+                    row.Cells[2].Value = l.ContadorPrestamos;
+                }
+            }
         }
 
     }

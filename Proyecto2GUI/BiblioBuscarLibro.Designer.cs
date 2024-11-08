@@ -38,6 +38,7 @@
             RecibirBuscar = new TextBox();
             label2 = new Label();
             label1 = new Label();
+            lblMensajeUsuario = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)TablaLibrosBuscados).BeginInit();
             SuspendLayout();
@@ -51,7 +52,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 150);
             panel1.Name = "panel1";
-            panel1.Size = new Size(982, 376);
+            panel1.Size = new Size(982, 343);
             panel1.TabIndex = 11;
             // 
             // btnBuscarLibro
@@ -95,7 +96,7 @@
             TablaLibrosBuscados.Cursor = Cursors.Hand;
             TablaLibrosBuscados.EnableHeadersVisualStyles = false;
             TablaLibrosBuscados.GridColor = Color.FromArgb(49, 53, 56);
-            TablaLibrosBuscados.Location = new Point(254, 111);
+            TablaLibrosBuscados.Location = new Point(239, 93);
             TablaLibrosBuscados.Name = "TablaLibrosBuscados";
             TablaLibrosBuscados.ReadOnly = true;
             TablaLibrosBuscados.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -114,7 +115,7 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(230, 165, 36);
             TablaLibrosBuscados.RowsDefaultCellStyle = dataGridViewCellStyle3;
             TablaLibrosBuscados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            TablaLibrosBuscados.Size = new Size(632, 265);
+            TablaLibrosBuscados.Size = new Size(632, 187);
             TablaLibrosBuscados.TabIndex = 10;
             // 
             // RecibirBuscar
@@ -148,11 +149,24 @@
             label1.Text = "Buscar Libro";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // lblMensajeUsuario
+            // 
+            lblMensajeUsuario.Dock = DockStyle.Bottom;
+            lblMensajeUsuario.Font = new Font("Segoe UI Variable Small", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMensajeUsuario.ForeColor = Color.Goldenrod;
+            lblMensajeUsuario.Location = new Point(0, 496);
+            lblMensajeUsuario.Name = "lblMensajeUsuario";
+            lblMensajeUsuario.Size = new Size(982, 57);
+            lblMensajeUsuario.TabIndex = 29;
+            lblMensajeUsuario.Text = "Mensaje";
+            lblMensajeUsuario.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // BiblioBuscarLibro
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(982, 553);
+            Controls.Add(lblMensajeUsuario);
             Controls.Add(panel1);
             Controls.Add(label1);
             Name = "BiblioBuscarLibro";
@@ -179,5 +193,6 @@
         private Label label1;
         private DataGridView TablaLibrosBuscados;
         private Button btnBuscarLibro;
+        private Label lblMensajeUsuario;
     }
 }

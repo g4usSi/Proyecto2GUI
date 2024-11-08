@@ -20,6 +20,7 @@ namespace Proyecto2GUI
             _biblioteca = biblioteca;
             InitializeComponent();
             LimpiarLabels();
+            RellenarGrid();
             lblMensajeUsuario.Text = string.Empty;
         }
 
@@ -42,6 +43,7 @@ namespace Proyecto2GUI
                 lblMensajeUsuario.Text = "Error: El libro no se encuentra en la biblioteca.";
                 lblMensajeUsuario.ForeColor = Color.DarkRed;
             }
+            RellenarGrid();
         }
         private void LimpiarLabels()
         {
@@ -49,6 +51,7 @@ namespace Proyecto2GUI
             lblRecibirAutor.Text = string.Empty;
             lblRecibirGenero.Text = string.Empty;
             lblRecibirDisponibilidad.Text = string.Empty;
+            
         }
         private void btnSolicitarLibro_Click(object sender, EventArgs e)
         {
@@ -78,12 +81,37 @@ namespace Proyecto2GUI
             if (_biblioteca.UsuarioActual is Lector lectorSolicitante)
             {
                 _biblioteca.SolicitarLibro(lectorSolicitante, libroPrestar);
+                libroPrestar.ContadorPrestamos++;
                 lblMensajeUsuario.Text = $"El libro '{libroPrestar.Titulo}' ha sido prestado exitosamente.";
                 lblMensajeUsuario.ForeColor = Color.Green; // Color de éxito
             }
         }
+        private void RellenarGrid()
+        {
+            var librosBiblioteca = _biblioteca.MostrarLibros();
 
+            if (librosBiblioteca != null && librosBiblioteca.Any())
+            {
+                foreach (var l in librosBiblioteca)
+                {
+                    int rowIndex = datosLibros.Rows.Add();
+                    DataGridViewRow row = datosLibros.Rows[rowIndex];
+                    row.Cells[0].Value = l.ISBN;
+                    row.Cells[1].Value = l.Titulo;
+                    row.Cells[2].Value = l.Autor;
+                    row.Cells[3].Value = l.Genero;
+                    row.Cells[4].Value = l.Disponible ? "Disponible" : "No Disponible";
+                }
+            }
+            else
+            {
+                lblMensajeUsuario.Visible = true;
+                lblMensajeUsuario.Text = "No hay préstamos activos.";
+                lblMensajeUsuario.ForeColor = Color.DarkRed;
+            }
+        }
 
+        //Boton no hace nada :v
         private void label4_Click(object sender, EventArgs e)
         {
 

@@ -20,6 +20,7 @@ namespace Proyecto2GUI
             usuarioBuscar = null;
             _biblioteca = biblioteca;
             InitializeComponent();
+            RellenarGrid();
             lblTituloID.Visible = false;
             lblRecibirIDUser.Visible = false;
             lblRecibirRol.Visible = false;
@@ -67,7 +68,6 @@ namespace Proyecto2GUI
             }
         }
 
-
         private void btnEliminarUsuario_Click(object sender, EventArgs e)
         {
             if (usuarioBuscar != null)
@@ -104,6 +104,24 @@ namespace Proyecto2GUI
             RecibirNombre.Clear();
             RecibirContraseña.Clear();
             lblRecibirIDUser.Text = string.Empty;
+        }
+
+        private void RellenarGrid()
+        {
+            List<Usuario> listaUsuarios = _biblioteca.MostrarListaUsuarios();
+
+            if (listaUsuarios != null && listaUsuarios.Any())
+            {
+                foreach (var u in listaUsuarios)
+                {
+                    int rowIndex = datosUsuarios.Rows.Add();
+                    DataGridViewRow row = datosUsuarios.Rows[rowIndex];
+                    row.Cells[0].Value = u.ID;
+                    row.Cells[1].Value = u.Name;
+                    row.Cells[2].Value = u.Password;
+                    row.Cells[3].Value = u.Rol;
+                }
+            }
         }
     }
 }

@@ -156,7 +156,7 @@
             lblMensajeUsuario.Name = "lblMensajeUsuario";
             lblMensajeUsuario.Size = new Size(982, 60);
             lblMensajeUsuario.TabIndex = 24;
-            lblMensajeUsuario.Text = "Se ha eliminado al usuario";
+            lblMensajeUsuario.Text = "Mensaje";
             lblMensajeUsuario.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // BiblioPrestamosActivos

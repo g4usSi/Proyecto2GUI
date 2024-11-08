@@ -9,11 +9,9 @@ namespace Proyecto2
 {
     public class Lector : Usuario
     {
-        public Libro LibroLigado;
         public Lector(string iD = null, string nombre = null, string password = null) : base()
         {
             this.Rol = "Lector";
-            this.LibroLigado = null;
             if (iD == null)
             {
                 Console.Write("Ingrese el nombre: ");
@@ -44,6 +42,7 @@ namespace Proyecto2
                 Password = password;
             }
         }
+        /*
         public override void MostrarUsuario()
         {
             Console.WriteLine("Información del usuario:");
@@ -69,6 +68,7 @@ namespace Proyecto2
             
             this.LibroLigado = null;
         }
+        */
 
     }
 }

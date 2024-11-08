@@ -34,6 +34,7 @@
             btnMinimizar = new PictureBox();
             btnCerrar = new PictureBox();
             panelMenuPrincipal = new Panel();
+            btnCerrarSesion = new Button();
             PanelGenInformes = new Panel();
             btnEstadisticas = new Button();
             btnPrestamos = new Button();
@@ -49,11 +50,10 @@
             BotonGestionLibros = new Button();
             panel1 = new Panel();
             lblTituloApp = new Label();
+            panel2 = new Panel();
             panelChildForm = new Panel();
             lblMensajeUser = new Label();
             lblBienvenida = new Label();
-            btnCerrarSesion = new Button();
-            panel2 = new Panel();
             barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
@@ -133,6 +133,26 @@
             panelMenuPrincipal.Size = new Size(280, 715);
             panelMenuPrincipal.TabIndex = 1;
             // 
+            // btnCerrarSesion
+            // 
+            btnCerrarSesion.Cursor = Cursors.Hand;
+            btnCerrarSesion.Dock = DockStyle.Bottom;
+            btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            btnCerrarSesion.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
+            btnCerrarSesion.FlatStyle = FlatStyle.Flat;
+            btnCerrarSesion.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
+            btnCerrarSesion.Image = (Image)resources.GetObject("btnCerrarSesion.Image");
+            btnCerrarSesion.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCerrarSesion.Location = new Point(0, 628);
+            btnCerrarSesion.Name = "btnCerrarSesion";
+            btnCerrarSesion.Padding = new Padding(20, 0, 48, 0);
+            btnCerrarSesion.Size = new Size(280, 60);
+            btnCerrarSesion.TabIndex = 7;
+            btnCerrarSesion.Text = "Cerrar Sesion";
+            btnCerrarSesion.TextAlign = ContentAlignment.MiddleRight;
+            btnCerrarSesion.UseVisualStyleBackColor = true;
+            btnCerrarSesion.Click += btnCerrarSesion_Click;
+            // 
             // PanelGenInformes
             // 
             PanelGenInformes.BackColor = Color.FromArgb(240, 211, 155);
@@ -157,10 +177,10 @@
             btnEstadisticas.ImageAlign = ContentAlignment.MiddleLeft;
             btnEstadisticas.Location = new Point(0, 40);
             btnEstadisticas.Name = "btnEstadisticas";
-            btnEstadisticas.Padding = new Padding(60, 0, 77, 0);
+            btnEstadisticas.Padding = new Padding(60, 0, 45, 0);
             btnEstadisticas.Size = new Size(280, 40);
             btnEstadisticas.TabIndex = 1;
-            btnEstadisticas.Text = "Estadisticas";
+            btnEstadisticas.Text = "Libros Biblioteca";
             btnEstadisticas.TextAlign = ContentAlignment.MiddleRight;
             btnEstadisticas.UseVisualStyleBackColor = false;
             btnEstadisticas.Click += btnEstadisticas_Click;
@@ -394,6 +414,14 @@
             lblTituloApp.TabIndex = 6;
             lblTituloApp.Text = "Biblioteca";
             // 
+            // panel2
+            // 
+            panel2.Dock = DockStyle.Bottom;
+            panel2.Location = new Point(0, 688);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(280, 27);
+            panel2.TabIndex = 8;
+            // 
             // panelChildForm
             // 
             panelChildForm.Controls.Add(lblMensajeUser);
@@ -425,34 +453,6 @@
             lblBienvenida.TabIndex = 7;
             lblBienvenida.Text = "Bienvenid@: ";
             lblBienvenida.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // btnCerrarSesion
-            // 
-            btnCerrarSesion.Cursor = Cursors.Hand;
-            btnCerrarSesion.Dock = DockStyle.Bottom;
-            btnCerrarSesion.FlatAppearance.BorderSize = 0;
-            btnCerrarSesion.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
-            btnCerrarSesion.FlatStyle = FlatStyle.Flat;
-            btnCerrarSesion.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
-            btnCerrarSesion.Image = (Image)resources.GetObject("btnCerrarSesion.Image");
-            btnCerrarSesion.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCerrarSesion.Location = new Point(0, 628);
-            btnCerrarSesion.Name = "btnCerrarSesion";
-            btnCerrarSesion.Padding = new Padding(20, 0, 48, 0);
-            btnCerrarSesion.Size = new Size(280, 60);
-            btnCerrarSesion.TabIndex = 7;
-            btnCerrarSesion.Text = "Cerrar Sesion";
-            btnCerrarSesion.TextAlign = ContentAlignment.MiddleRight;
-            btnCerrarSesion.UseVisualStyleBackColor = true;
-            btnCerrarSesion.Click += btnCerrarSesion_Click;
-            // 
-            // panel2
-            // 
-            panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 688);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(280, 27);
-            panel2.TabIndex = 8;
             // 
             // mainBibliotecario
             // 
@@ -506,7 +506,8 @@
         private Panel panelChildForm;
         private Label lblMensajeUser;
         private Label lblBienvenida;
-        private Button btnCerrarSesion;
         private Panel panel2;
+        private Button btnCerrarSesion;
+        private Button button1;
     }
 }

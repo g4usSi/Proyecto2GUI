@@ -70,7 +70,6 @@ namespace Proyecto2GUI
                 lblMensajeUsuario.Text = "No has prestado un libro.";
             }
         }
-
         public void LimpiarLabel()
         {
             lblRecibirAutor.Text = string.Empty;

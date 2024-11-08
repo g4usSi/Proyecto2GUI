@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BiblioEliminarLibro));
             label1 = new Label();
             panel1 = new Panel();
-            lblMensajeUsuario = new Label();
             lblRecibirDisponibilidad = new Label();
             lblRecibirAutor = new Label();
             lblRecibirTitulo = new Label();
@@ -44,6 +43,7 @@
             btnBuscarLibro = new Button();
             RecibirBuscar = new TextBox();
             label2 = new Label();
+            lblMensajeUsuario = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -60,7 +60,6 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(lblMensajeUsuario);
             panel1.Controls.Add(lblRecibirDisponibilidad);
             panel1.Controls.Add(lblRecibirAutor);
             panel1.Controls.Add(lblRecibirTitulo);
@@ -76,26 +75,14 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 150);
             panel1.Name = "panel1";
-            panel1.Size = new Size(982, 353);
+            panel1.Size = new Size(982, 305);
             panel1.TabIndex = 12;
-            // 
-            // lblMensajeUsuario
-            // 
-            lblMensajeUsuario.AutoSize = true;
-            lblMensajeUsuario.Font = new Font("Segoe UI Variable Small", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMensajeUsuario.ForeColor = Color.DarkRed;
-            lblMensajeUsuario.Location = new Point(340, 251);
-            lblMensajeUsuario.Name = "lblMensajeUsuario";
-            lblMensajeUsuario.Size = new Size(285, 27);
-            lblMensajeUsuario.TabIndex = 21;
-            lblMensajeUsuario.Text = "Error no se encontro el libro";
-            lblMensajeUsuario.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblRecibirDisponibilidad
             // 
             lblRecibirDisponibilidad.AutoSize = true;
             lblRecibirDisponibilidad.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
-            lblRecibirDisponibilidad.Location = new Point(317, 192);
+            lblRecibirDisponibilidad.Location = new Point(317, 185);
             lblRecibirDisponibilidad.Name = "lblRecibirDisponibilidad";
             lblRecibirDisponibilidad.Size = new Size(27, 27);
             lblRecibirDisponibilidad.TabIndex = 20;
@@ -105,7 +92,7 @@
             // 
             lblRecibirAutor.AutoSize = true;
             lblRecibirAutor.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
-            lblRecibirAutor.Location = new Point(317, 164);
+            lblRecibirAutor.Location = new Point(317, 157);
             lblRecibirAutor.Name = "lblRecibirAutor";
             lblRecibirAutor.Size = new Size(26, 27);
             lblRecibirAutor.TabIndex = 19;
@@ -115,7 +102,7 @@
             // 
             lblRecibirTitulo.AutoSize = true;
             lblRecibirTitulo.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
-            lblRecibirTitulo.Location = new Point(317, 133);
+            lblRecibirTitulo.Location = new Point(317, 126);
             lblRecibirTitulo.Name = "lblRecibirTitulo";
             lblRecibirTitulo.Size = new Size(24, 27);
             lblRecibirTitulo.TabIndex = 18;
@@ -125,7 +112,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
-            label6.Location = new Point(150, 192);
+            label6.Location = new Point(150, 185);
             label6.Name = "label6";
             label6.Size = new Size(149, 27);
             label6.TabIndex = 17;
@@ -135,7 +122,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
-            label5.Location = new Point(150, 165);
+            label5.Location = new Point(150, 158);
             label5.Name = "label5";
             label5.Size = new Size(71, 27);
             label5.TabIndex = 16;
@@ -145,7 +132,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
-            label4.Location = new Point(150, 134);
+            label4.Location = new Point(150, 127);
             label4.Name = "label4";
             label4.Size = new Size(71, 27);
             label4.TabIndex = 15;
@@ -155,7 +142,7 @@
             // 
             lblISBN.AutoSize = true;
             lblISBN.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
-            lblISBN.Location = new Point(389, 94);
+            lblISBN.Location = new Point(389, 88);
             lblISBN.Name = "lblISBN";
             lblISBN.Size = new Size(59, 27);
             lblISBN.TabIndex = 14;
@@ -172,6 +159,7 @@
             button2.ImageAlign = ContentAlignment.MiddleLeft;
             button2.Location = new Point(730, 188);
             button2.Name = "button2";
+            button2.Padding = new Padding(0, 0, 38, 0);
             button2.Size = new Size(146, 40);
             button2.TabIndex = 13;
             button2.Text = "Cancelar";
@@ -184,9 +172,10 @@
             btnEliminarLibro.BackColor = Color.DarkRed;
             btnEliminarLibro.Cursor = Cursors.Hand;
             btnEliminarLibro.FlatAppearance.BorderSize = 0;
-            btnEliminarLibro.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
+            btnEliminarLibro.FlatAppearance.MouseOverBackColor = Color.Tomato;
             btnEliminarLibro.FlatStyle = FlatStyle.Flat;
             btnEliminarLibro.Font = new Font("Segoe UI Variable Small Semibol", 9F, FontStyle.Bold);
+            btnEliminarLibro.ForeColor = Color.White;
             btnEliminarLibro.ImageAlign = ContentAlignment.MiddleLeft;
             btnEliminarLibro.Location = new Point(730, 129);
             btnEliminarLibro.Name = "btnEliminarLibro";
@@ -236,11 +225,24 @@
             label2.TabIndex = 0;
             label2.Text = "Ingrese ISBN:";
             // 
+            // lblMensajeUsuario
+            // 
+            lblMensajeUsuario.Dock = DockStyle.Bottom;
+            lblMensajeUsuario.Font = new Font("Segoe UI Variable Small", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMensajeUsuario.ForeColor = Color.DarkRed;
+            lblMensajeUsuario.Location = new Point(0, 458);
+            lblMensajeUsuario.Name = "lblMensajeUsuario";
+            lblMensajeUsuario.Size = new Size(982, 95);
+            lblMensajeUsuario.TabIndex = 21;
+            lblMensajeUsuario.Text = "Error no se encontro el libro";
+            lblMensajeUsuario.TextAlign = ContentAlignment.TopCenter;
+            // 
             // BiblioEliminarLibro
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(982, 553);
+            Controls.Add(lblMensajeUsuario);
             Controls.Add(panel1);
             Controls.Add(label1);
             Name = "BiblioEliminarLibro";

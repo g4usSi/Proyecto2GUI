@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LectorPrestarLibro));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             label1 = new Label();
             btnBuscarLibro = new Button();
             RecibirBuscar = new TextBox();
@@ -44,7 +48,14 @@
             label3 = new Label();
             btnSolicitarLibro = new Button();
             lblMensajeUsuario = new Label();
+            datosLibros = new DataGridView();
+            ISBN = new DataGridViewTextBoxColumn();
+            Titulo = new DataGridViewTextBoxColumn();
+            Autor = new DataGridViewTextBoxColumn();
+            Genero = new DataGridViewTextBoxColumn();
+            Disponibilidad = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)datosLibros).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -53,7 +64,7 @@
             label1.Font = new Font("Aston Script Bold", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(982, 150);
+            label1.Size = new Size(982, 87);
             label1.TabIndex = 12;
             label1.Text = "Prestar Libro";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -112,16 +123,16 @@
             panel1.Controls.Add(RecibirBuscar);
             panel1.Controls.Add(label2);
             panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 150);
+            panel1.Location = new Point(0, 87);
             panel1.Name = "panel1";
-            panel1.Size = new Size(982, 286);
+            panel1.Size = new Size(982, 202);
             panel1.TabIndex = 13;
             // 
             // lblRecibirDisponibilidad
             // 
             lblRecibirDisponibilidad.AutoSize = true;
             lblRecibirDisponibilidad.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
-            lblRecibirDisponibilidad.Location = new Point(390, 229);
+            lblRecibirDisponibilidad.Location = new Point(390, 162);
             lblRecibirDisponibilidad.Name = "lblRecibirDisponibilidad";
             lblRecibirDisponibilidad.Size = new Size(27, 27);
             lblRecibirDisponibilidad.TabIndex = 33;
@@ -131,7 +142,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
-            label9.Location = new Point(269, 229);
+            label9.Location = new Point(269, 162);
             label9.Name = "label9";
             label9.Size = new Size(115, 27);
             label9.TabIndex = 32;
@@ -141,7 +152,7 @@
             // 
             lblRecibirGenero.AutoSize = true;
             lblRecibirGenero.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
-            lblRecibirGenero.Location = new Point(360, 184);
+            lblRecibirGenero.Location = new Point(360, 133);
             lblRecibirGenero.Name = "lblRecibirGenero";
             lblRecibirGenero.Size = new Size(26, 27);
             lblRecibirGenero.TabIndex = 31;
@@ -151,7 +162,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
-            label7.Location = new Point(269, 184);
+            label7.Location = new Point(269, 133);
             label7.Name = "label7";
             label7.Size = new Size(85, 27);
             label7.TabIndex = 30;
@@ -161,7 +172,7 @@
             // 
             lblRecibirAutor.AutoSize = true;
             lblRecibirAutor.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
-            lblRecibirAutor.Location = new Point(346, 143);
+            lblRecibirAutor.Location = new Point(346, 106);
             lblRecibirAutor.Name = "lblRecibirAutor";
             lblRecibirAutor.Size = new Size(26, 27);
             lblRecibirAutor.TabIndex = 29;
@@ -172,7 +183,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
-            label5.Location = new Point(269, 141);
+            label5.Location = new Point(269, 104);
             label5.Name = "label5";
             label5.Size = new Size(71, 27);
             label5.TabIndex = 28;
@@ -182,7 +193,7 @@
             // 
             lblRecibirTitulo.AutoSize = true;
             lblRecibirTitulo.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
-            lblRecibirTitulo.Location = new Point(346, 98);
+            lblRecibirTitulo.Location = new Point(346, 77);
             lblRecibirTitulo.Name = "lblRecibirTitulo";
             lblRecibirTitulo.Size = new Size(24, 27);
             lblRecibirTitulo.TabIndex = 27;
@@ -192,7 +203,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold);
-            label3.Location = new Point(269, 98);
+            label3.Location = new Point(269, 77);
             label3.Name = "label3";
             label3.Size = new Size(71, 27);
             label3.TabIndex = 26;
@@ -208,7 +219,7 @@
             btnSolicitarLibro.Font = new Font("Segoe UI Variable Small Semibol", 9F, FontStyle.Bold);
             btnSolicitarLibro.Image = (Image)resources.GetObject("btnSolicitarLibro.Image");
             btnSolicitarLibro.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSolicitarLibro.Location = new Point(740, 154);
+            btnSolicitarLibro.Location = new Point(740, 111);
             btnSolicitarLibro.Name = "btnSolicitarLibro";
             btnSolicitarLibro.Size = new Size(146, 40);
             btnSolicitarLibro.TabIndex = 12;
@@ -222,18 +233,111 @@
             lblMensajeUsuario.Dock = DockStyle.Bottom;
             lblMensajeUsuario.Font = new Font("Segoe UI Variable Small", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblMensajeUsuario.ForeColor = Color.Goldenrod;
-            lblMensajeUsuario.Location = new Point(0, 439);
+            lblMensajeUsuario.Location = new Point(0, 517);
             lblMensajeUsuario.Name = "lblMensajeUsuario";
-            lblMensajeUsuario.Size = new Size(982, 114);
+            lblMensajeUsuario.Size = new Size(982, 36);
             lblMensajeUsuario.TabIndex = 25;
             lblMensajeUsuario.Text = "Mensaje";
             lblMensajeUsuario.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // datosLibros
+            // 
+            datosLibros.AllowUserToAddRows = false;
+            datosLibros.AllowUserToDeleteRows = false;
+            datosLibros.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            datosLibros.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            datosLibros.BackgroundColor = SystemColors.Control;
+            datosLibros.BorderStyle = BorderStyle.None;
+            datosLibros.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(49, 53, 56);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI Variable Display Semib", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(184, 149, 93);
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            datosLibros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            datosLibros.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            datosLibros.Columns.AddRange(new DataGridViewColumn[] { ISBN, Titulo, Autor, Genero, Disponibilidad });
+            datosLibros.Cursor = Cursors.Hand;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(230, 165, 36);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            datosLibros.DefaultCellStyle = dataGridViewCellStyle2;
+            datosLibros.EnableHeadersVisualStyles = false;
+            datosLibros.GridColor = Color.FromArgb(49, 53, 56);
+            datosLibros.Location = new Point(226, 301);
+            datosLibros.Name = "datosLibros";
+            datosLibros.ReadOnly = true;
+            datosLibros.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(230, 165, 36);
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            datosLibros.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            datosLibros.RowHeadersVisible = false;
+            datosLibros.RowHeadersWidth = 51;
+            dataGridViewCellStyle4.BackColor = Color.WhiteSmoke;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI Variable Small", 10.2F);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(230, 165, 36);
+            datosLibros.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            datosLibros.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            datosLibros.Size = new Size(592, 215);
+            datosLibros.TabIndex = 26;
+            // 
+            // ISBN
+            // 
+            ISBN.HeaderText = "ISBN";
+            ISBN.MinimumWidth = 6;
+            ISBN.Name = "ISBN";
+            ISBN.ReadOnly = true;
+            ISBN.Width = 85;
+            // 
+            // Titulo
+            // 
+            Titulo.HeaderText = "Titulo";
+            Titulo.MinimumWidth = 6;
+            Titulo.Name = "Titulo";
+            Titulo.ReadOnly = true;
+            Titulo.Width = 92;
+            // 
+            // Autor
+            // 
+            Autor.HeaderText = "Autor";
+            Autor.MinimumWidth = 6;
+            Autor.Name = "Autor";
+            Autor.ReadOnly = true;
+            Autor.Width = 92;
+            // 
+            // Genero
+            // 
+            Genero.HeaderText = "Genero";
+            Genero.MinimumWidth = 6;
+            Genero.Name = "Genero";
+            Genero.ReadOnly = true;
+            Genero.Width = 107;
+            // 
+            // Disponibilidad
+            // 
+            Disponibilidad.HeaderText = "Disponibilidad";
+            Disponibilidad.MinimumWidth = 6;
+            Disponibilidad.Name = "Disponibilidad";
+            Disponibilidad.ReadOnly = true;
+            Disponibilidad.Width = 169;
             // 
             // LectorPrestarLibro
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(982, 553);
+            Controls.Add(datosLibros);
             Controls.Add(lblMensajeUsuario);
             Controls.Add(panel1);
             Controls.Add(label1);
@@ -241,6 +345,7 @@
             Text = "LectorPrestarLibro";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)datosLibros).EndInit();
             ResumeLayout(false);
         }
 
@@ -261,5 +366,11 @@
         private Label label3;
         private Label lblRecibirDisponibilidad;
         private Label label9;
+        private DataGridView datosLibros;
+        private DataGridViewTextBoxColumn ISBN;
+        private DataGridViewTextBoxColumn Titulo;
+        private DataGridViewTextBoxColumn Autor;
+        private DataGridViewTextBoxColumn Genero;
+        private DataGridViewTextBoxColumn Disponibilidad;
     }
 }

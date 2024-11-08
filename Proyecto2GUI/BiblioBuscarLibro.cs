@@ -19,6 +19,7 @@ namespace Proyecto2GUI
         {
             _bibliotecaActual = biblioteca;   
             InitializeComponent();
+            lblMensajeUsuario.Text = String.Empty;
         }
 
         private void btnBuscarLibro_Click(object sender, EventArgs e)
@@ -32,17 +33,22 @@ namespace Proyecto2GUI
             TablaLibrosBuscados.DataSource = _dataLibrosEncontrados;
             Consultar();
             Limpiar();
-   
         }
         private void Consultar()
         {
-            if(_bibliotecaActual.BuscarLibrosPorTituloOAutor(RecibirBuscar.Text) == null)
+            lblMensajeUsuario.Text = String.Empty;
+
+            var librosEncontrados = _bibliotecaActual.BuscarLibrosPorTituloOAutor(RecibirBuscar.Text);
+
+            if (librosEncontrados == null || !librosEncontrados.Any())
             {
-                MessageBox.Show("No hay conincidencias", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                lblMensajeUsuario.Text = "No se encontraron resultados para la búsqueda.";
                 return;
             }
 
-            foreach (var item in _bibliotecaActual.BuscarLibrosPorTituloOAutor(RecibirBuscar.Text))
+            _dataLibrosEncontrados.Rows.Clear();
+
+            foreach (var item in librosEncontrados)
             {
                 DataRow fila = _dataLibrosEncontrados.NewRow();
                 fila["ISBN"] = item.ISBN;
@@ -50,13 +56,13 @@ namespace Proyecto2GUI
                 fila["Autor"] = item.Autor;
                 fila["Disponibilidad"] = item.Disponible ? "Disponible" : "No Disponible";
 
-                // Agregar la fila a la tabla de datos
                 _dataLibrosEncontrados.Rows.Add(fila);
             }
         }
+
         private void Limpiar()
         {
-            RecibirBuscar.Text = "";
+            RecibirBuscar.Text = String.Empty;
         }
     }
 }
