@@ -36,6 +36,7 @@
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BiblioPrestamosMas));
             label1 = new Label();
             panel1 = new Panel();
             label2 = new Label();
@@ -50,6 +51,7 @@
             FechaPrestamo = new DataGridViewTextBoxColumn();
             CantPrestamos = new DataGridViewTextBoxColumn();
             lblMensajeUsuario = new Label();
+            btnOrdenarLibros = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataMasPrestados).BeginInit();
             ((System.ComponentModel.ISupportInitialize)datosLibrosBiblio).BeginInit();
@@ -69,6 +71,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(btnOrdenarLibros);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(dataMasPrestados);
             panel1.Controls.Add(datosLibrosBiblio);
@@ -268,6 +271,25 @@
             lblMensajeUsuario.Text = "No hay Libros en la Biblioteca";
             lblMensajeUsuario.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // btnOrdenarLibros
+            // 
+            btnOrdenarLibros.BackColor = Color.FromArgb(230, 165, 36);
+            btnOrdenarLibros.Cursor = Cursors.Hand;
+            btnOrdenarLibros.FlatAppearance.BorderSize = 0;
+            btnOrdenarLibros.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 165, 36);
+            btnOrdenarLibros.FlatStyle = FlatStyle.Flat;
+            btnOrdenarLibros.Font = new Font("Segoe UI Variable Small Semibol", 9F, FontStyle.Bold);
+            btnOrdenarLibros.Image = (Image)resources.GetObject("btnOrdenarLibros.Image");
+            btnOrdenarLibros.ImageAlign = ContentAlignment.MiddleLeft;
+            btnOrdenarLibros.Location = new Point(827, 94);
+            btnOrdenarLibros.Name = "btnOrdenarLibros";
+            btnOrdenarLibros.Size = new Size(155, 40);
+            btnOrdenarLibros.TabIndex = 12;
+            btnOrdenarLibros.Text = "Ordenar Libros";
+            btnOrdenarLibros.TextAlign = ContentAlignment.MiddleRight;
+            btnOrdenarLibros.UseVisualStyleBackColor = false;
+            btnOrdenarLibros.Click += btnOrdenarLibros_Click;
+            // 
             // BiblioPrestamosMas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -301,5 +323,6 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private Button btnOrdenarLibros;
     }
 }

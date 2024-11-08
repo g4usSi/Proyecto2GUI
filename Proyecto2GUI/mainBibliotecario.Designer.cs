@@ -177,10 +177,10 @@
             btnEstadisticas.ImageAlign = ContentAlignment.MiddleLeft;
             btnEstadisticas.Location = new Point(0, 40);
             btnEstadisticas.Name = "btnEstadisticas";
-            btnEstadisticas.Padding = new Padding(60, 0, 45, 0);
+            btnEstadisticas.Padding = new Padding(60, 0, 17, 0);
             btnEstadisticas.Size = new Size(280, 40);
             btnEstadisticas.TabIndex = 1;
-            btnEstadisticas.Text = "Libros Biblioteca";
+            btnEstadisticas.Text = "Libros y Estadisticas";
             btnEstadisticas.TextAlign = ContentAlignment.MiddleRight;
             btnEstadisticas.UseVisualStyleBackColor = false;
             btnEstadisticas.Click += btnEstadisticas_Click;
@@ -440,7 +440,7 @@
             lblMensajeUser.Name = "lblMensajeUser";
             lblMensajeUser.Size = new Size(1000, 78);
             lblMensajeUser.TabIndex = 8;
-            lblMensajeUser.Text = "user";
+            lblMensajeUser.Text = "Mensaje";
             lblMensajeUser.TextAlign = ContentAlignment.TopCenter;
             // 
             // lblBienvenida

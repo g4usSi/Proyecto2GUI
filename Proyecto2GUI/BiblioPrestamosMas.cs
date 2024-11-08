@@ -17,7 +17,6 @@ namespace Proyecto2GUI
         Biblioteca _biblioteca;
         public BiblioPrestamosMas(Biblioteca biblioteca)
         {
-
             _biblioteca = biblioteca;
             InitializeComponent();
             RellenarGrid();
@@ -72,5 +71,11 @@ namespace Proyecto2GUI
             }
         }
 
+        private void btnOrdenarLibros_Click(object sender, EventArgs e)
+        {
+            _biblioteca.OrdenarLibrosPorTitulo();
+            lblMensajeUsuario.Text = "Libros ordenados por titulo.";
+            RellenarGrid();
+        }
     }
 }

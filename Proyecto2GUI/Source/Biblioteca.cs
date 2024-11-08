@@ -331,14 +331,10 @@ namespace Proyecto2
             return prestamoEliminar;
         }
 
-        //Deshacer Accion
-
-
         public void EliminarPrestamo(Prestamo prestamoEliminar) 
         {
             historialAcciones.RegistrarAccion(new AccionBiblioteca("Devolución", prestamoEliminar.LibroPrestado));
             prestamos.Remove(prestamoEliminar);
-;
         }
 
         //Mostrar prestamos activos
@@ -375,6 +371,10 @@ namespace Proyecto2
         public void OrdenarLibros() 
         {
             LibrosOrdenados = true;
+        }
+        public void OrdenarLibrosPorTitulo()
+        {
+            librosBiblioteca.Sort((libro1, libro2) => string.Compare(libro1.Titulo, libro2.Titulo, StringComparison.OrdinalIgnoreCase));
         }
     }
 }

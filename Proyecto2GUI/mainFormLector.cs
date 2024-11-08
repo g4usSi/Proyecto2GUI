@@ -138,12 +138,14 @@ namespace Proyecto2GUI
                     {
                         // Deshacer el préstamo: marcar como disponible y actualizar mensaje
                         ultimaAccion.LibroInvolucrado.Disponible = true;
+                        //Logica para remover de la lista
                         lblMensajeDeshacer.Text = $"Se deshizo el préstamo del libro: '{ultimaAccion.LibroInvolucrado.Titulo}'.";
                     }
                     else if (ultimaAccion.TipoAccion == "Devolución")
                     {
                         // Deshacer la devolución: marcar como no disponible y actualizar mensaje
                         ultimaAccion.LibroInvolucrado.Disponible = false;
+                        //logica para agregar a la lista
                         lblMensajeDeshacer.Text = $"Se deshizo la devolución del libro: '{ultimaAccion.LibroInvolucrado.Titulo}'.";
                     }
                 }

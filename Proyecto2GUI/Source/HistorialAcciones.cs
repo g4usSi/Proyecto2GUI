@@ -25,7 +25,7 @@ namespace Proyecto2
     public class HistorialAcciones
     {
         private Stack<AccionBiblioteca> historial;
-        public bool EstaVacio() 
+        public bool EstaVacio()
         { 
             return historial.Count == 0;
         }
@@ -44,11 +44,8 @@ namespace Proyecto2
             if (historial.Count > 0)
             {
                 AccionBiblioteca ultimaAccion = historial.Pop();
-                Console.WriteLine($"Se deshizo la última acción: {ultimaAccion.ObtenerDescripcion()}.");
                 return ultimaAccion;
             }
-
-            Console.WriteLine("No hay acciones para deshacer.");
             return null;
         }
 
@@ -57,6 +54,7 @@ namespace Proyecto2
             historial.Clear();
         }
     }
+
     public class SolicitudEspera
     {
         public Lector Lector { get; private set; }

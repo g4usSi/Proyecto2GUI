@@ -34,6 +34,7 @@ namespace Proyecto2GUI
             Consultar();
             Limpiar();
         }
+
         private void Consultar()
         {
             lblMensajeUsuario.Text = String.Empty;

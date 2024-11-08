@@ -220,7 +220,7 @@
             lblBienvenidaUser.Name = "lblBienvenidaUser";
             lblBienvenidaUser.Size = new Size(1000, 78);
             lblBienvenidaUser.TabIndex = 10;
-            lblBienvenidaUser.Text = "user";
+            lblBienvenidaUser.Text = "Mensaje";
             lblBienvenidaUser.TextAlign = ContentAlignment.TopCenter;
             // 
             // lblBienvenida

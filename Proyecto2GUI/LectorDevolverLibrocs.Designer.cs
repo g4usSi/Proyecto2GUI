@@ -79,7 +79,7 @@
             lblTituloLibro.Name = "lblTituloLibro";
             lblTituloLibro.Size = new Size(982, 78);
             lblTituloLibro.TabIndex = 34;
-            lblTituloLibro.Text = "user";
+            lblTituloLibro.Text = "Mensaje";
             lblTituloLibro.TextAlign = ContentAlignment.TopCenter;
             // 
             // lblRecibirDisponibilidad
