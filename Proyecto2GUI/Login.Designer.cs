@@ -48,7 +48,7 @@ namespace Proyecto2GUI
             // NombreUser
             // 
             NombreUser.AutoSize = true;
-            NombreUser.Font = new Font("Segoe UI Variable Small Semilig", 12F);
+            NombreUser.Font = new Font("Segoe UI Variable Small", 12F);
             NombreUser.Location = new Point(281, 155);
             NombreUser.Name = "NombreUser";
             NombreUser.Size = new Size(92, 27);
@@ -58,52 +58,63 @@ namespace Proyecto2GUI
             // PassUser
             // 
             PassUser.AutoSize = true;
-            PassUser.Font = new Font("Segoe UI Variable Small Semilig", 12F);
+            PassUser.Font = new Font("Segoe UI Variable Small", 12F);
             PassUser.Location = new Point(281, 225);
             PassUser.Name = "PassUser";
-            PassUser.Size = new Size(120, 27);
+            PassUser.Size = new Size(122, 27);
             PassUser.TabIndex = 1;
             PassUser.Text = "Contraseña:";
             // 
             // txtNombre
             // 
+            txtNombre.BorderStyle = BorderStyle.None;
             txtNombre.Font = new Font("Segoe UI", 10F);
             txtNombre.Location = new Point(281, 185);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(285, 30);
+            txtNombre.Size = new Size(285, 23);
             txtNombre.TabIndex = 2;
             // 
             // txtPassword
             // 
+            txtPassword.BorderStyle = BorderStyle.None;
             txtPassword.Font = new Font("Segoe UI", 10F);
             txtPassword.Location = new Point(281, 255);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(285, 30);
+            txtPassword.Size = new Size(285, 23);
             txtPassword.TabIndex = 3;
+            txtPassword.UseSystemPasswordChar = true;
             // 
             // BtnEntrar
             // 
+            BtnEntrar.BackColor = Color.Goldenrod;
             BtnEntrar.Cursor = Cursors.Hand;
-            BtnEntrar.Font = new Font("Segoe UI Variable Small Semilig", 10F);
+            BtnEntrar.FlatAppearance.BorderColor = Color.Gold;
+            BtnEntrar.FlatAppearance.MouseDownBackColor = Color.Goldenrod;
+            BtnEntrar.FlatStyle = FlatStyle.Flat;
+            BtnEntrar.Font = new Font("Segoe UI Variable Display Semib", 10.2F, FontStyle.Bold);
             BtnEntrar.Location = new Point(309, 301);
             BtnEntrar.Name = "BtnEntrar";
             BtnEntrar.Size = new Size(105, 33);
             BtnEntrar.TabIndex = 5;
             BtnEntrar.Text = "Entrar";
-            BtnEntrar.UseVisualStyleBackColor = true;
+            BtnEntrar.UseVisualStyleBackColor = false;
             BtnEntrar.Click += BtnEntrar_Click;
             BtnEntrar.KeyDown += BtnEntrar_KeyDown;
             // 
             // btnSalir
             // 
+            btnSalir.BackColor = Color.Goldenrod;
             btnSalir.Cursor = Cursors.Hand;
-            btnSalir.Font = new Font("Segoe UI Variable Small Semilig", 10F);
+            btnSalir.FlatAppearance.BorderColor = Color.Gold;
+            btnSalir.FlatAppearance.MouseDownBackColor = Color.Goldenrod;
+            btnSalir.FlatStyle = FlatStyle.Flat;
+            btnSalir.Font = new Font("Segoe UI Variable Display Semib", 10.2F, FontStyle.Bold);
             btnSalir.Location = new Point(434, 301);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(105, 33);
             btnSalir.TabIndex = 6;
             btnSalir.Text = "Salir";
-            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.UseVisualStyleBackColor = false;
             btnSalir.Click += button2_Click;
             // 
             // BtnCerrar
@@ -127,6 +138,7 @@ namespace Proyecto2GUI
             label1.Size = new Size(226, 59);
             label1.TabIndex = 9;
             label1.Text = "Bienvenido a";
+            label1.MouseDown += lblSignIn_MouseDown;
             // 
             // lblSignIn
             // 
@@ -137,6 +149,7 @@ namespace Proyecto2GUI
             lblSignIn.Size = new Size(185, 59);
             lblSignIn.TabIndex = 4;
             lblSignIn.Text = "Biblioteca";
+            lblSignIn.MouseDown += lblSignIn_MouseDown;
             // 
             // pictureBox1
             // 
@@ -144,9 +157,10 @@ namespace Proyecto2GUI
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(230, 400);
+            pictureBox1.Size = new Size(241, 400);
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
+            pictureBox1.MouseDown += pictureBox1_MouseDown;
             // 
             // Login
             // 

@@ -10,7 +10,6 @@ namespace Proyecto2
 {
     public class Biblioteca
     {
-        //declarar un usuario actual?
         public Usuario UsuarioActual = null;
 
         //Listas
@@ -200,11 +199,12 @@ namespace Proyecto2
         {
             listaUsuarios.Add(new Bibliotecario("Geovanny Alcon","Geovanny Alcon", "1407"));
             listaUsuarios.Add(new Bibliotecario("Geo", "Geo","1234"));
-            listaUsuarios.Add(new Lector("01", "Cono de Leon","123"));
-            librosBiblioteca.Add(new Libro("It", "Stephen King", "Horror", "666",true, 10));
+            listaUsuarios.Add(new Lector("01", "Josue de Leon","123"));
+            librosBiblioteca.Add(new Libro("It", "Stephen King", "Horror", "666", true, 10));
             librosBiblioteca.Add(new Libro("It", "Stephen King", "Horror", "123367", false, 20));
             librosBiblioteca.Add(new Libro("Moby Dick", "Hamlet", "Narrativa", "32089", true, 3));
         }
+
         //Modulo 2 Gestion de Usuarios
         //Opc 1
         public void RegistrarUsuarioNuevo(string id, string nombre, string contraseña, int rol)
@@ -241,35 +241,6 @@ namespace Proyecto2
         }
 
         //Opc 2
-        public void EliminarEditarUsuario()
-        {
-            Console.WriteLine("Ingrese el nombre del usuario");
-            string nombreUsuario = Console.ReadLine();
-            Usuario usuarioModificado = BuscarUsuario(nombreUsuario);
-            if (usuarioModificado == null)
-            {
-                Console.WriteLine("Error. No se ha encontrado al usuario...");
-                return;
-            }
-
-            Console.WriteLine("1. Editar");
-            Console.WriteLine("2. Eliminar");
-            Console.Write("Ingrese una opcion: ");
-            int opcion = Convert.ToInt32(Console.ReadLine());
-            switch (opcion)
-            {
-                case 1:
-                    EditarUsuario(usuarioModificado);
-                    Console.WriteLine("Se ha agregado al nuevo usuario.");
-                    break;
-                case 2:
-                    Console.WriteLine("Seguro desea eliminar al usuario? (S/N)");
-                    EliminarUsuario(usuarioModificado);
-                    Console.WriteLine("Se ha agregado al nuevo usuario.");
-                break;
-            }
-        }
-
         public void EditarUsuario(Usuario usuarioBuscado)
         {
             Console.WriteLine("Ingrese los nuevos datos a editar...");

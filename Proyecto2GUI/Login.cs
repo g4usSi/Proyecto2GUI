@@ -40,6 +40,16 @@ namespace Proyecto2GUI
 
             this.Region = new Region(path);
 
+            this.KeyDown += new KeyEventHandler(Form_KeyDown);
+            this.txtNombre.KeyDown += new KeyEventHandler(Form_KeyDown);
+            this.txtPassword.KeyDown += new KeyEventHandler(Form_KeyDown);
+        }
+        private void Form_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                BtnEntrar_Click(sender, e);
+            }
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -70,14 +80,12 @@ namespace Proyecto2GUI
                 {
                     var mainForm = new mainBibliotecario(_biblioteca, this);
                     mainForm.Show();
-
                     this.Hide();
                 }
                 else
                 {
                     var mainForm = new mainFormLector(_biblioteca, this);
                     mainForm.Show();
-
                     this.Hide();
                 }
             }
@@ -86,7 +94,6 @@ namespace Proyecto2GUI
                 MessageBox.Show("Usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void Login_Load(object sender, EventArgs e)
         {
             ReleaseCapture();
@@ -103,28 +110,20 @@ namespace Proyecto2GUI
         {
             if (e.KeyCode == Keys.Enter)
             {
-                // Llama al método de inicio de sesión
                 BtnEntrar_Click(sender, e);
             }
         }
 
-        /*private void NuevoUsuario()
+        private void lblSignIn_MouseDown(object sender, MouseEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtPassword.Text))
-            {
-                MessageBox.Show("No ha ingresado datos correctos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtNombre.Focus();
-            }
-
-            if(_biblioteca.IniciarSesion(txtNombre.Text, txtPassword.Text))
-            {
-
-            }
-
-
-
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-        */
 
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
     }
 }
